@@ -1,2 +1,1 @@
-# CSCI1320FinalProject
-# CSCI1320FinalProject
+# CU Boulder CSCI 1320 Final Project - Genetic Algorithms
