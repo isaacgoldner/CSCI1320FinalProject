@@ -8,16 +8,17 @@ function matingPool = buildMatingPool(population)
 
 %Mating factor will be decided later. 
 
- ticketVector = (fitness).*(mating factor)
-
- %ticketVector is a numerical vector indicating the number of "tickets"
- %each population memeber will have in the "lottery" system. 
- 
- 
+initialMatingPool = cell(1,3);
+initialMatingPool{1,1} = 'string1';
+initialMatingPool{1,2} = 'string1';
+initialMatingPool{1,3} = 'string2';
 
 matingPool = cell(1,2);
-matingPool{1,1} = 'string1';
-matingPool{1,2} = 'string2';
+
+for i = 1:2
+   indexInt = randi([1,3]);
+   matingPool{1,i} = initialMatingPool{1,indexInt};
+end
 
 
 end
