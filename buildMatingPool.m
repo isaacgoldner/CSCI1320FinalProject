@@ -1,18 +1,21 @@
-function matingPool = buildMatingPool(population)
+function matingPool = buildMatingPool(population, fitness)
 %takes in a population and builds a mating pool based on the fitness of
 %each member of the population
 
 
-%Using a "lottery" based system to decide an individual population member's
+%We plan on using a "lottery" based system to decide an individual population member's
 %chance of entering the mating pool: 
 
 %Mating factor will be decided later. 
 
+%The code below represents a possible initial mating pool where one organism
+%appears more often due to its heighter fitness. 
 initialMatingPool = cell(1,3);
 initialMatingPool{1,1} = 'string1';
 initialMatingPool{1,2} = 'string1';
 initialMatingPool{1,3} = 'string2';
 
+%Parent pairs are then selected randomly from the initial mating pool. 
 matingPool = cell(1,2);
 
 for i = 1:2

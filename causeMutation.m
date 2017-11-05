@@ -1,11 +1,12 @@
 function mutatedChild = causeMutation(child)
 %takes in a "child" string and mutates with a certain mutation rate
 
-%specify the mutation rate that can be changed
+%specify the mutation rate (this may be changed to optimize the program): 
 mutationRate = .01;
 
-%random function used to decide if child will be mutated, if so, go through
-%a process to randomly mutate
+%We antipate using a random number generator and conditional statements
+%to decide if a child is to be mutated. If a child is to be mutated,
+%another process is used to do so. 
 mutatedChild = 'mutated string';
 
 end
