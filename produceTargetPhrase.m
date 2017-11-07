@@ -20,7 +20,9 @@ tic
 %The process below will continue until the target phrase is found in the
 %evolved population: 
 
-while Evolved population does not include the target phrase...
+i = 1;
+
+while newPopulation{i-1} ~= targetPhrase
 
 %calculate the fitnesses of each of the organisms
 fitness = calculateFitness(population)
@@ -35,7 +37,9 @@ children = breed(matingPool{1},matingPool{2});
 
 
 %Reassign population to the 200 new children created in each iteration: 
-population = children; 
+newPopulation{i} = children; 
+
+i = i + 1;
 
 %End of while loop will occur one the target phrase is met:
 end 
