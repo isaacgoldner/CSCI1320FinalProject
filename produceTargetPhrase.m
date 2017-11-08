@@ -19,9 +19,8 @@ tic
 
 %The process below will continue until the target phrase is found in the
 %evolved population: 
-
 c = 1;
-while 
+while (bestPhrase ~= targetPhrase)
     i = 1;
     
     %creating a new generation
@@ -44,10 +43,10 @@ while
 
     i = i + 1;
     
+    %store the best fitness, average fitness, and best phrase for each
+    %generation
     bestFitness = 2;
-    
     averageFitness = 1;
-    
     bestPhrase = 'x';
     
     %End of while loop will occur once the target phrase is met:
@@ -84,10 +83,8 @@ plot(generationNumbers,geneticDiversity);
 
 %save best phrase, maximum fitness, average fitness, and genetic diversity
 %for each generation to a txt file currently named saver.txt: 
-
 %We anticpated each of the generation qualities mentioned to be stored in
 %vectors with one element per generation. 
-
 %General idea... 
 fid = fopen('saver.txt','w'); 
 fprintf(fid,'%s %s %s %s','Best Phrase','Maximum Fitness','Average Fitness','Genetic Diversity'); 
