@@ -7,4 +7,8 @@ function fitness = imageBasicCalculateFitness(population)
 %raise the fitnesses of each of the random images to a specified
 %exponential factor in order to differentiate the fitnesses more
 
+%in task 2.2, we will improve this fitness function by adding a tolerance
+%value, so that the random image pixe
+
+
 end

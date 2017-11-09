@@ -37,6 +37,7 @@ while (bestPhrase ~= targetPhrase)
     %that was created with the bulidMatingPool function: 
     children = breed(matingPool{1,1},matingPool{1,2});
 
+    %mutate the children vector with the cause mutation function
 
     %Reassign population to the 200 new children created in each iteration: 
     newPopulation{i} = children; 

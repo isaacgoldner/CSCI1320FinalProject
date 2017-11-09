@@ -8,6 +8,6 @@ function mutatedChild = imageBasicCauseMutation(child)
 
 %randomly select a collection of pixels to mutate
 
-%assign each of the pixels a new random value
+%assign each
 
 end
