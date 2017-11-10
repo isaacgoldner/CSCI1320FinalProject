@@ -30,11 +30,11 @@
 %while loop ends when the target image is produced
 
 %plot a sample of the the 9 maximum fitness members from evenly spaced
-%generations
+%generations. 
 
 %save the max fitness organism to an image file
 
 %save the max fitness, avg fitness, and genetic diversity vectors to a txt
-%file
+%file.
     
 %toc

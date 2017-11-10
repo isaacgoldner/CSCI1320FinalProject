@@ -4,6 +4,6 @@ function child = imageBreed(matingPool)
 %DNA (which are represented with individual pixels) from each of the 
 %individual parents
 
-%return the new child
+%function returns a new child to be added into the next generation. 
 
 end

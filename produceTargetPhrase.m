@@ -37,7 +37,7 @@ while (bestPhrase ~= targetPhrase)
     %that was created with the bulidMatingPool function: 
     children = breed(matingPool{1,1},matingPool{1,2});
 
-    %mutate the children vector with the cause mutation function
+    %Mutate the children with the cause mutation function
 
     %Reassign population to the 200 new children created in each iteration: 
     newPopulation{i} = children; 
@@ -86,7 +86,8 @@ plot(generationNumbers,geneticDiversity);
 %for each generation to a txt file currently named saver.txt: 
 %We anticpated each of the generation qualities mentioned to be stored in
 %vectors with one element per generation. 
-%General idea... 
+%General idea... (Will be modified as needed to fit required
+%functionality.)
 fid = fopen('saver.txt','w'); 
 fprintf(fid,'%s %s %s %s','Best Phrase','Maximum Fitness','Average Fitness','Genetic Diversity'); 
 fprintf(fid,'%s %f %f %f\n',bestPhraseVec,bestFitnessVec,averageFitnessVec,geneticDiversity);
