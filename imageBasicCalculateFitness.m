@@ -1,4 +1,4 @@
-function fitness = imageBasicCalculateFitness(population)
+function fitness = imageBasicCalculateFitness(ImagePopulation)
 
 %calculate the fitness of each of the random images
 %for this basic fitness function, the fitness is calculated based on how
@@ -9,5 +9,8 @@ function fitness = imageBasicCalculateFitness(population)
 %exponential factor in order to differentiate the fitnesses more in order
 %to eventually decide which members of the population will enter the mating
 %pool to form the next generation. 
+
+%For a given generation's input population, "fitness" will be a vector 
+%where each element will corrispond to an organism's fitness.
 
 end

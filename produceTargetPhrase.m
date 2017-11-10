@@ -1,5 +1,5 @@
-%script to define the target, generate initial population, calculate
-%fitnesses, build mating pools, and breed new populations. 
+%Script to define the target phrase, generate initial population of phrases, 
+%calculate fitnesses, build mating pools, and breed new populations. 
 
 %Specifying the target phrase string:
 targetPhrase = 'To be or not to be';
@@ -19,12 +19,16 @@ tic
 
 %The process below will continue until the target phrase is found in the
 %evolved population: 
+
+%c shows an example of how a generation iterator might be used to store the
+%required information for each generation: 
 c = 1;
 while (bestPhrase ~= targetPhrase)
-    i = 1;
     
     %creating a new generation
-    while (newPopulation{i-1} ~= targetPhrase) && (i < 202)
+    while %The new population members of the generation currently being 
+          %created do not include the target phrase (increases efficiency
+          %as code will terminate if target phrase is found): 
 
     %calculate the fitnesses of each of the organisms
     fitness = calculateFitness(population);
@@ -33,16 +37,16 @@ while (bestPhrase ~= targetPhrase)
     %organisms
     matingPool = buildMatingPool(population,fitness);
 
-    %breeding a new population one child at a time based on the mating pool 
-    %that was created with the bulidMatingPool function: 
-    children = breed(matingPool{1,1},matingPool{1,2});
+    %breed a new population consting of children of parent pairs found in
+    %the mating pool that was created with the bulidMatingPool function: 
+    children = breed(matingPool);
 
     %Mutate the children with the cause mutation function
+    population = causeMutation(children); 
 
-    %Reassign population to the 200 new children created in each iteration: 
-    newPopulation{i} = children; 
-
-    i = i + 1;
+    %This will also reassign population to the 200 new children, included those mutated 
+    %with the cause mutation function. 
+    
     
     %store the best fitness, average fitness, and best phrase for each
     %generation
@@ -50,13 +54,16 @@ while (bestPhrase ~= targetPhrase)
     averageFitness = 1;
     bestPhrase = 'x';
     
-    %End of while loop will occur once the target phrase is met:
+    %End of inner while loop will occur once the target phrase is found 
+    %within the newly created population:
     end 
     
+    %Record required information for each generation created:
     bestFitnessVec[1,c] = bestFitness;
     averageFitnessVec[1,c] = averageFitness;
     bestPhraseVec{c,1} = bestPhrase;
     
+    %increase generation iterator: 
     c = c + 1;
 
 end
@@ -78,13 +85,14 @@ hold on
 plot(generationNumbers,averageFitnessVec);
 
 figure
-%plot genetic diversity over generations on a seperate figure:
+%Plot genetic diversity over generations on a seperate figure:
 geneticDiversity = bestFitnessVec - averageFitnessVec;
 plot(generationNumbers,geneticDiversity);
 
-%save best phrase, maximum fitness, average fitness, and genetic diversity
+%Save best phrase, maximum fitness, average fitness, and genetic diversity
 %for each generation to a txt file currently named saver.txt: 
-%We anticpated each of the generation qualities mentioned to be stored in
+
+%We anticpate each of the generation qualities mentioned to be stored in
 %vectors with one element per generation. 
 %General idea... (Will be modified as needed to fit required
 %functionality.)

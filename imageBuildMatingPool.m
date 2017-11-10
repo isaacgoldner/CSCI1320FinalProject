@@ -1,10 +1,10 @@
-function matingPool = imageBuildMatingPool(fitness)
+function matingPool = imageBuildMatingPool(imagePopulation,fitness)
 
-%create a vector with more instances of specific "organisms" if its fitness
-%is higher relative to the rest of the population
+%Using the input population and the fitnesses of each member of this
+%population, create a "mating pool" of organisms where a given organism has
+%a larger presence in the pool if it has a heigher fitness value. 
 
-%randomly select two organisms to breed from this previous vector
-
-%return the mating pool that determines which organisms will breed
+%members of the mating pool population created will eventually be "bred" to
+%create a new population of children.
 
 end

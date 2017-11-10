@@ -1,6 +1,7 @@
 function matingPool = buildMatingPool(population, fitness)
-%takes in a population and builds a mating pool based on the fitness of
-%each member of the population
+%takes in a population and a vector containing the fitness of its members
+%and builds a mating pool for creating the next generation that prefers
+%organisms with heigher fitness. 
 
 
 %We plan on using a "lottery" based system to decide an individual population member's
