@@ -1,9 +1,16 @@
-function population = buildPopulation()
+function population = buildPopulation(targetString)
 %creates a random population of 200 strings that are the same length as the
 %target phrase. 
 
-population = cell(1,1);
-population{1,1} = 'sample string';
+populationSize = 200;
+
+asciiChars = [32,65:90,97:122];
+
+lengthChars = length(asciiChars);
+
+lengthOfTarget = length(targetString);
+
+randVec = rand(populationSize,lengthOfTarget);
 
 end 
 
