@@ -1,30 +1,38 @@
-function matingPool = buildMatingPool(population, fitness)
-%takes in a population and a vector containing the fitness of its members
-%and builds a mating pool for creating the next generation that prefers
-%organisms with heigher fitness. 
+function matingPool = buildMatingPool(fitness)
+%This function takes in a vector containing the fitness of each of the
+%current population's members and builds a "mating pool" for creating the 
+%next generation that prefers organisms with heigher fitness. The mating
+%pool produced by this function is a vector that only consists of indexes
+%referring to the organisms in the population that the next generation will
+%be bred from. 
 
+%First, the fitness values for the generation must be normalized, with 1 as
+%the heighest possible fitness and 0 as the lowest. This allows for easy
+%creation of a "lottery" style mating pool later in the function: 
 
-%We plan on using a "lottery" based system to decide an individual population member's
-%chance of entering the mating pool: 
+%The process for normalizing the fitness values for the generation is as
+%follows: 
+%1) subtract the minimum
+%2) divide by the new maximum
+normalizedFitness = (fitness - min(fitness))./(max(fitness) - min(fitness)); 
 
-%Mating factor will be decided later. 
+%Now it must be decided how many times a particular organism will appear in
+%the mating pool based on its fitness; how many "tickets it will have in 
+%the "lottery'. This is accomplished using a mating
+%factor that is saved as a variable so that it can be altered later. 
+mateFactor = 10; 
 
-%The code below represents a possible initial mating pool where one organism
-%appears more often due to its higher fitness. 
-initialMatingPool = cell(1,3);
-initialMatingPool{1,1} = 'string1';
-initialMatingPool{1,2} = 'string1';
-initialMatingPool{1,3} = 'string2';
+%TicketsPerOrg is a vector that simply saves the number of times a
+%particular organism will appear in the mating pool. Each element in the
+%vector corrisponds to an organism that appears in the generation being
+%used to create the mating pool. The number of tickets an organism has is
+%rounded to the nearest interger. 
+TicketsPerOrg = round(normalizedFitness .* (mateFactor)); 
 
-%Parent pairs are then selected randomly from the initial mating pool. 
-matingPool = cell(1,2);
+%The repelem function is then used to have the index for each organism in
+%the population (the population of 200) being used to create the mating 
+%pool appear in the pool a number of times equal to the number of "tickets"
+%the organism has. 
+matingPool = repelem([1:200]',TicketsPerOrg); 
 
-%form the mating pool based on random selection but with a higher frequency
-%of the higher fitness organisms
-for i = 1:2
-   indexInt = randi([1,3]);
-   matingPool{1,i} = initialMatingPool{1,indexInt};
-end
-
-
-end
+end 
