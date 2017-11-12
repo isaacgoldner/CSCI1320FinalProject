@@ -8,4 +8,4 @@
 
 fitness = calculateFitness(population); 
 
-matingPool = buildMatingPool(fitness)
+matingPool = buildMatingPool(fitness);

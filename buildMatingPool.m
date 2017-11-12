@@ -17,8 +17,8 @@ function matingPool = buildMatingPool(fitness)
 normalizedFitness = (fitness - min(fitness))./(max(fitness) - min(fitness)); 
 
 %Now it must be decided how many times a particular organism will appear in
-%the mating pool based on its fitness; how many "tickets it will have in 
-%the "lottery'. This is accomplished using a mating
+%the mating pool based on its fitness; how many 'tickets' it will have in 
+%the 'lottery'. This is accomplished using a mating
 %factor that is saved as a variable so that it can be altered later. 
 mateFactor = 10; 
 
