@@ -6,10 +6,10 @@ function fitness = calculateFitness(population)
 
 %take the current population and revert it back from a single cell to an
 %array. 
-pop = cell2mat(population); 
+%pop = cell2mat(population); 
 
 %Temporarily reshape the population to be a row vector for easy comparison: 
-pop4Compare = reshape(pop',1,3600); 
+pop4Compare = reshape(population,1,3600); 
 
 %Establish the target phrase to be compared with: 
 target = 'To be or not to be'; 

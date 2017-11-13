@@ -9,3 +9,5 @@
 fitness = calculateFitness(population); 
 
 matingPool = buildMatingPool(fitness);
+
+newPopulation = breed(matingPool,population);
