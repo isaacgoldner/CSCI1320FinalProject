@@ -9,7 +9,7 @@ function fitness = calculateFitness(population,populationSize,targetPhrase)
 %pop = cell2mat(population); 
 
 %Temporarily reshape the population to be a row vector for easy comparison: 
-pop4Compare = reshape(population,1,populationSize * length(targetPhrase)); 
+pop4Compare = reshape(population',1,populationSize * length(targetPhrase)); 
 
 %Replicate the target phrase to create a "target row vector" that can be
 %compared with pop4Compare: 

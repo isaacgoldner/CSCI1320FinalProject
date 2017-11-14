@@ -26,7 +26,9 @@ bestPhrase = char(maxGenerations,length(targetPhrase));
 %also used as a counter variable throughout the while-loop
 generation = 1;
 
-while (generation ~= maxGenerations) && (strcmp(bestPhrase(generation-1,1:end),...
+c = 0;
+
+while (generation ~= maxGenerations+1) && (~strcmp(bestPhrase(generation-c,1:end),...
         targetPhrase))
 
     %calculate the fitness of the population
@@ -50,7 +52,7 @@ while (generation ~= maxGenerations) && (strcmp(bestPhrase(generation-1,1:end),.
         avgFitness(1,generation);
     
     %store the bestPhrase out of the generation
-    bestPhrase(generation,1:end) = population(maxFitnessVec(1,1));
+    bestPhrase(generation,1:length(targetPhrase)) = population(maxFitnessVec(1,1),1:length(targetPhrase));
 
     %build the mating pool from the population
     matingPool = buildMatingPool(fitness,populationSize);
@@ -63,8 +65,8 @@ while (generation ~= maxGenerations) && (strcmp(bestPhrase(generation-1,1:end),.
     %replace the members of the old population with the new population
     for i = 1:populationSize
         %breed
-        newPopulation(i,1:end) = breed(population(matingPool(i,1),1:end),...
-            population(matingPool(i,2),1:end));
+        newPopulation(i,1:length(targetPhrase)) = breed(population(matingPool(i,1),:),...
+            population(matingPool(i,2),:),targetPhrase);
 
         %cause mutation
         newPopulation(i,1:end) = causeMutation(newPopulation(i,1:end),targetPhrase);
@@ -76,6 +78,8 @@ while (generation ~= maxGenerations) && (strcmp(bestPhrase(generation-1,1:end),.
     %increment the generation number when the new population has been
     %formed
     generation = generation + 1;
+    
+    c = c + 1;
     
 end
 %% Skeleton

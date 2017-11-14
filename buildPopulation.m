@@ -15,11 +15,6 @@ SpaceASCII = [32];
 
 PossCharASCII = char([CapASCII, LowASCII, SpaceASCII]);  
 
-%Create the output cell that contains the population. 
-% population = cell(1,1); 
-% population{1,1} = reshape(datasample(PossCharASCII,populationSize * targetPhraseLength),...
-%     populationSize,targetPhraseLength); 
-
 population = zeros(populationSize,targetPhraseLength); 
 population = reshape(datasample(PossCharASCII,populationSize * targetPhraseLength),...
     populationSize,targetPhraseLength);
