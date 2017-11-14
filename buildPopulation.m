@@ -1,13 +1,7 @@
-function [population, populationSize,targetPhrase] = buildPopulation()
+function population = buildPopulation(targetPhrase,populationSize)
 %This function is used to create a cell that contains the intial population
 %of 200 phrases for the string evolution process and a variable that stores
 %the number of organisms in the population.
-
-%Store populationSize as 200 as there are 200 organisms in the population. 
-populationSize = 200; 
-
-%establish the target phrase
-targetPhrase = 'To be or not to be';
 
 %find how many characters comprise targetPhrase
 targetPhraseLength = length(targetPhrase);

@@ -8,7 +8,7 @@ mutatedChild = child;
 %initialize the mutation rate as a number between 0 and 100, which
 %represents a percentage, of how often a mutation of a piece of DNA (a char)
 %will occur
-mutationRate = 3;
+mutationRate = 1;
 
 %generate random number(s) based on the mutation rate
 numVec = randi([1,100],mutationRate);

@@ -4,9 +4,13 @@
 %in the interest of testing to be sure that work completed can be
 %integrated properly. 
 
-[population,populationSize,targetPhrase]= buildPopulation; 
+targetPhrase = 'To be or not to be';
+
+populationSize = 200;
+
+population = buildPopulation(targetPhrase,populationSize); 
 
 fitness = calculateFitness(population,populationSize,targetPhrase); 
 
-matingPool = buildMatingPool(fitness,populationSize,targetPhrase);
+matingPool = buildMatingPool(fitness,populationSize);
 
