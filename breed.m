@@ -1,4 +1,4 @@
-function children = breed(parent1,parent2)
+function child = breed(parent1,parent2,targetPhrase)
 %Takes in the matingPool population and, using pairs of randomly selected 
 %"parent organisms", creates a new population of children based on their 
 %parent's DNA; Note that there are 2 methods in this function for how to 
@@ -6,71 +6,52 @@ function children = breed(parent1,parent2)
 
 % %% Method 1:
 % 
-% %get length of target string and create the char matrix for children that
-% %will be returned by the function
-% targetStringLength = length('To be or not to be');
-% z = blanks(targetStringLength);
-% children = repmat(z,200,1);
+% %get length of target string
+% targetStringLength = length(targetPhrase);
+% % z = blanks(targetStringLength);
+% % children = repmat(z,populationSize,1);
 % 
-% %loop through 200 times in order to create the new population
-% for i = 1:200
-%     
-%     %choose a random index in the length of the target string to split the
-%     %DNA to breed the child
-%     num = randi([1,targetStringLength-1]);
-%     
-%     %get parent 1's entire DNA sequence
-%     p1 = population(matingPool(i,1),1:end);
-%     
-%     %choose the part of parent 1's DNA sequence that was chosen by the
-%     %random number 'num'
-%     p1DNA = p1(1:num);
-%     
-%     %get parent 2's entire DNA sequence
-%     p2 = population(matingPool(i,2),1:end);
-%     
-%     %choose the part of parent 2's DNA sequence that was chosen by the
-%     %random number 'num'
-%     p2DNA = p2(num+1:end);
-%     
-%     %for the child based on p1DNA and p2DNA
-%     child = strcat(p1DNA,p2DNA);
-%     
-%     %input this new child's DNA into the 'children' char matrix that will
-%     %be returned
-%     children(i,1:length(child)) = child;
-% end
+% %choose a random index in the length of the target string to split the
+% %DNA to breed the child
+% num = randi([1,targetStringLength-1]);
+% 
+% %choose the part of parent 1's DNA sequence that was chosen by the
+% %random number 'num'
+% parent1DNA = parent1(1:num);
+% 
+% %choose the part of parent 2's DNA sequence that was chosen by the
+% %random number 'num'
+% parent2DNA = parent2(num+1:end);
+% 
+% %form the child based on p1DNA and p2DNA
+% child = strcat(parent1DNA,parent2DNA);
 
 %% Method 2:
 
-targetStringLength = length('To be or not to be');
+%get length of target string
+targetStringLength = length(targetPhrase);
 
 %randomly select how many characters from the first parent will be used in
 %the breeding process
 numChars = randi([1,targetStringLength - 1]);
 
-indices = zeros(1,numChars);
+%randomly select the indices of the chars that will be taken from parent1
+%based on the randomly-selected 'numChars' value
+parent1Indices = sort(datasample([1:targetStringLength],numChars));
 
-%loop through however many numbers of characters will be used in breeding from
-%parent 1
-for i = 1:numChars
-    %pick the indices that will be used from parent 1
-    indices(1,i) = randi([1,targetStringLength]);
+%pre-allocate the size of the child vector that will be returned
+child = blanks(targetStringLength);
+
+%set the specific indices of the child to parent 1's DNA, whose values were
+%chosen in the variable 'parent1Indices'
+child(parent1Indices) = parent1(parent1Indices);
+
+%find the indices out of the entire length of the target phrase that were
+%not used in 'parent1Indices'
+x = ~ismember([1:targetStringLength],parent1Indices);
+
+%set the indices that were not taken out of parent 1's DNA to parent 2's
+%DNA to finalize the breeding of the new child
+child(x) = parent2(x);
+
 end
-
-children = blanks(targetStringLength);
-
-children(indices) = parent1(indices);
-
-indices2 = targetStringLength - length(indices);
-
-
-counter = 1;
-for i = 1:targetStringLength
-   if (find(indices == i) == []) 
-      indices2(counter) = i;
-      counter = counter + 1;
-   end
-end
-
-children(indices2) = parent2(indices2);

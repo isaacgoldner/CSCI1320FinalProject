@@ -8,6 +8,5 @@
 
 fitness = calculateFitness(population,populationSize,targetPhrase); 
 
-matingPool = buildMatingPool(fitness,populationSize);
+matingPool = buildMatingPool(fitness,populationSize,targetPhrase);
 
-%newPopulation = breed(matingPool,population);
