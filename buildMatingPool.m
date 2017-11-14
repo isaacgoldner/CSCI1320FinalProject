@@ -1,4 +1,4 @@
-function matingPool = buildMatingPool(fitness)
+function matingPool = buildMatingPool(fitness,populationSize)
 %This function takes in a vector containing the fitness of each of the
 %current population's members and builds a "mating pool" for creating the 
 %next generation that prefers organisms with heigher fitness. The mating
@@ -36,20 +36,20 @@ TicketsPerOrg(find(TicketsPerOrg == 0)) = 1;
 %the population (the population of 200) being used to create the mating 
 %pool appear in the pool a number of times equal to the number of "tickets"
 %the organism has. 
-matingPoolTickets = repelem([1:200]',TicketsPerOrg); 
+matingPoolTickets = repelem([1:populationSize]',TicketsPerOrg);
 
 %store how many total tickets there are
 totalTickets = length(matingPoolTickets);
 
 %initialize the matingPool matrix
-matingPool = zeros(200,2);
+matingPool = zeros(populationSize,2);
 
 %go through each index of the matingPool matrix picking a random number for
 %the index of an element in the matingPoolTickets vector and assign the
 %specific index of matingPool to the organism number that was chosen.
 %if the same parent is randomly selected to breed with itself, choose a
 %different organism to breed with until this is not the case
-for p1 = 1:200
+for p1 = 1:populationSize
     for p2 = 1:2
         num = randi([1,totalTickets]);
         matingPool(p1,p2) = matingPoolTickets(num);

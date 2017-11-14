@@ -1,4 +1,4 @@
-function [population, populationSize] = buildPopulation()
+function [population, populationSize,targetPhrase] = buildPopulation()
 %This function is used to create a cell that contains the intial population
 %of 200 phrases for the string evolution process and a variable that stores
 %the number of organisms in the population.
@@ -26,7 +26,7 @@ PossCharASCII = char([CapASCII, LowASCII, SpaceASCII]);
 % population{1,1} = reshape(datasample(PossCharASCII,populationSize * targetPhraseLength),...
 %     populationSize,targetPhraseLength); 
 
-population = zeros(200,targetPhraseLength); 
+population = zeros(populationSize,targetPhraseLength); 
 population = reshape(datasample(PossCharASCII,populationSize * targetPhraseLength),...
     populationSize,targetPhraseLength);
 

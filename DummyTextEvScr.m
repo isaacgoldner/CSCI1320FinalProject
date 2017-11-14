@@ -4,10 +4,10 @@
 %in the interest of testing to be sure that work completed can be
 %integrated properly. 
 
-[population,populationSize]= buildPopulation; 
+[population,populationSize,targetPhrase]= buildPopulation; 
 
-fitness = calculateFitness(population); 
+fitness = calculateFitness(population,populationSize,targetPhrase); 
 
-matingPool = buildMatingPool(fitness);
+matingPool = buildMatingPool(fitness,populationSize);
 
-newPopulation = breed(matingPool,population);
+%newPopulation = breed(matingPool,population);
