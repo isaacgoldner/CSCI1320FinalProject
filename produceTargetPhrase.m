@@ -28,6 +28,10 @@ generation = 1;
 
 c = 0;
 
+%Editing note. Might be cleaner to just use the less than or equals to
+%operator here. 
+%Problem here. Even if the target phrase is met, the loop continues. Messed
+%with it for a long time and still was not able to fix. 
 while (generation ~= maxGenerations+1) && (~strcmp(bestPhrase(generation-c,1:end),...
         targetPhrase))
 
@@ -81,6 +85,7 @@ while (generation ~= maxGenerations+1) && (~strcmp(bestPhrase(generation-c,1:end
     
     c = c + 1;
     
+
 end
 %% Skeleton
 % %begin timer to detemine how long evolving to meet the target phrase will

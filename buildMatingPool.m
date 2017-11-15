@@ -48,7 +48,7 @@ matingPool = zeros(populationSize,2);
 %the index of an element in the matingPoolTickets vector and assign the
 %specific index of matingPool to the organism number that was chosen.
 %if the same parent is randomly selected to breed with itself, choose a
-%different organism to breed with until this is not the case
+%different organism to breed with until this is not the case. 
 for p1 = 1:populationSize
     for p2 = 1:2
         num = randi([1,totalTickets]);
