@@ -21,7 +21,7 @@ target4Compare = repmat(targetPhrase,1,populationSize);
 %for whether or not the particular character from
 %the organism represented by the column matched with the target phrase's 
 %character:
-rightOrWrong = pop4Compare == target4Compare;
+rightOrWrong = (pop4Compare == target4Compare);
 matchCheck = reshape(rightOrWrong,length(targetPhrase),populationSize);
 
 %MatchCheck = reshape((pop4Compare == target4Compare),200,18); 
@@ -32,4 +32,6 @@ matchCheck = reshape(rightOrWrong,length(targetPhrase),populationSize);
 fitness = (sum(matchCheck))./length(targetPhrase); 
 fitness = fitness';
 
+
+%General NOTE: UPDATE COMMENTS IN THIS GUY, LP BUT NECESSARY. 
 end
