@@ -26,13 +26,14 @@ bestPhrase = char(maxGenerations,length(targetPhrase));
 %also used as a counter variable throughout the while-loop
 generation = 1;
 
-%c = 0;
-
 %Editing note. Might be cleaner to just use the less than or equals to
 %operator here. 
 %Problem here. Even if the target phrase is met, the loop continues. Messed
 %with it for a long time and still was not able to fix. 
 
+
+%Start timer for evolution process: 
+tic; 
 while (generation ~= maxGenerations+1) && (~ismember(targetPhrase,bestPhrase,'rows'))
      
 
@@ -86,6 +87,25 @@ while (generation ~= maxGenerations+1) && (~ismember(targetPhrase,bestPhrase,'ro
     
 
 end
+
+%Print the amount of time and number of generations the evolution process
+%required. 
+%End timer for evolution process occurs inside the fprintf. 
+%Conditionals are used to express the end of process information. 
+if ismember(targetPhrase,bestPhrase,'rows')
+fprintf('The evolution process succeeded in %f seconds and %d generations.\n'...
+    ,toc, generation-1);  
+else
+fprintf('The evolution process terminated in %f seconds after the maximum possible generation (generation %d) was reached.\n'...
+    ,toc,maxGenerations);         
+end 
+
+%Plot the maximum and average fitness over the generations:
+%plot the genetic diversity of the population over the generations. 
+
+
+
+
 %% Skeleton
 % %begin timer to detemine how long evolving to meet the target phrase will
 % %take: 
