@@ -4,13 +4,7 @@
 %in the interest of testing to be sure that work completed can be
 %integrated properly. 
 
-targetPhrase = 'To be or not to be';
+monaLisa = imread('36x36monalisa.jpg');
 
-populationSize = 200;
-
-population = buildPopulation(targetPhrase,populationSize); 
-
-fitness = calculateFitness(population,populationSize,targetPhrase); 
-
-matingPool = buildMatingPool(fitness,populationSize);
+monaLisaBW = luminance(monaLisa);
 
