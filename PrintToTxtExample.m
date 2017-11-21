@@ -22,6 +22,7 @@ TableCreator = [Generation; TargetString; MaxFit];
 %formatting. 
 fprintf('%s     ',Titles{:}); 
 fprintf('\n');
+
 fprintf('%d          %s     %d\n',TableCreator{:}); 
 
 

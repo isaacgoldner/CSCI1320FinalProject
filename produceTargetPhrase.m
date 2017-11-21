@@ -98,12 +98,64 @@ fprintf('The evolution process succeeded in %f seconds and %d generations.\n'...
 else
 fprintf('The evolution process terminated in %f seconds after the maximum possible generation (generation %d) was reached.\n'...
     ,toc,maxGenerations);         
-end 
+end
 
-%Plot the maximum and average fitness over the generations:
-%plot the genetic diversity of the population over the generations. 
+%Plot max. fitness, avg. fitness, and genetic diversity over the
+%generations. Use the subplot function to show all the plots at once.
+figure
 
+%Plot avg. fitness over the generations: 
+subplot(1,3,1); 
+plot([1:generation-1],avgFitness(1:generation-1),'r');
+title('Generation vs. Avg. Fitness'); 
+xticks(0:20:200); 
+yticks(0:.05:1); 
+xlabel('Generation'); 
+ylabel('Avg. Fit.'); 
 
+%Plot max. fitness over the generations: 
+subplot(1,3,2); 
+plot([1:generation-1],maxFitness(1:generation-1),'b');
+title('Generation vs. Max. Fitness'); 
+xticks(0:20:200); 
+yticks(0:.05:1);
+xlabel('Generation'); 
+ylabel('Max. Fit.'); 
+
+%Plot. gen. div. over the generations: 
+subplot(1,3,3); 
+plot([1:generation-1],geneticDiversity(1:generation-1),'m');
+title('Generation vs. Genetic Diversity'); 
+xticks(0:20:200); 
+yticks(0:.01:.4);
+xlabel('Generation'); 
+ylabel('Gen. Div.'); 
+ 
+%Save best phrase, maximum fitness, average fitness, and genetic diversity 
+%for each generation to a text file: 
+
+%The text file is called PhraseEvolutionResults.txt and is overwritten each
+%time the evolution process is run. 
+
+%Establish the vectors needed for the printing process: 
+GenerationsForTxt = num2cell(1:generation-1); 
+BestPhrases = cellstr(bestPhrase)';  
+MaxFit = num2cell(maxFitness(1:generation-1));
+AvgFit = num2cell(avgFitness(1:generation-1));
+GenDiv = num2cell(geneticDiversity(1:generation-1));
+
+%Table Creator is the cell array actually iterated though to make the
+%"table" that will appear in the text file.
+
+%Note that one column of TableCreator stores all of the necessary data from
+%a single generation. 
+TableCreator = [GenerationsForTxt; BestPhrases; MaxFit; AvgFit; GenDiv]; 
+
+%The following commands save the data to the text file in a clear format: 
+ fileID = fopen('PhraseEvolutionResults.txt','w');
+ fprintf(fileID,'Generation         Best Phrase          Max. Fitness    Avg. Fitness   Gen. Diversity\r\n');
+ fprintf(fileID,'%5d          %18s          %.4f          %.4f          %.4f\r\n',TableCreator{:});
+ fclose(fileID);
 
 
 %% Skeleton
