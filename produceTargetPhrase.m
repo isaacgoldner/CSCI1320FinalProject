@@ -26,15 +26,9 @@ bestPhrase = char(maxGenerations,length(targetPhrase));
 %also used as a counter variable throughout the while-loop
 generation = 1;
 
-%Editing note. Might be cleaner to just use the less than or equals to
-%operator here. 
-%Problem here. Even if the target phrase is met, the loop continues. Messed
-%with it for a long time and still was not able to fix. 
-
-
 %Start timer for evolution process: 
 tic; 
-while (generation ~= maxGenerations+1) && (~ismember(targetPhrase,bestPhrase,'rows'))
+while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
      
 
     %calculate the fitness of the population
