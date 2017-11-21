@@ -1,10 +1,12 @@
-function imagePopulation = imageBuildPopulation(targetImage)
+function [imagePopulation,targetImage] = imageBuildPopulation(targetImage)
 
 %generate random images of same size as targetImage, the image that
 %is to be generated,to build the initial population to begin the 
 %evolution process. 
 
 newImage = luminance(targetImage);
+
+targetImage = newImage;
 
 [row,col] = size(newImage);
 
