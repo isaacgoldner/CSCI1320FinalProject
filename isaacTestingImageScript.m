@@ -38,7 +38,6 @@ for i = 1:(row*col)
     %Cause mutation (Currently this works with the improved mutation function:)
     newPopulation{i,1} = imageImprovedCauseMutation(newPopulation{i,1}); 
     
-    
 end
 
 
