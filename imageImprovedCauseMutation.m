@@ -1,16 +1,60 @@
-function mutatedChildren = imageImprovedCauseMutation(children)
+function mutatedNewPopulationMember = imageImprovedCauseMutation(newPopulationMember)
 
-%this function deals with task 2.3's requirements for developing a more
-%refined mutation process. 
+%First, decide if a pixel is to be mutated at all. 
+mutationRate = .01; 
+%Store the size of the child to be mutated: 
+[row, col, pg] = size(newPopulationMember); 
 
-%randomly pick a collection of pixels within a randomly selected set of
-%children from the children population: 
+%Generate a single random integer from a range that depends on the desired
+%mutation rate: 
+LuckyNumber = randi([1,100],1); 
 
-%For each child selected to be mutated... 
+%Create a vector of random integers drawn from the same range as
+%LuckyNumber. This vector's length matches the number of elements in the 
+%child that is to be mutated; each element corrisponds to one of the
+%child's pixels. 
+ChanceVec = randi([1,100],1,(row*col)); 
 
-%with a specified "random mutation rate", assign certain pixels an entirely
-%random value, but others a new mutated value that is within a specified
-%mutation range. This is designed to eliminate "trouble spots" that would
-%be otherwise difficult to remove via sheerly random mutations. 
+%Create a logical vector that marks the instances where an element of
+%ChanceVec matches the LuckyNumber's value: 
+mutMe = ismember(ChanceVec,LuckyNumber);
+
+%Find the indexes of the elements in the child that should be mutated by
+%finding where the element's of ChanceVec matched LuckyNumber: 
+
+mutateWho = find(mutMe == 1);
+
+%For the pixels to be mutated, determine what type of mutation they will
+%undergo (PROCESS 1 or 2)
+whatMut = randi([1,4],1,length(mutateWho)); 
+
+%Assign which pixels from mutateWho will undergo which mutation process: 
+Process1ers = mutateWho(find(whatMut == 4)); 
+
+Process2ers = mutateWho(find(whatMut ~= 4)); 
+
+
+%PROCESS 1: 
+%If a pixel is to be mutated, there is a 1/4 chance that it will simply be
+%randomly mutated.
+
+randNewVals = rand(1,length(Process1ers)*(1-0)+0);
+newPopulationMember(Process1ers) = randNewVals; 
+
+%Process 2: 
+%If a pixel is to be mutated, there is a 3/4 chance that it will be mutated
+%more specifically by being lightened or darkened by a random value in a
+%specific range. 
+mutationRange = 0.2; 
+
+%Create a vector of values within the range that will either be added or
+%subtracted: 
+ligDar = rand(1,length(Process2ers))*(mutationRange - (-mutationRange))+(-mutationRange); 
+
+newPopulationMember(Process2ers) = newPopulationMember(Process2ers) + ligDar; 
+
+%Finish with setting the function's output equal to the altered child. 
+mutatedNewPopulationMember = newPopulationMember;
+
 
 end

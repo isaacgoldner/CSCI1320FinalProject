@@ -1,6 +1,6 @@
 %Script used to run the image evolution process: 
 
-%Read in the desired target image: 
+%Read in the desired target image, save it as targetImage: 
 targetImage = imread('36x36monalisa.jpg');
 
 %call the function to generate the initial random population

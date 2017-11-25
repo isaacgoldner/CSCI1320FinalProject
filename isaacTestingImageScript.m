@@ -27,11 +27,20 @@ newPopulation = cell((row*col),1);
 %loop through the mating pool in order to breed the entire new population
 for i = 1:(row*col)
    
+    %New children are bred one at a time. Start by storing the organisms in
+    %the mating pool that will serve as the child's parents: 
     parent1 = population{matingPool(i,1)};
     parent2 = population{matingPool(i,2)};
     
+    %Breed the child: 
     newPopulation{i,1} = imageBreed(parent1,parent2,targetImage);
     
+    %Cause mutation (Currently this works with the improved mutation function:)
+    newPopulation{i,1} = imageImprovedCauseMutation(newPopulation{i,1}); 
+    
+    
 end
+
+
 
 toc

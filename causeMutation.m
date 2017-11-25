@@ -21,6 +21,11 @@ randNumVecStringLength = randi([1,100],1,length(targetPhrase));
 %numVec
 x = ismember(randNumVecStringLength,numVec);
 
+
+%PROBLEM HERE
+%IF THE VALUE OF THE ELEMENT IS ALREADY 1, WE END UP WITH MORE MUTATION
+%THAN WE WOULD LIKE. 
+
 %set the value of the vector to 1 if the random number vector 'numVec' is the
 %same as the specific index of 'randNumVecStringLength'
 randNumVecStringLength(x) = 1;

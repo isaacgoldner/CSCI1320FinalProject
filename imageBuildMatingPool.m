@@ -7,6 +7,10 @@ function matingPool = imageBuildMatingPool(imagePopulation,fitness,targetImage)
 %members of the mating pool population created will eventually be "bred" to
 %create a new population of children.
 
+
+%Before breeding the new population, the fitness values of the input
+%population should be normalized. 
+
 %The process for normalizing the fitness values for the generation is as
 %follows: 
 %1) subtract the minimum
@@ -25,7 +29,7 @@ mateFactor = 10;
 %used to create the mating pool. The number of tickets an organism has is
 %rounded to the nearest interger. If the calculation returns 0 tickets for
 %an organism, this zero is replaced with a 1 so that every organism is
-%included at least once
+%included at least once. 
 TicketsPerOrg = round(normalizedFitness .* (mateFactor)); 
 TicketsPerOrg(find(TicketsPerOrg == 0)) = 1;
 
