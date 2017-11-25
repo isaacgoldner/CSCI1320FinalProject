@@ -4,7 +4,7 @@ function fitness = imageAverageValuesFitness(population,targetImage)
 %original and target image, then with a similar tolerance value as before, 
 %compare each pixel to generate the fitness value for each "organism"
 
-%get the size of the images that we are calculating the fitnesses of
+%get the sizes of the images that we are calculating the fitnesses of
 [row,col] = size(targetImage);
 
 %indices of pixels to take the average of
