@@ -59,7 +59,5 @@ DUFit(i,1) = sum(DUMatchorNot)/(numel(DUMatchorNot));
 
 diffFitness(i,1) = ( ((LRFit(i,1))^2) + ((RLFit(i,1))^2) + ((UDFit(i,1))^2) + ((DUFit(i,1))^2) )^0.5; 
 end 
-%HERE I AM ASSUMING THAT WE WILL NORMALIZE FITNESS LATER WHEN WE GO TO
-%BUILD THE POPULATION. 
 
 end

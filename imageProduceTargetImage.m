@@ -10,7 +10,7 @@ image = imread('36x36monalisa.jpg');
 
 %specify the maximum number of generations that will be run through if the
 %target phrase has still not been produced yet
-maxGenerations = 50;
+maxGenerations = 1500;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -25,7 +25,7 @@ bestImage = cell(maxGenerations,1);
 generation = 1;
 
 %Start timer to determine how long the evolution process will take: 
-
+tic; 
 
 while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
 %Calculate the fitness of each organism with the calculate fitness
@@ -34,6 +34,8 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
  
     fitness = imageAverageValuesFitness(population,targetImage);
 
+    %RUN ON DIFF
+    %fitness = imageDiffFitness(population,targetImage); 
     
     %find the indices of the maximum fitness 
     maxFitnessVec = find(max(fitness) == fitness);
@@ -66,24 +68,26 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     
     %pre-allocate the cell vector that will be used to store the "new
     %population" that will be bred from the previous generation: 
-    newPopulation = cell((row*col),1);
-    
-    %This loop is used to create the new population:  
-for i = 1:(row*col)
-   
-    %New children are bred one at a time. Start by storing the organisms in
-    %the mating pool that will serve as the child's parents: 
-    parent1 = population{matingPool(i,1)};
-    parent2 = population{matingPool(i,2)};
-    
-    %Breed the child: 
-    newPopulation{i,1} = imageBreed(parent1,parent2,targetImage);
+   % newPopulation = cell((row*col),1);
     
     
+    %FIRST VERSION OF THE BREEDING PROCESS: 
+                        %This loop is used to create the new population:  
+                        % for i = 1:(row*col)
+                        %    
+                        %     %New children are bred one at a time. Start by storing the organisms in
+                        %     %the mating pool that will serve as the child's parents: 
+                        %     parent1 = population{matingPool(i,1)};
+                        %     parent2 = population{matingPool(i,2)};
+                        %     
+                        %     %Breed the child: 
+                        %     newPopulation{i,1} = imageBreed(parent1,parent2,targetImage);
     
-    
-    
-    
+                        
+     %UPDATED, MIGHT BE FASTER
+  newPopulation = imageBreed(matingPool,targetImage,population); 
+    %A Loop is then used to cause mutation
+    for i = 1:(row*col)
     %Cause mutation (Currently this works with the improved mutation function:)
    
     newPopulation{i,1} = imageImprovedCauseMutation(newPopulation{i,1}); 
@@ -96,12 +100,12 @@ end
     %increment the generation number when the new population has been
     %formed
     generation = generation + 1;
-
+generation-1
 
 end
 %while loop will finally terminate when the target image is produced. 
 
-%toc
+toc; 
 %(Cut timer for determining how long the image evolution process took in total). 
 
 

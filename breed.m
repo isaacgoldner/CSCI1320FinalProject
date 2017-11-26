@@ -37,6 +37,10 @@ numChars = randi([1,targetStringLength - 1]);
 
 %randomly select the indices of the chars that will be taken from parent1
 %based on the randomly-selected 'numChars' value
+
+%TROUBLE SHOOTING NOTE HERE: THIS WORKS, BUT WE ARE CURRENTLY SAMPLING WITH
+%REPLACEMENT. WE MOST LIKELY DO NOT WANT THIS. 
+
 parent1Indices = sort(datasample([1:targetStringLength],numChars));
 
 %pre-allocate the size of the child vector that will be returned
