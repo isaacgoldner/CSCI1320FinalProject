@@ -45,7 +45,7 @@ newPopulationMember(Process1ers) = randNewVals;
 %If a pixel is to be mutated, there is a 3/4 chance that it will be mutated
 %more specifically by being lightened or darkened by a random value in a
 %specific range. 
-mutationRange = 0.2; 
+mutationRange = 0.5; 
 
 %Create a vector of values within the range that will either be added or
 %subtracted: 
