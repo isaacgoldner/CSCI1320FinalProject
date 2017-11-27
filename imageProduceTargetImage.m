@@ -10,7 +10,7 @@ image = imread('25x25angry.png');
 
 %specify the maximum number of generations that will be run through if the
 %target phrase has still not been produced yet
-maxGenerations = 2000;
+maxGenerations = 2500;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -113,7 +113,7 @@ figure
 subplot(1,3,1); 
 plot([1:generation-1],avgFitness(1:generation-1),'r');
 title('Generation vs. Avg. Fitness'); 
-xticks(0:500:maxGenerations); 
+xticks(0:300:maxGenerations); 
 yticks(0:.1:1); 
 xlabel('Generation'); 
 ylabel('Avg. Fit.'); 
@@ -122,7 +122,7 @@ ylabel('Avg. Fit.');
 subplot(1,3,2); 
 plot([1:generation-1],maxFitness(1:generation-1),'b');
 title('Generation vs. Max. Fitness'); 
-xticks(0:500:maxGenerations); 
+xticks(0:300:maxGenerations); 
 yticks(0:.1:1);
 xlabel('Generation'); 
 ylabel('Max. Fit.'); 
