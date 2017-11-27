@@ -95,12 +95,12 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     %Replace the old population with the new population one child at a
     %time: 
        population{i,1} = newPopulation{i,1}; 
-end 
+    end 
 
     %increment the generation number when the new population has been
     %formed
     generation = generation + 1;
-generation-1
+    generation-1
 
 end
 %while loop will finally terminate when the target image is produced. 
@@ -108,16 +108,13 @@ end
 toc; 
 %(Cut timer for determining how long the image evolution process took in total). 
 
-
-%Display the last image that was produced. 
-imshow(bestImage{end,1}); 
-
+figure
 %Plot avg. fitness over the generations: 
 subplot(1,3,1); 
 plot([1:generation-1],avgFitness(1:generation-1),'r');
 title('Generation vs. Avg. Fitness'); 
-xticks(0:20:2000); 
-yticks(0:.05:1); 
+xticks(0:500:maxGenerations); 
+yticks(0:.1:1); 
 xlabel('Generation'); 
 ylabel('Avg. Fit.'); 
 
@@ -125,12 +122,14 @@ ylabel('Avg. Fit.');
 subplot(1,3,2); 
 plot([1:generation-1],maxFitness(1:generation-1),'b');
 title('Generation vs. Max. Fitness'); 
-xticks(0:20:2000); 
-yticks(0:.05:1);
+xticks(0:500:maxGenerations); 
+yticks(0:.1:1);
 xlabel('Generation'); 
 ylabel('Max. Fit.'); 
 
-
+%Display the last image that was produced. 
+subplot(1,3,3);
+imshow(bestImage{generation-1,1}); 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %PSUDO LEFTOVERS: 

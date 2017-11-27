@@ -50,6 +50,8 @@ smoothedTargetOrganism = reshape(smoothedTargetOrganism,row-2,col-2);
 %pre-allocate the size of the fitness vector that will be returned
 fitness = zeros(row*col,1);
 
+tolerance = .1;
+
 %this loop is not used in the mean value calculation, it is only used to
 %cover each of the organisms in the population;
 %the values of the iterator variable are not used at all in the actual mean
@@ -74,7 +76,7 @@ for i = 1:row*col
     %find the indices of the 'smoothedCurrentOrganism' that are within the
     %specified range of the target image; these indices are used in the
     %final fitness calculation
-    indicesWithinRange = find(abs(smoothedCurrentOrganism - smoothedTargetOrganism) <= 0.1);
+    indicesWithinRange = find(abs(smoothedCurrentOrganism - smoothedTargetOrganism) <= tolerance);
     
     %find the number of pixels in 'smoothedCurrentImage' that are within
     %the specified range to be used in the final fitness calculation
@@ -82,7 +84,7 @@ for i = 1:row*col
     
     %divide the calculated fitness value by the total number of pixels in
     %the target image to express the fitness as a percentage
-    fitness(i,1) = numIndicesWithinRange / (row * col);
+    fitness(i,1) = numIndicesWithinRange / ((row * col) - (2*row) - (2*row - 4));
     
 end
 
