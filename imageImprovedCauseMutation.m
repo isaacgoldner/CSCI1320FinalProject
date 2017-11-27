@@ -1,13 +1,15 @@
 function mutatedNewPopulationMember = imageImprovedCauseMutation(newPopulationMember)
 
-%First, decide if a pixel is to be mutated at all. 
-mutationRate = .01; 
-%Store the size of the child to be mutated: 
-[row, col, pg] = size(newPopulationMember); 
+%First, decide if a pixel is to be mutated at all. 'mutationRate' is a
+%number from 1 to 100, representing a percentage
+mutationRate = 1;
 
-%Generate a single random integer from a range that depends on the desired
+%Store the size of the child to be mutated: 
+[row,col,page] = size(newPopulationMember); 
+
+%Generate random integer(s) from a range that depends on the desired
 %mutation rate: 
-LuckyNumber = randi([1,100],1); 
+LuckyNumber = randi([1,100],1,mutationRate); 
 
 %Create a vector of random integers drawn from the same range as
 %LuckyNumber. This vector's length matches the number of elements in the 
