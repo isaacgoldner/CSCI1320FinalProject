@@ -23,7 +23,7 @@ end
 
 for i = 1:(row*col)
     children{i,1}(Par2PixelsCell{i,1}) = secParents{i,1}(Par2PixelsCell{i,1});
-    
+
 end
 
 
