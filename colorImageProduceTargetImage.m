@@ -1,15 +1,3 @@
-%Script used to run the image evolution process: 
-
-%Read in the desired target image, save it as image: 
-image = imread('25x25angry.png');
-
-%Build the randomly generated starting population and return 
-%'targetImage', which is the black and white version of 'image'. 
-
-[population,targetImage] = imageBuildPopulation(image);
-
-%specify the maximum number of generations that will be run through if the
-%target phrase has still not been produced yet
 maxGenerations = 3500;
 
 %Initialize the vectors that will be used to store data from each
