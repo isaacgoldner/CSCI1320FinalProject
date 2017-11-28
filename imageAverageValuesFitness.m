@@ -50,7 +50,7 @@ smoothedTargetOrganism = reshape(smoothedTargetOrganism,row-2,col-2);
 %pre-allocate the size of the fitness vector that will be returned
 fitness = zeros(row*col,1);
 
-tolerance = .1;
+tolerance = .05;
 
 %this loop is not used in the mean value calculation, it is only used to
 %cover each of the organisms in the population;
