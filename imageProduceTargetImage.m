@@ -96,11 +96,12 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     %time: 
        population{i,1} = newPopulation{i,1}; 
     end 
-
+    
     %increment the generation number when the new population has been
     %formed
     generation = generation + 1;
     generation-1
+   
 
 end
 %while loop will finally terminate when the target image is produced. 
