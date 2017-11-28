@@ -17,7 +17,15 @@ fitness = fitness.^4;
 %follows: 
 %1) subtract the minimum
 %2) divide by the new maximum
-normalizedFitness = (fitness - min(fitness))./(max(fitness) - min(fitness)); 
+maxFitnessVec = max(fitness);
+maxFitness = maxFitnessVec(1,1);
+minFitnessVec = min(fitness);
+minFitness = minFitnessVec(1,1);
+if minFitness ~= maxFitness
+    normalizedFitness = (fitness - min(fitness))./(max(fitness) - min(fitness)); 
+else
+    normalizedFitness = fitness;
+end
 
 %Now it must be decided how many times a particular organism will appear in
 %the mating pool based on its fitness; how many 'tickets' it will have in 

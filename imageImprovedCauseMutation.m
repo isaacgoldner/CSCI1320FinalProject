@@ -21,26 +21,29 @@ ChanceVec = randi([1,100],1,(row*col));
 %ChanceVec matches the LuckyNumber's value: 
 mutMe = ismember(ChanceVec,LuckyNumber);
 
+pixels = [1:row*col];
+
 %Find the indexes of the elements in the child that should be mutated by
 %finding where the element's of ChanceVec matched LuckyNumber: 
 
-mutateWho = find(mutMe == 1);
+mutateWho = pixels(mutMe);
 
 %For the pixels to be mutated, determine what type of mutation they will
 %undergo (PROCESS 1 or 2)
-whatMut = randi([1,4],1,length(mutateWho)); 
+%whatMut = randi([1,4],1,length(mutateWho)); 
+whatMut = randi([1,4],1,sum(mutMe));
 
 %Assign which pixels from mutateWho will undergo which mutation process: 
+%Process1ers = mutateWho(find(whatMut == 4)); 
+%Process2ers = mutateWho(find(whatMut ~= 4)); 
 Process1ers = mutateWho(find(whatMut == 4)); 
-
 Process2ers = mutateWho(find(whatMut ~= 4)); 
-
 
 %PROCESS 1: 
 %If a pixel is to be mutated, there is a 1/4 chance that it will simply be
 %randomly mutated.
 
-randNewVals = rand(1,length(Process1ers)*(1-0)+0);
+randNewVals = rand(1,length(Process1ers));
 newPopulationMember(Process1ers) = randNewVals; 
 
 %Process 2: 
@@ -54,6 +57,12 @@ mutationRange = 0.5;
 ligDar = rand(1,length(Process2ers))*(mutationRange - (-mutationRange))+(-mutationRange); 
 
 newPopulationMember(Process2ers) = newPopulationMember(Process2ers) + ligDar; 
+
+greaterThan1Indices = find(newPopulationMember > 1);
+newPopulationMember(greaterThan1Indices) = 1;
+
+lessThan0Indices = find(newPopulationMember < 0);
+newPopulationMember(lessThan0Indices) = 0;
 
 %Finish with setting the function's output equal to the altered child. 
 mutatedNewPopulationMember = newPopulationMember;
