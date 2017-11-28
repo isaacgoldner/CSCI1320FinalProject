@@ -33,11 +33,13 @@ mutateWho = pixels(mutMe);
 %whatMut = randi([1,4],1,length(mutateWho)); 
 whatMut = randi([1,4],1,sum(mutMe));
 
+%randomMutationChance = 1;
+
 %Assign which pixels from mutateWho will undergo which mutation process: 
 %Process1ers = mutateWho(find(whatMut == 4)); 
 %Process2ers = mutateWho(find(whatMut ~= 4)); 
-Process1ers = mutateWho(find(whatMut == 4)); 
-Process2ers = mutateWho(find(whatMut ~= 4)); 
+Process1ers = mutateWho(find(whatMut == 1 )); 
+Process2ers = mutateWho(find(whatMut ~= 1)); 
 
 %PROCESS 1: 
 %If a pixel is to be mutated, there is a 1/4 chance that it will simply be
@@ -50,7 +52,7 @@ newPopulationMember(Process1ers) = randNewVals;
 %If a pixel is to be mutated, there is a 3/4 chance that it will be mutated
 %more specifically by being lightened or darkened by a random value in a
 %specific range. 
-mutationRange = 0.1; 
+mutationRange = 0.05; 
 
 %Create a vector of values within the range that will either be added or
 %subtracted: 

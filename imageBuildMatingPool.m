@@ -8,7 +8,7 @@ function matingPool = imageBuildMatingPool(imagePopulation,fitness,targetImage)
 %create a new population of children.
 
 
-fitness = fitness.^4;
+fitness = fitness.^6;
 
 %Before breeding the new population, the fitness values of the input
 %population should be normalized. 
