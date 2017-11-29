@@ -1,3 +1,20 @@
+%Script used to run the image evolution process in color: 
+
+%Read in the desired target image, save it as targetImage: 
+targetImage = imread('25x25angry.png');
+
+%Convert the image to type double and have intensity values range from 0 to 1. 
+targetImage = double(targetImage); 
+targetImage = targetImage ./255; 
+
+%Build the randomly generated starting population and return 
+%'targetImage', which is the black and white version of 'image'. 
+
+[population,targetImage] = colorImageBuildPopulation(targetImage);
+
+%specify the maximum number of generations that will be run through if the
+%target phrase has still not been produced yet
+
 maxGenerations = 3500;
 
 %Initialize the vectors that will be used to store data from each
@@ -20,7 +37,7 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
 %function (there are to be multiple versions for this function):
     %CURRENTLY THIS RUNS ON THE AVERAGE VALUE ONE.
  
-    fitness = imageAverageValuesFitness(population,targetImage);
+    fitness = colorImageAverageValuesFitness(population,targetImage);
 
     %RUN ON DIFF
     %fitness = imageDiffFitness(population,targetImage); 
