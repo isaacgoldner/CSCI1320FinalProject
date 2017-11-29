@@ -10,7 +10,7 @@ image = imread('25x25angry.png');
 
 %specify the maximum number of generations that will be run through if the
 %target phrase has still not been produced yet
-maxGenerations = 3500;
+maxGenerations = 1000;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -32,7 +32,7 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
 %function (there are to be multiple versions for this function):
     %CURRENTLY THIS RUNS ON THE AVERAGE VALUE ONE.
  
-    fitness = imageAverageValuesFitness(population,targetImage);
+    fitness = ImageFitnessTest(population,targetImage);
 
     %RUN ON DIFF
     %fitness = imageDiffFitness(population,targetImage); 

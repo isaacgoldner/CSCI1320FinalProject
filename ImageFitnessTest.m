@@ -7,7 +7,7 @@ function fitness = ImageFitnessTest(population,targetImage)
     currentOrganism = population{i,1};
     
    
-    indicesWithinRange = find(abs(currentOrganism - targetImage) <= 0.3);
+    indicesWithinRange = find(abs(currentOrganism - targetImage) <= 0.05);
     
     %find the number of pixels in 'smoothedCurrentImage' that are within
     %the specified range to be used in the final fitness calculation

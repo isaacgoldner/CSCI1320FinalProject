@@ -1,190 +1,201 @@
 Generation         Best Phrase          Max. Fitness    Avg. Fitness   Gen. Diversity
-    1          Grfxm urkRMcGxx WX          0.1667          0.0178          0.1489
-    2          MpPHiooE qbgHFAube          0.2222          0.0536          0.1686
-    3          SiZjeC aUnoCupNfbe          0.2778          0.0861          0.1917
-    4          TNGJejxA noskBqITe          0.3333          0.1300          0.2033
-    5          TkCteUprynoslhjCbe          0.3889          0.1622          0.2267
-    6          TkELe pUvnoFkpombe          0.4444          0.1778          0.2667
-    7          Tk Je bUUnoruroNYs          0.3889          0.2058          0.1831
-    8          TiCQi hr nekWpoZbe          0.4444          0.2447          0.1997
-    9          Ti Qp Nr nekWpogTe          0.4444          0.2814          0.1631
-   10          TCGQe br noVvrohbe          0.5556          0.3169          0.2386
-   11          TCGQe Fr nokvFohbe          0.5556          0.3419          0.2136
-   12          T  bp tr noVuiombm          0.5556          0.3517          0.2039
-   13          TC bp tr noVudombm          0.5556          0.3625          0.1931
-   14          TC Qe Fr noVMbohbe          0.6111          0.3928          0.2183
-   15          TC be trFnokurohbe          0.6111          0.4119          0.1992
-   16          TC re mrFnoVvtoqbe          0.6111          0.4372          0.1739
-   17          TC be Fr noVWFohbe          0.6667          0.4708          0.1958
-   18          TC be jr noyvrohbe          0.6667          0.4925          0.1742
-   19          TL be Fr noylroxbe          0.6667          0.4928          0.1739
-   20          Te be yr noGvEogbe          0.6667          0.5233          0.1433
-   21          Te be or noavFogbe          0.7222          0.5531          0.1692
-   22          TH be or noavFogbe          0.7222          0.5683          0.1539
-   23          TH be or nofOEohbe          0.7222          0.5600          0.1622
-   24          Te be or noIvEoIbe          0.7222          0.5731          0.1492
-   25          TC be or noavEoIbe          0.7222          0.5839          0.1383
-   26          TC be or noavFoIbe          0.7222          0.5942          0.1281
-   27          Tm be or noGvFoIbe          0.7222          0.6042          0.1181
-   28          Tk be or noWCEocbe          0.7222          0.5972          0.1250
-   29          To be yr noyuFocbe          0.7222          0.6014          0.1208
-   30          Tk be or noWvroIbe          0.7222          0.6147          0.1075
-   31          TC be or noIvFobbe          0.7222          0.6242          0.0981
-   32          Tm be or noyuFogbe          0.7222          0.6219          0.1003
-   33          To be or noGvrobbe          0.7778          0.6289          0.1489
-   34          To be or noyLrogbe          0.7778          0.6322          0.1456
-   35          Tm be or noyKFoIbe          0.7222          0.6478          0.0744
-   36          To be Lr noyvFogbe          0.7222          0.6425          0.0797
-   37          To be yr noyuFoIbe          0.7222          0.6506          0.0717
-   38          To be Tr nojvFoIbe          0.7222          0.6511          0.0711
-   39          To be jr noWvFobbe          0.7222          0.6400          0.0822
-   40          To be yr noIQFoIbe          0.7222          0.6342          0.0881
-   41          To be yr noaKEoIbe          0.7222          0.6333          0.0889
-   42          To be tr noWvEobbe          0.7222          0.6514          0.0708
-   43          To be yr nonuFoIbe          0.7222          0.6411          0.0811
-   44          To be tr noEuFoIbe          0.7222          0.6506          0.0717
-   45          To be yr noIuFoIbe          0.7222          0.6447          0.0775
-   46          To be jr nonuFoIbe          0.7222          0.6633          0.0589
-   47          To be yr noWxFobbe          0.7222          0.6603          0.0619
-   48          To be yr nonuFoIbe          0.7222          0.6650          0.0572
-   49          To be yr nonvFoIbe          0.7222          0.6644          0.0578
-   50          To be yr nonuFobbe          0.7222          0.6672          0.0550
-   51          To be yr noaZFoCbe          0.7222          0.6661          0.0561
-   52          To be yr nonuFobbe          0.7222          0.6706          0.0517
-   53          To be yr noWuyoIbe          0.7222          0.6756          0.0467
-   54          To be yr nonZFobbe          0.7222          0.6736          0.0486
-   55          To be yr notwyoIbe          0.7778          0.6903          0.0875
-   56          To be yr noWKFozbe          0.7222          0.6831          0.0392
-   57          To be yr noWdFoCbe          0.7222          0.6964          0.0258
-   58          To be yr nonZFoIbe          0.7222          0.6931          0.0292
-   59          To be yr noWxFozbe          0.7222          0.6897          0.0325
-   60          To be tr nonwFoCbe          0.7222          0.6878          0.0344
-   61          To be tr noaEuo be          0.7778          0.6828          0.0950
-   62          To be yr noawFobbe          0.7222          0.6775          0.0447
-   63          To be yr nonwFobbe          0.7222          0.6808          0.0414
-   64          To be Lr nonEuoJbe          0.7222          0.6894          0.0328
-   65          To be Lr noWuuoCbe          0.7222          0.6958          0.0264
-   66          To be yr noawLobbe          0.7222          0.6892          0.0331
-   67          To be yr noawuobbe          0.7222          0.6878          0.0344
-   68          To be yr nonwuobbe          0.7222          0.6800          0.0422
-   69          To be yr noWwuobbe          0.7222          0.6739          0.0483
-   70          To be Nr noauuobbe          0.7222          0.6703          0.0519
-   71          To be kr noawLobbe          0.7222          0.6750          0.0472
-   72          To be Nr nonuuobbe          0.7222          0.6792          0.0431
-   73          To be yr nonuLoCbe          0.7222          0.6942          0.0281
-   74          To be kr noaSLobbe          0.7222          0.6900          0.0322
-   75          To be yr noWwFobbe          0.7222          0.6819          0.0403
-   76          To be yr noawLobbe          0.7222          0.6797          0.0425
-   77          To be yr noWwWofbe          0.7222          0.6869          0.0353
-   78          To be yr noawMofbe          0.7222          0.6842          0.0381
-   79          To be Lr notwLofbe          0.7778          0.6869          0.0908
-   80          To be yr notwuoYbe          0.7778          0.6994          0.0783
-   81          To be yr notduofbe          0.7778          0.7028          0.0750
-   82          To be yr notduofbe          0.7778          0.7058          0.0719
-   83          To be Lr notwuo be          0.8333          0.7122          0.1211
-   84          To be yr notwuo be          0.8333          0.7067          0.1267
-   85          To be yr notwuo be          0.8333          0.7156          0.1178
-   86          To be yr notwuo be          0.8333          0.7092          0.1242
-   87          To be Vr notwMo be          0.8333          0.7094          0.1239
-   88          To be kr notuRo be          0.8333          0.7331          0.1003
-   89          To be yr nottMo be          0.8333          0.7431          0.0903
-   90          To be yr notuMo be          0.8333          0.7453          0.0881
-   91          To be yr notwuo be          0.8333          0.7514          0.0819
-   92          To be yr notTHo be          0.8333          0.7600          0.0733
-   93          To be kr notwLo be          0.8333          0.7808          0.0525
-   94          To be Vr notwuo be          0.8333          0.7756          0.0578
-   95          To be kr notwHo be          0.8333          0.7697          0.0636
-   96          To be yr notTRo be          0.8333          0.7622          0.0711
-   97          To be kr notwto be          0.8889          0.7744          0.1144
-   98          To be kr notTRo be          0.8333          0.7864          0.0469
-   99          To be or notwMo be          0.8889          0.7722          0.1167
-  100          To be or notTRo be          0.8889          0.7667          0.1222
-  101          To be kr notYRo be          0.8333          0.7631          0.0703
-  102          To be kr notYRo be          0.8333          0.7700          0.0633
-  103          To be kr notTNo be          0.8333          0.7839          0.0494
-  104          To be yr notwMo be          0.8333          0.7767          0.0567
-  105          To be kr notduo be          0.8333          0.7731          0.0603
-  106          To be kr notTNo be          0.8333          0.7758          0.0575
-  107          To be kr notGRo be          0.8333          0.7717          0.0617
-  108          To be kr notTNo be          0.8333          0.7908          0.0425
-  109          To be kr notTRo be          0.8333          0.7753          0.0581
-  110          To be Yr notTNo be          0.8333          0.7553          0.0781
-  111          To be kr notTNo be          0.8333          0.7522          0.0811
-  112          To be yr notTRo be          0.8333          0.7522          0.0811
-  113          To be rr notYRo be          0.8333          0.7631          0.0703
-  114          To be rr notaRo be          0.8333          0.7714          0.0619
-  115          To be kr notTRo be          0.8333          0.7778          0.0556
-  116          To be kr notYRo be          0.8333          0.7767          0.0567
-  117          To be kr notTRo be          0.8333          0.7811          0.0522
-  118          To be or notTRo be          0.8889          0.7906          0.0983
-  119          To be or notTRo be          0.8889          0.7900          0.0989
-  120          To be or notTRo be          0.8889          0.7958          0.0931
-  121          To be or notVRo be          0.8889          0.7897          0.0992
-  122          To be or notVmo be          0.8889          0.7828          0.1061
-  123          To be or notVmo be          0.8889          0.7878          0.1011
-  124          To be or notTmo be          0.8889          0.7986          0.0903
-  125          To be or notTmo be          0.8889          0.8008          0.0881
-  126          To be or notTmo be          0.8889          0.8039          0.0850
-  127          To be or notwRo be          0.8889          0.8003          0.0886
-  128          To be or notTSo be          0.8889          0.8028          0.0861
-  129          To be or notTRo be          0.8889          0.8061          0.0828
-  130          To be or notTRo be          0.8889          0.8156          0.0733
-  131          To be or notTRo be          0.8889          0.8247          0.0642
-  132          To be or nottSo be          0.8889          0.8336          0.0553
-  133          To be or notTRo be          0.8889          0.8347          0.0542
-  134          To be or notTRo be          0.8889          0.8303          0.0586
-  135          To be or notTRo be          0.8889          0.8339          0.0550
-  136          To be or notTRo be          0.8889          0.8308          0.0581
-  137          To be or notuso be          0.8889          0.8136          0.0753
-  138          To be or notTmo be          0.8889          0.8092          0.0797
-  139          To be or notuNo be          0.8889          0.8150          0.0739
-  140          To be or notwRo be          0.8889          0.8250          0.0639
-  141          To be or notkeo be          0.8889          0.8250          0.0639
-  142          To be or notwRo be          0.8889          0.8064          0.0825
-  143          To be or notumo be          0.8889          0.8128          0.0761
-  144          To be or notbRo be          0.8889          0.8256          0.0633
-  145          To be or notoRo be          0.8889          0.8244          0.0644
-  146          To be or notoRo be          0.8889          0.8200          0.0689
-  147          To be or notTgo be          0.8889          0.8194          0.0694
-  148          To be or notojo be          0.8889          0.8147          0.0742
-  149          To be or notwgo be          0.8889          0.8242          0.0647
-  150          To be or notbgo be          0.8889          0.8114          0.0775
-  151          To be or notTyo be          0.8889          0.8081          0.0808
-  152          To be or notemo be          0.8889          0.8308          0.0581
-  153          To be or notkBo be          0.8889          0.8433          0.0456
-  154          To be or notbho be          0.8889          0.8381          0.0508
-  155          To be or notORo be          0.8889          0.8369          0.0519
-  156          To be or notOgo be          0.8889          0.8253          0.0636
-  157          To be or notego be          0.8889          0.8244          0.0644
-  158          To be or notomo be          0.8889          0.8325          0.0564
-  159          To be or not jo be          0.9444          0.8356          0.1089
-  160          To be or not Ro be          0.9444          0.8406          0.1039
-  161          To be or not Ro be          0.9444          0.8467          0.0978
-  162          To be or not jo be          0.9444          0.8561          0.0883
-  163          To be or not jo be          0.9444          0.8547          0.0897
-  164          To be or not mo be          0.9444          0.8614          0.0831
-  165          To be or not jo be          0.9444          0.8719          0.0725
-  166          To be or not no be          0.9444          0.8644          0.0800
-  167          To be or not eo be          0.9444          0.8708          0.0736
-  168          To be or not go be          0.9444          0.8650          0.0794
-  169          To be or not go be          0.9444          0.8750          0.0694
-  170          To be or not mo be          0.9444          0.8725          0.0719
-  171          To be or not go be          0.9444          0.8750          0.0694
-  172          To be or not ao be          0.9444          0.8747          0.0697
-  173          To be or not jo be          0.9444          0.8756          0.0689
-  174          To be or not go be          0.9444          0.8881          0.0564
-  175          To be or not go be          0.9444          0.8972          0.0472
-  176          To be or not go be          0.9444          0.8894          0.0550
-  177          To be or not Do be          0.9444          0.8800          0.0644
-  178          To be or not jo be          0.9444          0.8889          0.0556
-  179          To be or not go be          0.9444          0.8942          0.0503
-  180          To be or not go be          0.9444          0.8917          0.0528
-  181          To be or not jo be          0.9444          0.9056          0.0389
-  182          To be or not go be          0.9444          0.8853          0.0592
-  183          To be or not Eo be          0.9444          0.8781          0.0664
-  184          To be or not jo be          0.9444          0.8800          0.0644
-  185          To be or not mo be          0.9444          0.8889          0.0556
-  186          To be or not oo be          0.9444          0.8928          0.0517
-  187          To be or not go be          0.9444          0.8989          0.0456
-  188          To be or not no be          0.9444          0.9011          0.0433
-  189          To be or not to be          1.0000          0.8933          0.1067
+    1          HXYTWuVapSzeHti xv          0.1111          0.0203          0.0908
+    2          LO bGwyczuStpsGhiU          0.1667          0.0481          0.1186
+    3          LMlxe ZrPthtXsIObg          0.2778          0.0836          0.1942
+    4          LB be MgzKhtCtitvU          0.3333          0.1325          0.2008
+    5          LMlxe mrabStXtK  r          0.3333          0.1714          0.1619
+    6          xMlxe ord htotI bb          0.4444          0.2067          0.2378
+    7          Ko Ve orzBStXtGOvb          0.4444          0.2383          0.2061
+    8          xBcbe orz hthtI ob          0.4444          0.2522          0.1922
+    9          qMlbe ordBAtXtiObm          0.4444          0.2753          0.1692
+   10          TMlbe mrdIAtXtIObm          0.4444          0.2900          0.1544
+   11          LM be DrdBhtVtS bg          0.5000          0.3217          0.1783
+   12          YK be ordBhtztS bU          0.5556          0.3553          0.2003
+   13          LK be orzvhtzti be          0.6111          0.3806          0.2306
+   14          Yo xe orzSYtVtS be          0.6111          0.4311          0.1800
+   15          qo be orkShtVtSLbe          0.6111          0.4483          0.1628
+   16          To be orzBhthtI bm          0.6667          0.4617          0.2050
+   17          To be orkBhthtS bm          0.6667          0.4814          0.1853
+   18          Wo be orkBYtztS bm          0.6111          0.4819          0.1292
+   19          To be orz YtCtS bm          0.6667          0.4833          0.1833
+   20          To be orz YtztV be          0.7222          0.4836          0.2386
+   21          To be orz YtCtI bm          0.6667          0.4983          0.1683
+   22          xo be orzfYtCtV be          0.6667          0.5133          0.1533
+   23          To be mrkfYtCtI be          0.6667          0.5361          0.1306
+   24          To be orzfYtCtV be          0.7222          0.5594          0.1628
+   25          To be orzfYthtT be          0.7222          0.5850          0.1372
+   26          To be orkfhthtS be          0.7222          0.5811          0.1411
+   27          To be orzNmthtV be          0.7222          0.5928          0.1294
+   28          To be orrfYthtV be          0.7222          0.6111          0.1111
+   29          To be ork YthtS be          0.7222          0.6403          0.0819
+   30          To be orzyhtLtT be          0.7222          0.6467          0.0756
+   31          To be orzfgthtS be          0.7222          0.6433          0.0789
+   32          To be orzHhthtS be          0.7222          0.6569          0.0653
+   33          To be orzfYthtP be          0.7222          0.6778          0.0444
+   34          To be orzf thtV be          0.7222          0.6933          0.0289
+   35          To be orwlYthtI be          0.7222          0.6867          0.0356
+   36          To be orzyYthtS be          0.7222          0.6828          0.0394
+   37          To be orzHYthtE be          0.7222          0.6836          0.0386
+   38          To be ornfhtLtS be          0.7222          0.6750          0.0472
+   39          To be orzfwthto be          0.7778          0.6719          0.1058
+   40          To be orzQYtLtT be          0.7222          0.6758          0.0464
+   41          To be orzywtStT be          0.7222          0.6833          0.0389
+   42          To be orLyYthto be          0.7778          0.6947          0.0831
+   43          To be orzfhtLto be          0.7778          0.6933          0.0844
+   44          To be or yYthtS be          0.7778          0.6864          0.0914
+   45          To be or fYthtS be          0.7778          0.6803          0.0975
+   46          To be or yYthtogbe          0.7778          0.6661          0.1117
+   47          To be or fYtLtT be          0.7778          0.6619          0.1158
+   48          To be or fYthtT be          0.7778          0.6783          0.0994
+   49          To be or flthtT be          0.7778          0.6797          0.0981
+   50          To be or fhthtT be          0.7778          0.6769          0.1008
+   51          To be or fltLtP be          0.7778          0.6844          0.0933
+   52          To be or fhthtS be          0.7778          0.6853          0.0925
+   53          To be or fhthtS be          0.7778          0.6825          0.0953
+   54          To be or zYtLtT be          0.7778          0.6794          0.0983
+   55          To be or uhtltT be          0.7778          0.6814          0.0964
+   56          To be or gYthtT be          0.7778          0.6769          0.1008
+   57          To be or rctCtM be          0.7778          0.6983          0.0794
+   58          To be or uhthtT be          0.7778          0.7006          0.0772
+   59          To be or uothtT be          0.8333          0.7092          0.1242
+   60          To be or mothtS be          0.8333          0.7086          0.1247
+   61          To be or rothtS be          0.8333          0.7064          0.1269
+   62          To be or gothtr be          0.8333          0.7142          0.1192
+   63          To be or sotCtS be          0.8333          0.7178          0.1156
+   64          To be or mothtT be          0.8333          0.7228          0.1106
+   65          To be or gothtT be          0.8333          0.7136          0.1197
+   66          To be or nototr be          0.8889          0.7117          0.1772
+   67          To be or nototr be          0.8889          0.7325          0.1564
+   68          To be or mothtr be          0.8333          0.7464          0.0869
+   69          To be or gotNtr be          0.8333          0.7456          0.0878
+   70          To be or rothtL be          0.8333          0.7519          0.0814
+   71          To be or sotNtr be          0.8333          0.7492          0.0842
+   72          To be or uotZtr be          0.8333          0.7614          0.0719
+   73          To be or jothtT be          0.8333          0.7722          0.0611
+   74          To be or fothtr be          0.8333          0.7789          0.0544
+   75          To be or uotZtS be          0.8333          0.7797          0.0536
+   76          To be or rothtr be          0.8333          0.7875          0.0458
+   77          To be or rothtr be          0.8333          0.7819          0.0514
+   78          To be or jothtT be          0.8333          0.7933          0.0400
+   79          To be or xothtT be          0.8333          0.7925          0.0408
+   80          To be or rotNtS be          0.8333          0.7931          0.0403
+   81          To be or rotNtT be          0.8333          0.7972          0.0361
+   82          To be or rothtS be          0.8333          0.7919          0.0414
+   83          To be or jotQte be          0.8333          0.7958          0.0375
+   84          To be or rotQtT be          0.8333          0.7953          0.0381
+   85          To be or rothtS be          0.8333          0.7992          0.0342
+   86          To be or gotQta be          0.8333          0.8036          0.0297
+   87          To be or rothtB be          0.8333          0.7992          0.0342
+   88          To be or rotQtT be          0.8333          0.7911          0.0422
+   89          To be or LothtT be          0.8333          0.7939          0.0394
+   90          To be or Xotmto be          0.8889          0.7908          0.0981
+   91          To be or gotmto be          0.8889          0.7967          0.0922
+   92          To be or XotQto be          0.8889          0.7978          0.0911
+   93          To be or rotQtT be          0.8333          0.7894          0.0439
+   94          To be or gotQt  be          0.8333          0.7806          0.0528
+   95          To be or gototr be          0.8333          0.7775          0.0558
+   96          To be or gototT be          0.8333          0.7803          0.0531
+   97          To be or rotQtr be          0.8333          0.7775          0.0558
+   98          To be or lotQtT be          0.8333          0.7689          0.0644
+   99          To be or rotZtz be          0.8333          0.7722          0.0611
+  100          To be or rotQtT be          0.8333          0.7731          0.0603
+  101          To be or lotZtr be          0.8333          0.7842          0.0492
+  102          To be or rotQth be          0.8333          0.7947          0.0386
+  103          To be or lotZtr be          0.8333          0.7844          0.0489
+  104          To be or rotQtT be          0.8333          0.7967          0.0367
+  105          To be or totZtT be          0.8333          0.7956          0.0378
+  106          To be or totZtr be          0.8333          0.7856          0.0478
+  107          To be or lotQtT be          0.8333          0.7917          0.0417
+  108          To be or rotQt  be          0.8333          0.7956          0.0378
+  109          To be or DotHtk be          0.8333          0.7894          0.0439
+  110          To be or ZotQtr be          0.8333          0.7894          0.0439
+  111          To be or rotLtM be          0.8333          0.7811          0.0522
+  112          To be or ZotQt  be          0.8333          0.7733          0.0600
+  113          To be or rotQtp be          0.8333          0.7842          0.0492
+  114          To be or DotQth be          0.8333          0.7906          0.0428
+  115          To be or rotYtr be          0.8333          0.7831          0.0503
+  116          To be or rotQt  be          0.8333          0.7856          0.0478
+  117          To be or rotHt  be          0.8333          0.7769          0.0564
+  118          To be or rot tY be          0.8889          0.7892          0.0997
+  119          To be or notHt  be          0.8889          0.7994          0.0894
+  120          To be or rotZtk be          0.8333          0.8053          0.0281
+  121          To be or IotZtk be          0.8333          0.7947          0.0386
+  122          To be or rothtZ be          0.8333          0.7939          0.0394
+  123          To be or IotQt  be          0.8333          0.7950          0.0383
+  124          To be or rotft  be          0.8333          0.8006          0.0328
+  125          To be or rotZtk be          0.8333          0.8022          0.0311
+  126          To be or rotZt  be          0.8333          0.8022          0.0311
+  127          To be or rotQt  be          0.8333          0.8050          0.0283
+  128          To be or rotZt  be          0.8333          0.8081          0.0253
+  129          To be or rotZt  be          0.8333          0.8031          0.0303
+  130          To be or sotcto be          0.8889          0.7925          0.0964
+  131          To be or sotZto be          0.8889          0.8000          0.0889
+  132          To be or Eotrto be          0.8889          0.8036          0.0853
+  133          To be or Eotrto be          0.8889          0.7956          0.0933
+  134          To be or sotcto be          0.8889          0.7981          0.0908
+  135          To be or Eotrto be          0.8889          0.7867          0.1022
+  136          To be or Eotct  be          0.8333          0.7842          0.0492
+  137          To be or lotHtO be          0.8333          0.7850          0.0483
+  138          To be or Eotrtk be          0.8333          0.7867          0.0467
+  139          To be or Eotrt  be          0.8333          0.7833          0.0500
+  140          To be or EotqtY be          0.8333          0.7939          0.0394
+  141          To be or sotStk be          0.8333          0.7961          0.0372
+  142          To be or iotot  be          0.8333          0.7967          0.0367
+  143          To be or sotQt  be          0.8333          0.8000          0.0333
+  144          To be or Eotctk be          0.8333          0.7922          0.0411
+  145          To be or Potrt  be          0.8333          0.7875          0.0458
+  146          To be or sotIt  be          0.8333          0.7850          0.0483
+  147          To be or PotQto be          0.8889          0.7731          0.1158
+  148          To be or PotQto be          0.8889          0.7886          0.1003
+  149          To be or EotQto be          0.8889          0.7942          0.0947
+  150          To be or EotQto be          0.8889          0.8092          0.0797
+  151          To be or sotUto be          0.8889          0.8086          0.0803
+  152          To be or Eotcto be          0.8889          0.8103          0.0786
+  153          To be or sotcto be          0.8889          0.7936          0.0953
+  154          To be or EotHto be          0.8889          0.7808          0.1081
+  155          To be or EotHto be          0.8889          0.7800          0.1089
+  156          To be or EotHt  be          0.8333          0.7697          0.0636
+  157          To be or eotrtU be          0.8333          0.7717          0.0617
+  158          To be or eotct  be          0.8333          0.7917          0.0417
+  159          To be or Eotnt  be          0.8333          0.7858          0.0475
+  160          To be or eotStX be          0.8333          0.7894          0.0439
+  161          To be or eotStX be          0.8333          0.7881          0.0453
+  162          To be or FotStn be          0.8333          0.7772          0.0561
+  163          To be or eotStX be          0.8333          0.7761          0.0572
+  164          To be or FotStN be          0.8333          0.7739          0.0594
+  165          To be or Fotct  be          0.8333          0.7703          0.0631
+  166          To be or eotWtX be          0.8333          0.7753          0.0581
+  167          To be or kotctn be          0.8333          0.7692          0.0642
+  168          To be or FotrtM be          0.8333          0.7775          0.0558
+  169          To be or FotctO be          0.8333          0.7900          0.0433
+  170          To be or FotVtP be          0.8333          0.7961          0.0372
+  171          To be or FotqtO be          0.8333          0.7939          0.0394
+  172          To be or FotSto be          0.8889          0.8011          0.0878
+  173          To be or sotSto be          0.8889          0.8008          0.0881
+  174          To be or eotctO be          0.8333          0.8014          0.0319
+  175          To be or FotStj be          0.8333          0.7961          0.0372
+  176          To be or FotStO be          0.8333          0.7925          0.0408
+  177          To be or eotctO be          0.8333          0.7975          0.0358
+  178          To be or uotctO be          0.8333          0.7972          0.0361
+  179          To be or Fot ty be          0.8889          0.8061          0.0828
+  180          To be or Fot ty be          0.8889          0.8056          0.0833
+  181          To be or eotStO be          0.8333          0.7986          0.0347
+  182          To be or eotgtH be          0.8333          0.7964          0.0369
+  183          To be or potgtO be          0.8333          0.8039          0.0294
+  184          To be or potStO be          0.8333          0.7992          0.0342
+  185          To be or uotSty be          0.8333          0.7853          0.0481
+  186          To be or eotqtw be          0.8333          0.7819          0.0514
+  187          To be or potStO be          0.8333          0.7817          0.0517
+  188          To be or eotqty be          0.8333          0.7850          0.0483
+  189          To be or Jotqty be          0.8333          0.7869          0.0464
+  190          To be or potqtO be          0.8333          0.7983          0.0350
+  191          To be or zotFtn be          0.8333          0.7961          0.0372
+  192          To be or zotFtO be          0.8333          0.8058          0.0275
+  193          To be or zotFtn be          0.8333          0.7922          0.0411
+  194          To be or zotFtK be          0.8333          0.7914          0.0419
+  195          To be or zotqtj be          0.8333          0.7772          0.0561
+  196          To be or zotqtw be          0.8333          0.7653          0.0681
+  197          To be or zotqtO be          0.8333          0.7597          0.0736
+  198          To be or zotFtO be          0.8333          0.7561          0.0772
+  199          To be or zotqtu be          0.8333          0.7528          0.0806
+  200          To be or zotStO be          0.8333          0.7561          0.0772
