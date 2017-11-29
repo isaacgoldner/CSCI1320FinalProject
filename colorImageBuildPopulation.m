@@ -4,18 +4,15 @@ function [imagePopulation,targetImage] = imageBuildPopulation(targetImage)
 %is to be generated,to build the initial population to begin the 
 %evolution process. 
 
-newImage = luminance(targetImage);
-
-targetImage = newImage;
-
-[row,col] = size(newImage);
+[row,col,page] = size(targetImage);
 
 imagePopulation = cell(row * col,1);
 
-randGen = rand(row * (row * col),col);
+
+randomImages = rand; 
 
 for i = 1:(row * col)
-    imagePopulation{i,1} = randGen((((i-1) * row) + 1):i * row,1:col);
+    imagePopulation{i,1} = rand(row,col,3); 
 end
 
 end
