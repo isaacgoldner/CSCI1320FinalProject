@@ -37,7 +37,7 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
 %function (there are to be multiple versions for this function):
     %CURRENTLY THIS RUNS ON THE AVERAGE VALUE ONE.
  
-    fitness = colorImageAverageValuesFitness(population,targetImage);
+    fitness = colorImageBasicFitness(population,targetImage);
 
     %RUN ON DIFF
     %fitness = imageDiffFitness(population,targetImage); 

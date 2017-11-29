@@ -132,6 +132,10 @@ smoothedcurrentOrganism(:,:,3) = smoothedcurrentOrganismB;
     %find the indices of the 'smoothedCurrentOrganism' that are within the
     %specified range of the target image; these indices are used in the
     %final fitness calculation
+    
+    
+    %FIX: This should work on a layer by layer basis. 
+    
     indicesWithinRange = find(abs(smoothedcurrentOrganism - smoothedTargetOrganism) <= tolerance);
     
     %find the number of pixels in 'smoothedCurrentImage' that are within
