@@ -1,4 +1,4 @@
-function matingPool = imageBuildMatingPool(imagePopulation,fitness,targetImage)
+function matingPool = colorImageBuildMatingPool(imagePopulation,fitness,targetImage)
 
 %Using the input population and the fitnesses of each member of this
 %population, create a "mating pool" of organisms where a given organism has

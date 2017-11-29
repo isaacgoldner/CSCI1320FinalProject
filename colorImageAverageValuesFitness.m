@@ -1,4 +1,4 @@
-function fitness = imageAverageValuesFitness(population,targetImage)
+function fitness = colorImageAverageValuesFitness(population,targetImage)
 
 %use the mean filter function to generate a "smoothed" version of the
 %original and target image, then with a similar tolerance value as before, 
@@ -8,9 +8,9 @@ function fitness = imageAverageValuesFitness(population,targetImage)
 [row,col,page] = size(targetImage);
 
 %Take the layers of the target image: 
-targetImageR = targetImage(:,:,1)  ;
-targetImageG = targetImage(:,:,2)  ;
-targetImageB = targetImage(:,:,3)  ;
+targetImageR = targetImage(:,:,1);
+targetImageG = targetImage(:,:,2);
+targetImageB = targetImage(:,:,3);
 
 %indices of pixels to take the average of
 %at this stage the vector includes the indices of the top row and bottom
@@ -71,6 +71,8 @@ smoothedTargetOrganism(:,:,1) = smoothedTargetOrganismR;
 smoothedTargetOrganism(:,:,2) = smoothedTargetOrganismG; 
 smoothedTargetOrganism(:,:,3) = smoothedTargetOrganismB; 
 
+smoothedTargetOrganism = double(smoothedTargetOrganism) ./ 256;
+
 %pre-allocate the size of the fitness vector that will be returned. One
 %element per organism: 
 fitness = zeros(row*col,1);
@@ -86,9 +88,9 @@ for i = 1:row*col
     currentOrganism = population{i,1};
     
     %Take the layers of the current organism: 
-    currentOrganismR = currentOrganism(:,:,1)  ;
-    currentOrganismG = currentOrganism(:,:,2)  ;
-    currentOrganismB = currentOrganism(:,:,3)  ;
+    currentOrganismR = currentOrganism(:,:,1);
+    currentOrganismG = currentOrganism(:,:,2);
+    currentOrganismB = currentOrganism(:,:,3);
     
     %Apply the same smoothing process with the current organism used with
     %the target image: 

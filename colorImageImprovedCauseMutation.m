@@ -1,4 +1,4 @@
-function mutatedNewPopulationMember = imageImprovedCauseMutation(newPopulationMember)
+function mutatedNewPopulationMember = colorImageImprovedCauseMutation(newPopulationMember)
 
 %First, decide if a pixel is to be mutated at all. 'mutationRate' is a
 %number from 1 to 100, representing a percentage
