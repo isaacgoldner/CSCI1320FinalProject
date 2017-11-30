@@ -130,8 +130,11 @@ smoothedcurrentOrganismB = reshape(smoothedcurrentOrganismB,row-2,col-2);
    
    %Record the number of pixels that are within the tolerance range for all
    %three of their color layers: 
-   numPixelsWithinRange = length(ColorFit == 3); 
-   
+   numPixelsWithinRange = sum(sum(ColorFit == 3)); 
+
+    %divide the number of fit pixels by the total number of pixels in
+    %the target image to express the image's fitness as a percentage: 
+    fitness(i,1) = numPixelsWithinRange / (row * col);
 
     %divide the number of fit pixels in the smoothed image by the total 
     %number of pixels in the smoothed target image to express the fitness 

@@ -10,16 +10,16 @@ tolerance = 0.05;
 %Preallocate the fitness vector: 
 fitness = zeros(row*col,1);
 
+ %Take each of the target organism's layers: 
+    targetOrganismR = targetImage(:,:,1);
+    targetOrganismG = targetImage(:,:,2);
+    targetOrganismB = targetImage(:,:,3);
+
 %Run this loop for every member of the population: 
    for i = 1:row*col
     
     %store the value of a single organism in variable 'currentOrganism'
     currentOrganism = population{i,1};
-    
-    %Take each of the target organism's layers: 
-    targetOrganismR = targetImage(:,:,1);
-    targetOrganismG = targetImage(:,:,2);
-    targetOrganismB = targetImage(:,:,3);
     
    %Take each of the current organism's layers: 
    currentOrganismR = currentOrganism(:,:,1); 
@@ -39,10 +39,11 @@ fitness = zeros(row*col,1);
    %within the set tolerance value. 
    ColorFit = (Rdiff <= tolerance) + (Bdiff <= tolerance) + (Gdiff <= tolerance); 
    
+   
    %Record the number of pixels that are within the tolerance range for all
    %three of their color layers: 
-   numPixelsWithinRange = length(ColorFit == 3); 
-   
+   numPixelsWithinRange = sum(sum(ColorFit == 3)); 
+
     %divide the number of fit pixels by the total number of pixels in
     %the target image to express the image's fitness as a percentage: 
     fitness(i,1) = numPixelsWithinRange / (row * col);
