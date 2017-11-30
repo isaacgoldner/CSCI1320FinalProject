@@ -59,11 +59,11 @@ smoothedTargetOrganismR = (targetImageR(topLeft) + targetImageR(middleLeft) + ..
 %target image's color layers; the previous step converts the matrices into row vectors, so
 %this step reverses that process
 %Red
-smoothedTargetOrganismR = reshape(smoothedTargetOrganismR,row-2,col-2);
+smoothedTargetOrganismR = double(reshape(smoothedTargetOrganismR,row-2,col-2));
 %Green
-smoothedTargetOrganismG = reshape(smoothedTargetOrganismG,row-2,col-2);
+smoothedTargetOrganismG = double(reshape(smoothedTargetOrganismG,row-2,col-2));
 %Blue
-smoothedTargetOrganismB = reshape(smoothedTargetOrganismB,row-2,col-2);
+smoothedTargetOrganismB = double(reshape(smoothedTargetOrganismB,row-2,col-2));
 
 %pre-allocate the size of the fitness vector that will be returned. One
 %element per organism: 
@@ -130,11 +130,11 @@ smoothedcurrentOrganismB = reshape(smoothedcurrentOrganismB,row-2,col-2);
    
    %Record the number of pixels that are within the tolerance range for all
    %three of their color layers: 
-   numPixelsWithinRange = sum(sum(ColorFit == 3)); 
+   numPixelsWithinRange = sum(sum(ColorFit >= 2)); 
 
-    %divide the number of fit pixels by the total number of pixels in
-    %the target image to express the image's fitness as a percentage: 
-    fitness(i,1) = numPixelsWithinRange / (row * col);
+%     %divide the number of fit pixels by the total number of pixels in
+%     %the target image to express the image's fitness as a percentage: 
+%     fitness(i,1) = numPixelsWithinRange / (row * col);
 
     %divide the number of fit pixels in the smoothed image by the total 
     %number of pixels in the smoothed target image to express the fitness 

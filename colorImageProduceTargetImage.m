@@ -15,7 +15,7 @@ targetImage = targetImage ./255;
 %specify the maximum number of generations that will be run through if the
 %target phrase has still not been produced yet
 
-maxGenerations = 3500;
+maxGenerations = 10000;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -70,7 +70,7 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     %Build the mating pool needed to create the next generation with the 
     %indices of which parents are to be bred: 
 
-    matingPool = imageBuildMatingPool(population,fitness,targetImage);
+    matingPool = colorImageBuildMatingPool(population,fitness,targetImage);
     
     %Store the dimensions of the target image with the variables row, col,
     %and pg: 
@@ -95,12 +95,12 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     
                         
      %UPDATED, MIGHT BE FASTER
-  newPopulation = imageBreed(matingPool,targetImage,population); 
+  newPopulation = colorImageBreed(matingPool,targetImage,population); 
     %A Loop is then used to cause mutation
     for i = 1:(row*col)
     %Cause mutation (Currently this works with the improved mutation function:)
    
-    newPopulation{i,1} = imageImprovedCauseMutation(newPopulation{i,1}); 
+    newPopulation{i,1} = colorImageImprovedCauseMutation(newPopulation{i,1}); 
   
     %Replace the old population with the new population one child at a
     %time: 

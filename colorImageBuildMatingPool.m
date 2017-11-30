@@ -7,7 +7,8 @@ function matingPool = colorImageBuildMatingPool(imagePopulation,fitness,targetIm
 %members of the mating pool population created will eventually be "bred" to
 %create a new population of children.
 
-
+%exponential factor used to make the better fit organisms in the population
+%stand out
 fitness = fitness.^6;
 
 %Before breeding the new population, the fitness values of the input
@@ -44,7 +45,7 @@ TicketsPerOrg = round(normalizedFitness .* (mateFactor));
 TicketsPerOrg(find(TicketsPerOrg == 0)) = 1;
 
 %get the size of the target image
-[row,col] = size(targetImage);
+[row,col,page] = size(targetImage);
 
 %The repelem function is then used to have the index for each organism in
 %the population (the population of 200) being used to create the mating 

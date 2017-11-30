@@ -8,11 +8,11 @@ function children = colorImageBreed(matingPool,targetImage,population)
 firstParents = population(matingPool(:,1)); 
 secParents = population(matingPool(:,2)); 
 
-[row,col] = size(targetImage);
+[row,col,page] = size(targetImage);
 
 %Start by having the children match the first parent population exactly.
 %They will be altered from here: 
-children = (firstParents); 
+children = firstParents; 
 
 Par2PixelsPer = randi([1,(row*col)-1],1,row*col); 
 Par2PixelsCell = cell((row*col),1);
