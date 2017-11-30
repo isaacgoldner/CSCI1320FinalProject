@@ -1,6 +1,6 @@
 function fitness = colorImageAverageValuesFitness(population,targetImage)
 
-%use the mean filter function to generate a "smoothed" version of the
+%use the mean filter process to generate a "smoothed" version of the
 %original and target image, then with a similar tolerance value as before, 
 %compare each pixel to generate the fitness value for each "organism"
 
@@ -65,28 +65,20 @@ smoothedTargetOrganismG = reshape(smoothedTargetOrganismG,row-2,col-2);
 %Blue
 smoothedTargetOrganismB = reshape(smoothedTargetOrganismB,row-2,col-2);
 
-%Combine the smoothed target organism's layers back together. 
-
-smoothedTargetOrganism(:,:,1) = smoothedTargetOrganismR; 
-smoothedTargetOrganism(:,:,2) = smoothedTargetOrganismG; 
-smoothedTargetOrganism(:,:,3) = smoothedTargetOrganismB; 
-
-
 %pre-allocate the size of the fitness vector that will be returned. One
 %element per organism: 
 fitness = zeros(row*col,1);
+
+%Set the tolerance for fitness: 
 tolerance = .05;
 
-%this loop is not used in the mean value calculation, it is only used to
-%cover each of the organisms in the population;
-%the values of the iterator variable are not used at all in the actual mean
-%value calculation
+%Run the following loop for every member of the population: 
 for i = 1:row*col
     
     %store the value of a single organism in variable 'currentOrganism'
     currentOrganism = population{i,1};
     
-    %Take the layers of the current organism: 
+    %Take the RGB layers of the current organism: 
     currentOrganismR = currentOrganism(:,:,1);
     currentOrganismG = currentOrganism(:,:,2);
     currentOrganismB = currentOrganism(:,:,3);
@@ -94,8 +86,8 @@ for i = 1:row*col
     %Apply the same smoothing process with the current organism used with
     %the target image: 
     
-    %smooth the current organism, one color layer at a time, by taking the average of all of the surrounding
-%pixels
+    %smooth the current organism, one color layer at a time, by taking the 
+    %average of all of the surrounding pixels:
 %Red
 smoothedcurrentOrganismR = (currentOrganismR(topLeft) + currentOrganismR(middleLeft) + ...
         currentOrganismR(bottomLeft) + currentOrganismR(topCenter) + currentOrganismR(center) + ...
@@ -121,31 +113,30 @@ smoothedcurrentOrganismR = reshape(smoothedcurrentOrganismR,row-2,col-2);
 smoothedcurrentOrganismG = reshape(smoothedcurrentOrganismG,row-2,col-2);
 %Blue
 smoothedcurrentOrganismB = reshape(smoothedcurrentOrganismB,row-2,col-2);
-
-%Combine the smoothed target organism's layers back together. 
-
-smoothedcurrentOrganism(:,:,1) = smoothedcurrentOrganismR; 
-smoothedcurrentOrganism(:,:,2) = smoothedcurrentOrganismG; 
-smoothedcurrentOrganism(:,:,3) = smoothedcurrentOrganismB; 
     
   
-    
-    %find the indices of the 'smoothedCurrentOrganism' that are within the
-    %specified range of the target image; these indices are used in the
-    %final fitness calculation
-    
-    
-    %FIX: This should work on a layer by layer basis. 
-    
-    indicesWithinRange = find(abs(smoothedcurrentOrganism - smoothedTargetOrganism) <= tolerance);
-    
-    %find the number of pixels in 'smoothedCurrentImage' that are within
-    %the specified range to be used in the final fitness calculation
-    numIndicesWithinRange = length(indicesWithinRange);
-    
-    %divide the calculated fitness value by the total number of pixels in
-    %the target image to express the fitness as a percentage
-    fitness(i,1) = numIndicesWithinRange / (3*(((row * col) - (2*row) - (2*row - 4))));
+%Record the differences between the color layers of the smoothed
+%current organism and the smoothed target organism: 
+   Rdiff = abs(smoothedcurrentOrganismR - smoothedTargetOrganismR); 
+   Gdiff = abs(smoothedcurrentOrganismG - smoothedTargetOrganismG);
+   Bdiff = abs(smoothedcurrentOrganismB - smoothedTargetOrganismB); 
+   
+  %Process using  NO loops: 
+   
+   %Create a matrix called ColorFit, where each element represents
+   %a pixel in the smoothed image (the edges are cut off). If the element 
+   %is 3, the RGB layers are all within the set tolerance value. 
+   ColorFit = (Rdiff <= tolerance) + (Bdiff <= tolerance) + (Gdiff <= tolerance); 
+   
+   %Record the number of pixels that are within the tolerance range for all
+   %three of their color layers: 
+   numPixelsWithinRange = length(ColorFit == 3); 
+   
+
+    %divide the number of fit pixels in the smoothed image by the total 
+    %number of pixels in the smoothed target image to express the fitness 
+    %as a percentage
+    fitness(i,1) = numPixelsWithinRange / ((row * col) - (2*row) - (2*row - 4));
     
 end
 
