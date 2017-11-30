@@ -4,6 +4,12 @@ function fitness = colorImageBasicFitness(population,targetImage)
 %Take the size of the target image: 
 [row,col,page] = size(targetImage);
 
+%Set the fitness tolerance: 
+tolerance = 0.05;  
+
+%Preallocate the fitness vector: 
+fitness = zeros(row*col,1);
+
 %Run this loop for every member of the population: 
    for i = 1:row*col
     

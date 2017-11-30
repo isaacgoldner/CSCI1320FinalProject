@@ -35,12 +35,17 @@ tic;
 while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
 %Calculate the fitness of each organism with the calculate fitness
 %function (there are to be multiple versions for this function):
-    %CURRENTLY THIS RUNS ON THE AVERAGE VALUE ONE.
+
+
+    %RUN ON AVG VALUE:
  
-    fitness = colorImageBasicFitness(population,targetImage);
+    fitness = colorImageAverageValuesFitness(population,targetImage);
 
     %RUN ON DIFF
-    %fitness = imageDiffFitness(population,targetImage); 
+    %fitness = imageDiffFitness(population,targetImage);
+    
+    %RUN ON BASIC: 
+    %fitness = colorImageBasicFitness(population,targetImage);
     
     %find the indices of the maximum fitness 
     maxFitnessVec = find(max(fitness) == fitness);

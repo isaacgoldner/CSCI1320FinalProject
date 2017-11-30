@@ -71,7 +71,6 @@ smoothedTargetOrganism(:,:,1) = smoothedTargetOrganismR;
 smoothedTargetOrganism(:,:,2) = smoothedTargetOrganismG; 
 smoothedTargetOrganism(:,:,3) = smoothedTargetOrganismB; 
 
-smoothedTargetOrganism = double(smoothedTargetOrganism) ./ 256;
 
 %pre-allocate the size of the fitness vector that will be returned. One
 %element per organism: 
