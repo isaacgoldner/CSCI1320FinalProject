@@ -1,4 +1,4 @@
-function children = imageBreed(matingPool,targetImage,population)
+function children = colorImageBreed(matingPool,targetImage,population)
 
 %breed randomly selected "parent" organism pairs from the mating pool
 %population with a specific method of taking random DNA 
