@@ -1,4 +1,4 @@
-function fitness = colorImageDiffFitnessUD(population,targetImage);
+function fitness = colorImageDiffFitnessUD(population,targetImage,maxFitness);
 
 %function fitness = colorImageDiffFitness2(population,targetImage,generation,maxFitness);
 
@@ -29,8 +29,11 @@ TargetUDB = diff(targetImageB,1,1);
 fitness = zeros(row*col,1);
 
 %Set the tolerance for fitness: 
+tolerance = (1-(maxFitness)) * .3;
 
-tolerance =(.3); 
+if tolerance < .02
+   tolerance = .02; 
+end
 
 %tolerance =(  (1- maxFitness(generation)) * .05); 
 

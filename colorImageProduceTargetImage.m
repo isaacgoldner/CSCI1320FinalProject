@@ -15,7 +15,7 @@ targetImage = targetImage ./255;
 %specify the maximum number of generations that will be run through if the
 %target phrase has still not been produced yet
 
-maxGenerations = 1000;
+maxGenerations = 4000;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -40,10 +40,13 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
  
     fitnessBasic = colorImageBasicFitness(population,targetImage,maxFitness(1,c-1));
     fitnessAvgValues = colorImageAverageValuesFitness(population,targetImage,maxFitness(1,c-1));
+    fitnessDiffUD = colorImageDiffFitnessUD(population,targetImage,maxFitness(1,c-1));
+    fitnessDiffLR = colorImageDiffFitnessLR(population,targetImage,maxFitness(1,c-1));
     
-    %fitness = sqrt((fitnessBasic.^2) + (fitnessAvgValues.^2));
+    fitness = sqrt((fitnessBasic.^2) + (fitnessAvgValues.^2) + (fitnessDiffUD.^2) + ...
+        (fitnessDiffLR.^2));
     
-    fitness = fitnessBasic;
+    %fitness = fitnessBasic;
     
     %RUN ON DIFF
     %fitness = imageDiffFitness(population,targetImage);
@@ -58,10 +61,10 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     %because there may be multiple organisms with the same best fitness, so
     %it doesn not matter which of these best organisms is selected to use
     %for bestFitness
-    maxFitness(1,generation) = fitness(maxFitnessVec(1,1));
+    maxFitness(1,generation) = fitness(maxFitnessVec(1,1)) / 2;
     
     %store the average fitness for the generation
-    avgFitness(1,generation) = sum(fitness) / length(fitness);
+    avgFitness(1,generation) = (sum(fitness) / length(fitness)) / 2;
     
     %store the genetic diversity (max fitness - avg fitness) for the
     %generation
