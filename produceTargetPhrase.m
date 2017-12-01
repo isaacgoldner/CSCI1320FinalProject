@@ -33,10 +33,10 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
 
     %calculate the fitness of the population
     fitness = calculateFitness(population,populationSize,targetPhrase);
-
+    
     %find the indices of the maximum fitness 
     maxFitnessVec = find(max(fitness) == fitness);
-
+    
     %store the max fitness for the generation; 'maxFitnessVec(1,1) is used
     %because there may be multiple organisms with the same best fitness, so
     %it doesn not matter which of these best organisms is selected to use
@@ -54,6 +54,8 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     %store the bestPhrase out of the generation
     bestPhrase(generation,1:length(targetPhrase)) = population(maxFitnessVec(1,1),1:length(targetPhrase));
 
+    fprintf('Best Phrase: %s  |  Generation: %d\n',(population(maxFitnessVec(1,1),1:length(targetPhrase))),generation); 
+    
     %build the mating pool from the population
     matingPool = buildMatingPool(fitness,populationSize);
 
@@ -73,6 +75,7 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
 
         %replace old population with new population
         population(i,1:end) = newPopulation(i,1:end);
+        
     end
   
     %increment the generation number when the new population has been
@@ -87,10 +90,10 @@ end
 %End timer for evolution process occurs inside the fprintf. 
 %Conditionals are used to express the end of process information. 
 if ismember(targetPhrase,bestPhrase,'rows')
-fprintf('The evolution process succeeded in %f seconds and %d generations.\n'...
+fprintf('\nThe evolution process succeeded in %f seconds and %d generations.\n'...
     ,toc, generation-1);  
 else
-fprintf('The evolution process terminated in %f seconds after the maximum possible generation (generation %d) was reached.\n'...
+fprintf('\nThe evolution process terminated in %f seconds after the maximum possible generation (generation %d) was reached.\n'...
     ,toc,maxGenerations);         
 end
 
