@@ -28,7 +28,8 @@ mateFactor = 10;
 %used to create the mating pool. The number of tickets an organism has is
 %rounded to the nearest interger. If the calculation returns 0 tickets for
 %an organism, this zero is replaced with a 1 so that every organism is
-%included at least once
+%included in the mating pool at least once to help maintain genetic
+%diversity. 
 TicketsPerOrg = round(normalizedFitness .* (mateFactor)); 
 TicketsPerOrg(find(TicketsPerOrg == 0)) = 1;
 
@@ -38,17 +39,20 @@ TicketsPerOrg(find(TicketsPerOrg == 0)) = 1;
 %the organism has. 
 matingPoolTickets = repelem([1:populationSize]',TicketsPerOrg);
 
-%store how many total tickets there are
+%Store the number of "tickets" entering the mating pool. 
 totalTickets = length(matingPoolTickets);
 
-%initialize the matingPool matrix
+%initialize the matingPool matrix, which will create the 200 pairs of
+%parents that will be used to breed the members of the next generation. 
 matingPool = zeros(populationSize,2);
 
-%go through each index of the matingPool matrix picking a random number for
+%Go through each index of the matingPool matrix, picking a random number for
 %the index of an element in the matingPoolTickets vector and assign the
-%specific index of matingPool to the organism number that was chosen.
-%if the same parent is randomly selected to breed with itself, choose a
-%different organism to breed with until this is not the case. 
+%specific index of matingPool to the organism number that was chosen. This
+%will create random pairs of parents to breed.
+%If the same parent is randomly selected to breed with itself, choose a
+%different organism to breed with until this is not the case. The process
+%will end when all parent pairs are created. 
 for p1 = 1:populationSize
     for p2 = 1:2
         num = randi([1,totalTickets]);
