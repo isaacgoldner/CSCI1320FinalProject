@@ -4,11 +4,9 @@ function fitness = calculateFitness(population,populationSize,targetPhrase)
 %function returns a column vector where each element is an individual
 %population organism's fitness expressed as a percent. 
 
-%take the current population and revert it back from a single cell to an
-%array. 
-%pop = cell2mat(population); 
 
-%Temporarily reshape the population to be a row vector for easy comparison: 
+%Temporarily reshape the population to be a row vector for easy comparison
+%between each organism and the target pharse: 
 pop4Compare = reshape(population',1,populationSize * length(targetPhrase)); 
 
 %Replicate the target phrase to create a "target row vector" that can be
@@ -22,16 +20,14 @@ target4Compare = repmat(targetPhrase,1,populationSize);
 %the organism represented by the column matched with the target phrase's 
 %character:
 rightOrWrong = (pop4Compare == target4Compare);
-matchCheck = reshape(rightOrWrong,length(targetPhrase),populationSize);
-
-%MatchCheck = reshape((pop4Compare == target4Compare),200,18); 
+matchCheck = reshape(rightOrWrong,length(targetPhrase),populationSize); 
 
 %Fitness, a 200x1 column vector, is created to store the fitness of each
 %of the members of the population expressed as a percent. Each element of
 %the fitness vector corrisponds to an individual organism. 
 fitness = (sum(matchCheck))./length(targetPhrase); 
 fitness = fitness';
-
-
-%General NOTE: UPDATE COMMENTS IN THIS GUY, LP BUT NECESSARY. 
+ 
+%Note that fitness is normalized inside of the function that builds the
+%mating pool. 
 end
