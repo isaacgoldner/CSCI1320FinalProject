@@ -70,7 +70,11 @@ smoothedTargetOrganismB = double(reshape(smoothedTargetOrganismB,row-2,col-2));
 fitness = zeros(row*col,1);
 
 %Set the tolerance for fitness: 
-tolerance = (1 - (0.5 * maxFitness)) * .3;
+tolerance = (1 - maxFitness) * .3;
+
+if tolerance < .02
+   tolerance = .02; 
+end
 
 %Run the following loop for every member of the population: 
 for i = 1:row*col
