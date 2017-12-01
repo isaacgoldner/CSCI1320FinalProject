@@ -32,7 +32,7 @@ end
 %the mating pool based on its fitness; how many 'tickets' it will have in 
 %the 'lottery'. This is accomplished using a mating
 %factor that is saved as a variable so that it can be altered later. 
-mateFactor = 20; 
+mateFactor = 30; 
 
 %TicketsPerOrg is a vector that simply saves the number of times a
 %particular organism will appear in the mating pool. Each element in the

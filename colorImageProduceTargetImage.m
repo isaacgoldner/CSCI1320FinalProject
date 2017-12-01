@@ -29,18 +29,22 @@ bestImage = cell(maxGenerations,1);
 %also used as a counter variable throughout the while-loop
 generation = 1;
 
+c = 2;
+
 %Start timer to determine how long the evolution process will take: 
 tic; 
 
 while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
 %Calculate the fitness of each organism with the calculate fitness
-%function (there are to be multiple versions for this function):
-
-
-    %RUN ON AVG VALUE:
+%function
  
-    fitness = colorImageBasicFitness(population,targetImage);
-
+    fitnessBasic = colorImageBasicFitness(population,targetImage,maxFitness(1,c-1));
+    fitnessAvgValues = colorImageAverageValuesFitness(population,targetImage,maxFitness(1,c-1));
+    
+    %fitness = sqrt((fitnessBasic.^2) + (fitnessAvgValues.^2));
+    
+    fitness = fitnessBasic;
+    
     %RUN ON DIFF
     %fitness = imageDiffFitness(population,targetImage);
     
@@ -112,6 +116,7 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     generation = generation + 1;
     generation-1
    
+    c = c + 1;
 
 end
 %while loop will finally terminate when the target image is produced. 

@@ -80,7 +80,7 @@ newPopulationMember(Process1ers + (2*row*col)) = randNewVals3;
 %Process 2: 
 %Pixels assigned to process 2 will either be lightened or darkened within
 %asa specific mutatation range. 
-mutationRange = 0.05; 
+mutationRange = 0.1; 
 
 %Create a vector of values within the range that will either be added or
 %subtracted: 

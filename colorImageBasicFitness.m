@@ -1,11 +1,15 @@
-function fitness = colorImageBasicFitness(population,targetImage)
+function fitness = colorImageBasicFitness(population,targetImage,maxFitness)
    
 
 %Take the size of the target image: 
 [row,col,page] = size(targetImage);
 
 %Set the fitness tolerance: 
-tolerance = 0.05;  
+tolerance = (1-(maxFitness)) * .3;
+
+if tolerance < .05
+   tolerance = .05; 
+end
 
 %Preallocate the fitness vector: 
 fitness = zeros(row*col,1);
@@ -32,20 +36,55 @@ fitness = zeros(row*col,1);
    Gdiff = abs(currentOrganismG - targetOrganismG);
    Bdiff = abs(currentOrganismB - targetOrganismB); 
    
-   %calculate how "off" of the target each of the pixels are in total
-   totalDiff = Rdiff + Gdiff + Bdiff;
+   %1: Process using  NO loops: 
    
-   %set the values of how "off" each pixel is to a value between 0 and 1,
-   %with 0 being the least "off" and 1 being the most "off"
-   totalDiff = totalDiff / 3;
+   %create matrix of the same size as the target image with each element
+   %containing the number of its index
+   pixels = [1:(row*col)];
+   pixels = reshape(pixels,row,col);
    
-   %switch the values so that a value of 1 is the least "off" and a value
-   %of 0 is the most "off"
+   matR = zeros(1,(row*col));
+   matG = zeros(1,(row*col));
+   matB = zeros(1,(row*col));
+   
+   %logical vector of the indices of red layer that fall
+   %within the tolerance level
+   rWithin = Rdiff <= tolerance;
+   %indices of the pixels that fall within the tolerance level
+   rIndicesWithin = pixels(rWithin);
+   matR(rIndicesWithin) = 1;
+   
+   %logical vector of the indices of green layer that fall
+   %within the tolerance level
+   gWithin = Gdiff <= tolerance;
+   %indices of the pixels that fall within the tolerance level
+   gIndicesWithin = pixels(gWithin);
+   matG(gIndicesWithin) = 1;
+   
+   %logical vector of the indices of blue layer that fall
+   %within the tolerance level
+   bWithin = Bdiff <= tolerance;
+   %indices of the pixels that fall within the tolerance level
+   bIndicesWithin = pixels(bWithin);
+   matB(gIndicesWithin) = 1;
+   
+   matTotal = matR + matG + matB;
+   
+   withinTolerance = find(matTotal == 3);
+   
+   diffR = abs(currentOrganismR(withinTolerance) - targetOrganismR(withinTolerance));
+   diffG = abs(currentOrganismG(withinTolerance) - targetOrganismG(withinTolerance));
+   diffB = abs(currentOrganismB(withinTolerance) - targetOrganismB(withinTolerance));
+   
+   totalDiff = diffR + diffG + diffB;
+   
+   totalDiff = totalDiff ./ (withinTolerance * row * col * 3);
+   
    totalDiff = 1 - totalDiff;
    
-   fitness(i,1) = round(sum(sum(totalDiff))) / (row*col);
+   totalDiff = sum(sum(totalDiff));
    
-   %1: Process using  NO loops: 
+   fitness(i,1) = totalDiff / (row * col);
    
    %Create a row*col matrix called ColorFit, where each element represents
    %a pixel in the image. If the element is 3, the RGB layers are all
@@ -56,8 +95,8 @@ fitness = zeros(row*col,1);
    
    %Record the number of pixels that are within the tolerance range for all
    %three of their color layers: 
-   
-   %numPixelsWithinRange = sum(sum(ColorFit == 3)); 
+    
+   %numPixelsWithinRange = sum(sum(ColorFit >= 2)); 
 
     %divide the number of fit pixels by the total number of pixels in
     %the target image to express the image's fitness as a percentage: 
