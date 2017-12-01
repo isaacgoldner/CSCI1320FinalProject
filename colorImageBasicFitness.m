@@ -7,8 +7,8 @@ function fitness = colorImageBasicFitness(population,targetImage,maxFitness)
 %Set the fitness tolerance: 
 tolerance = (1-(maxFitness)) * .3;
 
-if tolerance < .05
-   tolerance = .05; 
+if tolerance < .02
+   tolerance = .02; 
 end
 
 %Preallocate the fitness vector: 
