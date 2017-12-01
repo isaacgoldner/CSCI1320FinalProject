@@ -115,22 +115,37 @@ smoothedcurrentOrganismG = reshape(smoothedcurrentOrganismG,row-2,col-2);
 smoothedcurrentOrganismB = reshape(smoothedcurrentOrganismB,row-2,col-2);
     
   
-%Record the differences between the color layers of the smoothed
-%current organism and the smoothed target organism: 
+    %Record the differences between the color layers of the smoothed
+    %current organism and the smoothed target organism: 
    Rdiff = abs(smoothedcurrentOrganismR - smoothedTargetOrganismR); 
    Gdiff = abs(smoothedcurrentOrganismG - smoothedTargetOrganismG);
    Bdiff = abs(smoothedcurrentOrganismB - smoothedTargetOrganismB); 
+   
+   %calculate how "off" of the target each of the pixels are in total
+   totalDiff = Rdiff + Gdiff + Bdiff;
+   
+   %set the values of how "off" each pixel is to a value between 0 and 1,
+   %with 0 being the least "off" and 1 being the most "off"
+   totalDiff = totalDiff / 3;
+   
+   %switch the values so that a value of 1 is the least "off" and a value
+   %of 0 is the most "off"
+   totalDiff = 1 - totalDiff;
+   
+   fitness(i,1) = round(sum(sum(totalDiff))) / (row*col);
    
   %Process using  NO loops: 
    
    %Create a matrix called ColorFit, where each element represents
    %a pixel in the smoothed image (the edges are cut off). If the element 
    %is 3, the RGB layers are all within the set tolerance value. 
-   ColorFit = (Rdiff <= tolerance) + (Bdiff <= tolerance) + (Gdiff <= tolerance); 
+   
+   %ColorFit = (Rdiff <= tolerance) + (Bdiff <= tolerance) + (Gdiff <= tolerance); 
    
    %Record the number of pixels that are within the tolerance range for all
    %three of their color layers: 
-   numPixelsWithinRange = sum(sum(ColorFit >= 2)); 
+   
+   %numPixelsWithinRange = sum(sum(ColorFit >= 2)); 
 
 %     %divide the number of fit pixels by the total number of pixels in
 %     %the target image to express the image's fitness as a percentage: 
@@ -139,7 +154,8 @@ smoothedcurrentOrganismB = reshape(smoothedcurrentOrganismB,row-2,col-2);
     %divide the number of fit pixels in the smoothed image by the total 
     %number of pixels in the smoothed target image to express the fitness 
     %as a percentage
-    fitness(i,1) = numPixelsWithinRange / ((row * col) - (2*row) - (2*row - 4));
+    
+    %fitness(i,1) = numPixelsWithinRange / ((row * col) - (2*row) - (2*row - 4));
     
 end
 

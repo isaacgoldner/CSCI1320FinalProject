@@ -15,7 +15,7 @@ targetImage = targetImage ./255;
 %specify the maximum number of generations that will be run through if the
 %target phrase has still not been produced yet
 
-maxGenerations = 10000;
+maxGenerations = 1000;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -39,7 +39,7 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
 
     %RUN ON AVG VALUE:
  
-    fitness = colorImageAverageValuesFitness(population,targetImage);
+    fitness = colorImageBasicFitness(population,targetImage);
 
     %RUN ON DIFF
     %fitness = imageDiffFitness(population,targetImage);
