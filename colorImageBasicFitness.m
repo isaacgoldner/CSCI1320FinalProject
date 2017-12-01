@@ -5,7 +5,7 @@ function fitness = colorImageBasicFitness(population,targetImage,maxFitness)
 [row,col,page] = size(targetImage);
 
 %Set the fitness tolerance: 
-tolerance = (1-(maxFitness)) * .3;
+tolerance = (1-(.5*maxFitness)) * .3;
 
 if tolerance < .02
    tolerance = .02; 
@@ -78,7 +78,7 @@ fitness = zeros(row*col,1);
    
    totalDiff = diffR + diffG + diffB;
    
-   totalDiff = totalDiff ./ (withinTolerance * row * col * 3);
+   totalDiff = totalDiff ./ (tolerance * row * col * 3);
    
    totalDiff = 1 - totalDiff;
    

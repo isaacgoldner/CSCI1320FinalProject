@@ -1,7 +1,7 @@
 %Script used to run the image evolution process in color: 
 
 %Read in the desired target image, save it as targetImage: 
-targetImage = imread('25x25poop.png');
+targetImage = imread('25x25angry.png');
 
 %Convert the image to type double and have intensity values range from 0 to 1. 
 targetImage = double(targetImage); 
@@ -15,7 +15,7 @@ targetImage = targetImage ./255;
 %specify the maximum number of generations that will be run through if the
 %target phrase has still not been produced yet
 
-maxGenerations = 1000;
+maxGenerations = 700;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -155,6 +155,7 @@ toc;
 
 gensToPlot = [1:round(generation / 9):generation-1];
 
+figure
 subplot(3,3,1);
 imshow(bestImage{gensToPlot(1),1});
 
