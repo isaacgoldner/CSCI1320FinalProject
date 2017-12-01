@@ -15,7 +15,7 @@ targetImage = targetImage ./255;
 %specify the maximum number of generations that will be run through if the
 %target phrase has still not been produced yet
 
-maxGenerations = 4000;
+maxGenerations = 100;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -114,11 +114,14 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
        population{i,1} = newPopulation{i,1}; 
     end 
     
+    fprintf('Generation number: %d; Current max fitness: %f; Current avg fitness: %f\n',...
+        generation,maxFitness(1,generation),avgFitness(1,generation));
+    
     %increment the generation number when the new population has been
     %formed
     generation = generation + 1;
-    generation-1
-   
+    %generation-1
+    
     c = c + 1;
 
 end
@@ -127,29 +130,57 @@ end
 toc; 
 %(Cut timer for determining how long the image evolution process took in total). 
 
-figure
-%Plot avg. fitness over the generations: 
-subplot(1,3,1); 
-plot([1:generation-1],avgFitness(1:generation-1),'r');
-title('Generation vs. Avg. Fitness'); 
-xticks(0:300:maxGenerations); 
-yticks(0:.1:1); 
-xlabel('Generation'); 
-ylabel('Avg. Fit.'); 
+% figure
+% %Plot avg. fitness over the generations: 
+% subplot(1,3,1); 
+% plot([1:generation-1],avgFitness(1:generation-1),'r');
+% title('Generation vs. Avg. Fitness'); 
+% xticks(0:300:maxGenerations); 
+% yticks(0:.1:1); 
+% xlabel('Generation'); 
+% ylabel('Avg. Fit.'); 
+% 
+% %Plot max. fitness over the generations: 
+% subplot(1,3,2); 
+% plot([1:generation-1],maxFitness(1:generation-1),'b');
+% title('Generation vs. Max. Fitness'); 
+% xticks(0:300:maxGenerations); 
+% yticks(0:.1:1);
+% xlabel('Generation'); 
+% ylabel('Max. Fit.'); 
+% 
+% %Display the last image that was produced. 
+% subplot(1,3,3);
+% imshow(bestImage{generation-1,1}); 
 
-%Plot max. fitness over the generations: 
-subplot(1,3,2); 
-plot([1:generation-1],maxFitness(1:generation-1),'b');
-title('Generation vs. Max. Fitness'); 
-xticks(0:300:maxGenerations); 
-yticks(0:.1:1);
-xlabel('Generation'); 
-ylabel('Max. Fit.'); 
+gensToPlot = [1:round(generation / 9):generation-1];
 
-%Display the last image that was produced. 
-subplot(1,3,3);
-imshow(bestImage{generation-1,1}); 
+subplot(3,3,1);
+imshow(bestImage{gensToPlot(1),1});
 
+subplot(3,3,2);
+imshow(bestImage{gensToPlot(2),1});
+
+subplot(3,3,3);
+imshow(bestImage{gensToPlot(3),1});
+
+subplot(3,3,4);
+imshow(bestImage{gensToPlot(4),1});
+
+subplot(3,3,5);
+imshow(bestImage{gensToPlot(5),1});
+
+subplot(3,3,6);
+imshow(bestImage{gensToPlot(6),1});
+
+subplot(3,3,7);
+imshow(bestImage{gensToPlot(7),1});
+
+subplot(3,3,8);
+imshow(bestImage{gensToPlot(8),1});
+
+subplot(3,3,9);
+imshow(bestImage{gensToPlot(9),1});
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %PSUDO LEFTOVERS: 
 
