@@ -9,7 +9,7 @@ function matingPool = colorImageBuildMatingPool(imagePopulation,fitness,targetIm
 
 %exponential factor used to make the better fit organisms in the population
 %stand out
-fitness = fitness.^50;
+fitness = fitness.^100;
 
 %Before breeding the new population, the fitness values of the input
 %population should be normalized. 

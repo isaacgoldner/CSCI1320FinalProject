@@ -15,7 +15,7 @@ targetImage = targetImage ./255;
 %specify the maximum number of generations that will be run through if the
 %target phrase has still not been produced yet
 
-maxGenerations = 700;
+maxGenerations = 1500;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -45,7 +45,7 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     
     fitness = sqrt((fitnessBasic.^2) + (fitnessAvgValues.^2) + (fitnessDiffUD.^2) + ...
         (fitnessDiffLR.^2));
-    
+        
     %fitness = fitnessBasic;
     
     %RUN ON DIFF
