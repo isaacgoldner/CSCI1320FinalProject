@@ -31,8 +31,8 @@ fitness = zeros(row*col,1);
 
 %Set the tolerance for fitness: 
 tolerance = (1-(maxFitness)) * .3;
-if tolerance < .01
-   tolerance = .01; 
+if tolerance < .05
+   tolerance = .05; 
 end  
 % tolerance = .3;
 % tolerance = tolerance * .99;

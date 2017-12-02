@@ -8,8 +8,8 @@ function fitness = colorImageBasicFitness(population,targetImage,maxFitness)
 %Set the fitness tolerance. Tolerance lowers as max fitness increases. Max
 %possible tolerance being 0.3. Don't let the tolerance go below 0.02.
 tolerance = (1-(maxFitness)) * .3;
-if tolerance < .01
-   tolerance = .01; 
+if tolerance < .1
+   tolerance = .1; 
 end
 % tolerance = .3;
 % tolerance = tolerance * .99;

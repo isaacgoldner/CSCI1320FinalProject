@@ -77,9 +77,9 @@ fitness = zeros(row*col,1);
 
 %Set the fitness tolerance. Tolerance lowers as max fitness increases. Max
 %possible tolerance being 0.3. Don't let the tolerance go below 0.02.
-tolerance = (1 - (maxFitness)) * .3;
-if tolerance < .01
-   tolerance = .01; 
+tolerance = (1 - (maxFitness)) * .2;
+if tolerance < .05
+   tolerance = .05; 
 end
 % tolerance = .3;
 % tolerance = tolerance * .99;
