@@ -18,7 +18,7 @@ Par2PixelsPer = randi([1,(row*col)-1],1,row*col);
 Par2PixelsCell = cell((row*col),1);
 
 for i = 1:(row*col) 
-    Par2PixelsCell{i,1} = datasample( [1:(row*col)],Par2PixelsPer(i)); 
+    Par2PixelsCell{i,1} = datasample([1:(row*col)],Par2PixelsPer(i)); 
 end
 
 for i = 1:(row*col)

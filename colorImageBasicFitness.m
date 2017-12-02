@@ -37,8 +37,21 @@ for i = 1:row*col
     %and the target organism and take the absolute value of this calculation 
     Rdiff = abs(currentOrganismR - targetOrganismR); 
     Gdiff = abs(currentOrganismG - targetOrganismG);
-    Bdiff = abs(currentOrganismB - targetOrganismB); 
+    Bdiff = abs(currentOrganismB - targetOrganismB);
+    
+%     rWithin = (Rdiff <= tolerance);
+%     gWithin = (Gdiff <= tolerance);
+%     bWithin = (Bdiff <= tolerance);
+%     
+%     totalWithin = rWithin + gWithin + bWithin;
+%     
+%     allThreeWithin = (totalWithin == 3);
+%     
+%     fitPixels = sum(sum(allThreeWithin));
+%     
+%     fitness(i,1) = fitPixels / (row*col*3);
 
+%% Tolerance algorithm
     %create matrix of the same size as the target image with each element
     %containing the number of its index
     pixels = [1:(row*col)];
@@ -115,7 +128,7 @@ for i = 1:row*col
     %store the fitness of the current organism in the matrix 'fitness' with
     %a value of 1 being "totally fit" and a value of 0 being not fit at all
     fitness(i,1) = totalDiff / (row * col);
-
+%% 
     end 
 
 end 

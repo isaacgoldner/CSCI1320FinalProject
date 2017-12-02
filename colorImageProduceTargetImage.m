@@ -11,7 +11,7 @@ targetImage = targetImage ./ 255;
 population = colorImageBuildPopulation(targetImage);
 
 %specify the maximum number of generations that will be run through
-maxGenerations = 100;
+maxGenerations = 500;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -45,9 +45,11 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     
     %add the fitness values in quadrature and divide by two so that a
     %fitness of 1 is considered perfectly "fit"
-    fitness = sqrt((fitnessBasic.^2) + (fitnessAvgValues.^2) + (fitnessDiffUD.^2) + ...
-    (fitnessDiffLR.^2)) / 2;
+    %fitness = sqrt((fitnessBasic.^2) + (fitnessAvgValues.^2) + (fitnessDiffUD.^2) + ...
+    %(fitnessDiffLR.^2)) / 2;
 
+    fitness = fitnessBasic;
+    
     %find the indices of the maximum fitness 
     maxFitnessVec = find(max(fitness) == fitness);
 
@@ -115,7 +117,7 @@ title('1');
 
 subplot(3,3,2);
 imshow(bestImage{round(generation / 9),1});
-title(gensToPlot(2));
+title(round((generation / 9)));
 
 subplot(3,3,3);
 imshow(bestImage{round((generation / 9) * 2),1});
