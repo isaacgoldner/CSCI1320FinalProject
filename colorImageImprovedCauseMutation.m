@@ -3,6 +3,7 @@ function mutatedNewPopulationMember = colorImageImprovedCauseMutation(newPopulat
 %First, decide if a pixel is to be mutated at all. 'mutationRate' is a
 %number from 1 to 100, representing a percentage
 mutationRate = round((1-maxFitness) * 2.5);
+%mutationRate = 1;
 
 %Store the size of the child to be mutated: 
 [row,col,page] = size(newPopulationMember); 

@@ -11,7 +11,7 @@ targetImage = targetImage ./ 255;
 population = colorImageBuildPopulation(targetImage);
 
 %specify the maximum number of generations that will be run through
-maxGenerations = 500;
+maxGenerations = 2000;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -157,16 +157,6 @@ bestOverallImage = bestImage{bestImageIndex(1,1)};
 
 %Save the best overall image to jpeg file: 
 imwrite(bestOverallImage,'bestOverallImage.jpg');
- 
-
-% %Save the average fitness, max. fitness, and genetic diversity of each
-% %generation to a text file. 
-% fileID = fopen('ImageEvolutionResults.txt','w');
-% fprintf(fileID,'Generation                   Max. Fitness    Avg. Fitness   Gen. Diversity\r\n');
-% fprintf(fileID,'%5d                %.5f          %.5f          %.4f\r\n',TableCreator{:});
-% fclose(fileID);
-
-
 
 %Establish the vectors needed for the printing process: 
 GenerationsForTxt = num2cell(1:generation-1);  

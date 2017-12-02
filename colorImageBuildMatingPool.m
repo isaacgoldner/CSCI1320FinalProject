@@ -1,15 +1,14 @@
 function matingPool = colorImageBuildMatingPool(imagePopulation,fitness,targetImage)
-
 %Using the input population and the fitnesses of each member of this
 %population, create a "mating pool" of organisms where a given organism has
 %a larger presence in the pool if it has a heigher fitness value. 
-
 %members of the mating pool population created will eventually be "bred" to
 %create a new population of children.
 
 %exponential factor used to make the better fit organisms in the population
 %stand out
-fitness = fitness.^100;
+expFactor = 100;
+fitness = fitness .^ expFactor;
 
 %Before breeding the new population, the fitness values of the input
 %population should be normalized. 
@@ -22,6 +21,8 @@ maxFitnessVec = max(fitness);
 maxFitness = maxFitnessVec(1,1);
 minFitnessVec = min(fitness);
 minFitness = minFitnessVec(1,1);
+%handle the case if both the max and min fitness are 0; prevents diving by
+%0 in normalization calculation
 if minFitness ~= maxFitness
     normalizedFitness = (fitness - min(fitness))./(max(fitness) - min(fitness)); 
 else
@@ -62,16 +63,17 @@ matingPool = zeros(row*col,2);
 %go through each index of the matingPool matrix picking a random number for
 %the index of an element in the matingPoolTickets vector and assign the
 %specific index of matingPool to the organism number that was chosen.
-%if the same parent is randomly selected to breed with itself, choose a
-%different organism to breed with until this is not the case. 
 for p1 = 1:row*col
     for p2 = 1:2
         num = randi([1,totalTickets]);
         matingPool(p1,p2) = matingPoolTickets(num);
+        
+        %handle the case if an organism is selecte to breed with itself
         while matingPool(p1,1) == matingPool(p1,2)
            num = randi([1,totalTickets]);
            matingPool(p1,2) = matingPoolTickets(num);
         end
+        
     end
 
 end

@@ -6,13 +6,11 @@ function fitness = colorImageBasicFitness(population,targetImage,maxFitness)
 [row,col,page] = size(targetImage);
 
 %Set the fitness tolerance. Tolerance lowers as max fitness increases. Max
-%possible tolerance being 0.3. Don't let the tolerance go below 0.02.
+%possible tolerance being 0.3. Don't let the tolerance go below 0.1
 tolerance = (1-(maxFitness)) * .3;
 if tolerance < .1
    tolerance = .1; 
 end
-% tolerance = .3;
-% tolerance = tolerance * .99;
 
 %Preallocate the size of the fitness vector
 fitness = zeros(row*col,1);
@@ -38,20 +36,7 @@ for i = 1:row*col
     Rdiff = abs(currentOrganismR - targetOrganismR); 
     Gdiff = abs(currentOrganismG - targetOrganismG);
     Bdiff = abs(currentOrganismB - targetOrganismB);
-    
-%     rWithin = (Rdiff <= tolerance);
-%     gWithin = (Gdiff <= tolerance);
-%     bWithin = (Bdiff <= tolerance);
-%     
-%     totalWithin = rWithin + gWithin + bWithin;
-%     
-%     allThreeWithin = (totalWithin == 3);
-%     
-%     fitPixels = sum(sum(allThreeWithin));
-%     
-%     fitness(i,1) = fitPixels / (row*col*3);
 
-%% Tolerance algorithm
     %create matrix of the same size as the target image with each element
     %containing the number of its index
     pixels = [1:(row*col)];
@@ -128,7 +113,7 @@ for i = 1:row*col
     %store the fitness of the current organism in the matrix 'fitness' with
     %a value of 1 being "totally fit" and a value of 0 being not fit at all
     fitness(i,1) = totalDiff / (row * col);
-%% 
+    
     end 
 
 end 
