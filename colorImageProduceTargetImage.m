@@ -147,13 +147,43 @@ subplot(3,3,9);
 imshow(bestImage{generation - 1,1});
 title(generation - 1);
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%PSUDO LEFTOVERS: 
+%Save the image with the heighest fitness created in the entire evolution
+%process to an image file. 
 
-%Final tasks to be completed once the target organism is found:
+%Determine which one of the images in bestImage has the best fitness
+%reached in the entire process: 
+bestImageIndex = find(maxFitness == max(maxFitness)); 
 
-%Save the maximum fitness organism to an image file.
+%Save the best overall image to bestOverallImage:
+bestOverallImage = bestImage{bestImageIndex(1,1)}; 
 
-%save the max fitness, avg fitness, and genetic diversity vectors to a txt
-%file. This will incorperate the same process we use in the string example
-%at a larger scale.
+%Save the best overall image to jpeg file: 
+imwrite(bestOverallImage,'bestOverallImage.jpg');
+ 
+
+% %Save the average fitness, max. fitness, and genetic diversity of each
+% %generation to a text file. 
+% fileID = fopen('ImageEvolutionResults.txt','w');
+% fprintf(fileID,'Generation                   Max. Fitness    Avg. Fitness   Gen. Diversity\r\n');
+% fprintf(fileID,'%5d                %.5f          %.5f          %.4f\r\n',TableCreator{:});
+% fclose(fileID);
+
+
+
+%Establish the vectors needed for the printing process: 
+GenerationsForTxt = num2cell(1:generation-1);  
+MaxFit = num2cell(maxFitness(1:generation-1));
+AvgFit = num2cell(avgFitness(1:generation-1));
+GenDiv = num2cell(geneticDiversity(1:generation-1));
+%Table Creator is the cell array actually iterated though to make the
+%"table" that will appear in the text file.
+
+%Note that one column of TableCreator stores all of the necessary data from
+%a single generation. 
+TableCreator = [GenerationsForTxt; MaxFit; AvgFit; GenDiv]; 
+
+%The following commands save the data to the text file in a clear format: 
+fileID = fopen('ImageEvolutionResults.txt','w');
+fprintf(fileID,'Generation   Max. Fitness   Avg. Fitness   Gen. Diversity\r\n');
+fprintf(fileID,'%5d           %.5f        %.5f       %.5f\r\n',TableCreator{:});
+%fclose(fileID);
