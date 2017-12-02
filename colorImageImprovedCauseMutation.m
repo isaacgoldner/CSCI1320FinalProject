@@ -1,8 +1,8 @@
-function mutatedNewPopulationMember = colorImageImprovedCauseMutation(newPopulationMember)
+function mutatedNewPopulationMember = colorImageImprovedCauseMutation(newPopulationMember,maxFitness)
 
 %First, decide if a pixel is to be mutated at all. 'mutationRate' is a
 %number from 1 to 100, representing a percentage
-mutationRate = 1;
+mutationRate = round((1-maxFitness) * 2.5);
 
 %Store the size of the child to be mutated: 
 [row,col,page] = size(newPopulationMember); 
@@ -80,7 +80,7 @@ newPopulationMember(Process1ers + (2*row*col)) = randNewVals3;
 %Process 2: 
 %Pixels assigned to process 2 will either be lightened or darkened within
 %asa specific mutatation range. 
-mutationRange = .05; 
+mutationRange = (1-maxFitness) * .3; 
 
 %Create a vector of values within the range that will either be added or
 %subtracted: 

@@ -25,11 +25,11 @@ fitness = zeros(row*col,1);
 %equation we developed. Tolerance decreases as the maxFitness of the population
 %decreases, but if tolerance drops below .02 it becomes set at .02.  
 tolerance = (1-(.5*maxFitness)) * .3;
-
 if (tolerance < .02)
    tolerance = .02; 
 end
-
+% tolerance = .3;
+% tolerance = tolerance * .99;
 
 %Run the following loop for every pixel of the population: 
 for i = 1:row*col

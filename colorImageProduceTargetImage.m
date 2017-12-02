@@ -45,10 +45,9 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     
     %add the fitness values in quadrature and divide by two so that a
     %fitness of 1 is considered perfectly "fit"
-    %fitness = sqrt((fitnessBasic.^2) + (fitnessAvgValues.^2) + (fitnessDiffUD.^2) + ...
-    %(fitnessDiffLR.^2)) / 2;
-
-    fitness = fitnessBasic;
+    fitness = sqrt((fitnessBasic.^2) + (fitnessAvgValues.^2) + (fitnessDiffUD.^2) + ...
+    (fitnessDiffLR.^2)) / 2;
+    %fitness = fitnessBasic;
     
     %find the indices of the maximum fitness 
     maxFitnessVec = find(max(fitness) == fitness);
@@ -86,7 +85,7 @@ while (generation ~= maxGenerations+1) && (~ismember(1,maxFitness))
     for i = 1:(row*col)
     
         %Cause mutation for the specific organism of the new population
-        newPopulation{i,1} = colorImageImprovedCauseMutation(newPopulation{i,1}); 
+        newPopulation{i,1} = colorImageImprovedCauseMutation(newPopulation{i,1},maxFitness(c-1)); 
 
         %Replace the old population with the new population one child at a
         %time
