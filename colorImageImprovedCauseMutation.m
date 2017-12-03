@@ -1,107 +1,271 @@
 function mutatedNewPopulationMember = colorImageImprovedCauseMutation(newPopulationMember,maxFitness)
-
+%% New mutation function
 %First, decide if a pixel is to be mutated at all. 'mutationRate' is a
 %number from 1 to 100, representing a percentage
-mutationRate = round((1-maxFitness) * 2.5);
-%mutationRate = 1;
+mutationRate = 10;
 
 %Store the size of the child to be mutated: 
-[row,col,page] = size(newPopulationMember); 
+[row,col,page] = size(newPopulationMember);
 
 %Generate random integer(s) from a range that depends on the desired
 %mutation rate: 
-LuckyNumber = randi([1,100],1,mutationRate); 
+luckyNumber = randi([1,100],1,mutationRate);
 
 %Create a vector of random integers drawn from the same range as
 %LuckyNumber. This vector's length matches the number of elements in the 
 %child that is to be mutated; each element corrisponds to one of the
 %child's pixels. 
-ChanceVec = randi([1,100],1,(row*col)); 
+chanceVec = randi([1,100],1,(row*col));
 
 %Create a logical vector that marks the instances where an element of
-%ChanceVec matches the LuckyNumber's value: 
-mutMe = ismember(ChanceVec,LuckyNumber);
+%ChanceVec matches the LuckyNumber's value:
+mutMeRandomLogical = ismember(chanceVec,luckyNumber);
 
-pixels = [1:row*col];
+%create a vector with the indices of all of the elements of the population
+%member
+pixels = [1:(row*col)];
 
 %Find the indexes of the elements in the child that should be mutated by
 %finding where the element's of ChanceVec matched LuckyNumber: 
+mutMeRandomIndices = pixels(mutMeRandomLogical);
 
-mutateWho = pixels(mutMe);
-
-%For the pixels to be mutated, determine what type of mutation they will
-%undergo (PROCESS 1 or 2)
-%whatMut = randi([1,4],1,length(mutateWho)); 
-
-%Set two mutation rates for the pixels that are to be mutated:
-%randomMutationRate and special MutationRate: 
-
-randomMutationRate = 0.25; 
-
-%THIS IS THE PRIOR DECISION PROCESS; SAVE FOR TESTING: 
-%whatMut = randi([1,4],1,sum(mutMe));
-
-%randomMutationChance = 1;
-
-%Assign which pixels from mutateWho will undergo which mutation process: 
-%Process1ers = mutateWho(find(whatMut == 4)); 
-%Process2ers = mutateWho(find(whatMut ~= 4)); 
-
-%This is the most recent, use for testing as needed. 
-%Process1ers = mutateWho(find(whatMut == 1 )); 
-%Process2ers = mutateWho(find(whatMut ~= 1)); 
-
-%Of of the pixels to be mutated, decide which pixels will recieve what
-%kind of mutation:
+%mutation rate for entirely random mutation
+randomMutationRate = 0.05;
 
 %Decide which of the pixels are to be randomly mutated:  
-NumPro1Pixels = round(randomMutationRate * length(mutateWho));
-Process1ers = datasample(mutateWho, NumPro1Pixels,'Replace',false); 
+
+NumPro1Pixels = round(randomMutationRate * length(mutMeRandomIndices));
+Process1ers = datasample(mutMeRandomIndices, NumPro1Pixels,'Replace',false);
 
 %Have the remaining pixels undergo a more specific mutation process:
-Process2ers = mutateWho(~ismember(mutateWho,Process1ers)); 
+Process2ers = mutMeRandomIndices(~ismember(mutMeRandomIndices,Process1ers));
 
-%Process2ers = 
-%Process1ers = mutateWho(find(whatMut == 1 )); 
-%Process2ers = mutateWho(find(whatMut ~= 1)); 
+    %% Entirely random mutation: 
+    %Pixels assigned to process 1 will be randomly mutated: 
 
+    randNewVals1 = rand(1,length(Process1ers));
+    newPopulationMember(Process1ers) = randNewVals1; 
 
-%PROCESS 1: 
-%Pixels assigned to process 1 will be randomly mutated: 
+    randNewVals2 = rand(1,length(Process1ers));
+    newPopulationMember(Process1ers + (row*col)) = randNewVals2;
 
-randNewVals1 = rand(1,length(Process1ers));
-newPopulationMember(Process1ers) = randNewVals1; 
+    randNewVals3 = rand(1,length(Process1ers));
+    newPopulationMember(Process1ers + (2*row*col)) = randNewVals3;
+    
+    %% Within range mutation: 
+    %Pixels assigned to process 2 will either be lightened or darkened within
+    %asa specific mutatation range. 
+    mutationRange = .05; 
 
-randNewVals2 = rand(1,length(Process1ers));
-newPopulationMember(Process1ers + (row*col)) = randNewVals2;
+    %Create a vector of values within the range that will either be added or
+    %subtracted: 
+    ligDar = rand(1,length(Process2ers))*(mutationRange - (-mutationRange))+(-mutationRange); 
+    newPopulationMember(Process2ers) = newPopulationMember(Process2ers) + ligDar; 
+    newPopulationMember(Process2ers + (row*col)) = newPopulationMember(Process2ers) + ligDar; 
+    newPopulationMember(Process2ers + (2*row*col)) = newPopulationMember(Process2ers) + ligDar; 
 
-randNewVals3 = rand(1,length(Process1ers));
-newPopulationMember(Process1ers + (2*row*col)) = randNewVals3;
+    %set values that are greater than 1 to 1
+    greaterThan1Indices = find(newPopulationMember > 1);
+    newPopulationMember(greaterThan1Indices) = 1;
 
-%Process 2: 
-%Pixels assigned to process 2 will either be lightened or darkened within
-%asa specific mutatation range. 
-mutationRange = (1-maxFitness) * .3; 
+    %set values that are less than 0 to 0
+    lessThan0Indices = find(newPopulationMember < 0);
+    newPopulationMember(lessThan0Indices) = 0;
+    
+    %Finish with setting the function's output equal to the altered child. 
+    mutatedNewPopulationMember = newPopulationMember;
+    
+%% Flipping pixels up/down
+%set the mutation rate for the flipping of pixels
+flipPixelsMutationRateUD = round((1 - (maxFitness)) * 50);
 
-%Create a vector of values within the range that will either be added or
-%subtracted: 
-ligDar = rand(1,length(Process2ers))*(mutationRange - (-mutationRange))+(-mutationRange); 
-newPopulationMember(Process2ers) = newPopulationMember(Process2ers) + ligDar; 
- 
-newPopulationMember(Process2ers + (row*col)) = newPopulationMember(Process2ers) + ligDar; 
+%Generate random integer(s) from a range that depends on the desired
+%mutation rate: 
+luckyNumber = randi([1,100],1,flipPixelsMutationRateUD);
 
-newPopulationMember(Process2ers + (2*row*col)) = newPopulationMember(Process2ers) + ligDar; 
+%Create a vector of random integers drawn from the same range as
+%LuckyNumber. This vector's length matches the number of elements in the 
+%child that is to be mutated; each element corrisponds to one of the
+%child's pixels. 
+chanceVec = randi([1,100],1,(row*col));
 
+%Create a logical vector that marks the instances where an element of
+%ChanceVec matches the LuckyNumber's value:
+mutMe= ismember(chanceVec,luckyNumber);
 
+%create a vector with the indices of all of the elements of the population
+%member
+pixels = [1:(row*col)];
 
-greaterThan1Indices = find(newPopulationMember > 1);
-newPopulationMember(greaterThan1Indices) = 1;
+%Find the indexes of the elements in the child that should be mutated by
+%finding where the element's of ChanceVec matched LuckyNumber: 
+mutMeRandomIndices = pixels(mutMe);
 
-lessThan0Indices = find(newPopulationMember < 0);
-newPopulationMember(lessThan0Indices) = 0;
+topRow = find(mod(mutMeRandomIndices,row) == 1);
+mutMeRandomIndices(topRow) = [];
 
-%Finish with setting the function's output equal to the altered child. 
-mutatedNewPopulationMember = newPopulationMember;
+bottomRow = find(mod(mutMeRandomIndices,row) == 0);
+mutMeRandomIndices(bottomRow) = [];
 
+upOrDown = [-1,1];
 
+upOrDownVec = datasample(upOrDown,length(mutMeRandomIndices));
+
+temp = newPopulationMember(mutMeRandomIndices);
+
+switchingIndices = upOrDownVec + mutMeRandomIndices;
+
+newPopulationMember(mutMeRandomIndices) = newPopulationMember(switchingIndices);
+
+newPopulationMember(switchingIndices) = temp;
+
+%% Flipping pixels left/right
+%set the mutation rate for the flipping of pixels
+flipPixelsMutationRateUD = round((1 - (maxFitness)) * 50);
+
+%Generate random integer(s) from a range that depends on the desired
+%mutation rate: 
+luckyNumber = randi([1,100],1,flipPixelsMutationRateUD);
+
+%Create a vector of random integers drawn from the same range as
+%LuckyNumber. This vector's length matches the number of elements in the 
+%child that is to be mutated; each element corrisponds to one of the
+%child's pixels. 
+chanceVec = randi([1,100],1,(row*col));
+
+%Create a logical vector that marks the instances where an element of
+%ChanceVec matches the LuckyNumber's value:
+mutMe= ismember(chanceVec,luckyNumber);
+
+%create a vector with the indices of all of the elements of the population
+%member
+pixels = [1:(row*col)];
+
+%Find the indexes of the elements in the child that should be mutated by
+%finding where the element's of ChanceVec matched LuckyNumber: 
+mutMeRandomIndices = pixels(mutMe);
+
+leftColumn = find(mutMeRandomIndices <= row);
+mutMeRandomIndices(leftColumn) = [];
+
+rightColumn = find(mutMeRandomIndices >= ((row * col) - row + 1));
+mutMeRandomIndices(rightColumn) = [];
+
+leftOrRight = [-row,row];
+
+leftOrRightVec = datasample(leftOrRight,length(mutMeRandomIndices));
+
+temp = newPopulationMember(mutMeRandomIndices);
+
+switchingIndices = leftOrRightVec + mutMeRandomIndices;
+
+newPopulationMember(mutMeRandomIndices) = newPopulationMember(switchingIndices);
+
+newPopulationMember(switchingIndices) = temp;
 end
+%% Previous mutation function
+% %First, decide if a pixel is to be mutated at all. 'mutationRate' is a
+% %number from 1 to 100, representing a percentage
+% mutationRate = 2;
+% %mutationRate = 1;
+% 
+% %Store the size of the child to be mutated: 
+% [row,col,page] = size(newPopulationMember); 
+% 
+% %Generate random integer(s) from a range that depends on the desired
+% %mutation rate: 
+% LuckyNumber = randi([1,100],1,mutationRate); 
+% 
+% %Create a vector of random integers drawn from the same range as
+% %LuckyNumber. This vector's length matches the number of elements in the 
+% %child that is to be mutated; each element corrisponds to one of the
+% %child's pixels. 
+% ChanceVec = randi([1,100],1,(row*col)); 
+% 
+% %Create a logical vector that marks the instances where an element of
+% %ChanceVec matches the LuckyNumber's value: 
+% mutMe = ismember(ChanceVec,LuckyNumber);
+% 
+% pixels = [1:row*col];
+% 
+% %Find the indexes of the elements in the child that should be mutated by
+% %finding where the element's of ChanceVec matched LuckyNumber: 
+% 
+% mutateWho = pixels(mutMe);
+% 
+% %For the pixels to be mutated, determine what type of mutation they will
+% %undergo (PROCESS 1 or 2)
+% %whatMut = randi([1,4],1,length(mutateWho)); 
+% 
+% %Set two mutation rates for the pixels that are to be mutated:
+% %randomMutationRate and special MutationRate: 
+% 
+% randomMutationRate = 0.25; 
+% 
+% %THIS IS THE PRIOR DECISION PROCESS; SAVE FOR TESTING: 
+% %whatMut = randi([1,4],1,sum(mutMe));
+% 
+% %randomMutationChance = 1;
+% 
+% %Assign which pixels from mutateWho will undergo which mutation process: 
+% %Process1ers = mutateWho(find(whatMut == 4)); 
+% %Process2ers = mutateWho(find(whatMut ~= 4)); 
+% 
+% %This is the most recent, use for testing as needed. 
+% %Process1ers = mutateWho(find(whatMut == 1 )); 
+% %Process2ers = mutateWho(find(whatMut ~= 1)); 
+% 
+% %Of of the pixels to be mutated, decide which pixels will recieve what
+% %kind of mutation:
+% 
+% %Decide which of the pixels are to be randomly mutated:  
+% NumPro1Pixels = round(randomMutationRate * length(mutateWho));
+% Process1ers = datasample(mutateWho, NumPro1Pixels,'Replace',false); 
+% 
+% %Have the remaining pixels undergo a more specific mutation process:
+% Process2ers = mutateWho(~ismember(mutateWho,Process1ers)); 
+% 
+% %Process2ers = 
+% %Process1ers = mutateWho(find(whatMut == 1 )); 
+% %Process2ers = mutateWho(find(whatMut ~= 1)); 
+% 
+% 
+% %PROCESS 1: 
+% %Pixels assigned to process 1 will be randomly mutated: 
+% 
+% randNewVals1 = rand(1,length(Process1ers));
+% newPopulationMember(Process1ers) = randNewVals1; 
+% 
+% randNewVals2 = rand(1,length(Process1ers));
+% newPopulationMember(Process1ers + (row*col)) = randNewVals2;
+% 
+% randNewVals3 = rand(1,length(Process1ers));
+% newPopulationMember(Process1ers + (2*row*col)) = randNewVals3;
+% 
+% %Process 2: 
+% %Pixels assigned to process 2 will either be lightened or darkened within
+% %asa specific mutatation range. 
+% mutationRange = (1-maxFitness) * .3; 
+% 
+% %Create a vector of values within the range that will either be added or
+% %subtracted: 
+% ligDar = rand(1,length(Process2ers))*(mutationRange - (-mutationRange))+(-mutationRange); 
+% newPopulationMember(Process2ers) = newPopulationMember(Process2ers) + ligDar; 
+%  
+% newPopulationMember(Process2ers + (row*col)) = newPopulationMember(Process2ers) + ligDar; 
+% 
+% newPopulationMember(Process2ers + (2*row*col)) = newPopulationMember(Process2ers) + ligDar; 
+% 
+% 
+% 
+% greaterThan1Indices = find(newPopulationMember > 1);
+% newPopulationMember(greaterThan1Indices) = 1;
+% 
+% lessThan0Indices = find(newPopulationMember < 0);
+% newPopulationMember(lessThan0Indices) = 0;
+% 
+% %Finish with setting the function's output equal to the altered child. 
+% mutatedNewPopulationMember = newPopulationMember;
+% 
+% 
+% end

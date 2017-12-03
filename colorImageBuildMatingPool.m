@@ -7,7 +7,7 @@ function matingPool = colorImageBuildMatingPool(imagePopulation,fitness,targetIm
 
 %exponential factor used to make the better fit organisms in the population
 %stand out
-expFactor = 100;
+expFactor = 50;
 fitness = fitness .^ expFactor;
 
 %Before breeding the new population, the fitness values of the input
@@ -33,7 +33,7 @@ end
 %the mating pool based on its fitness; how many 'tickets' it will have in 
 %the 'lottery'. This is accomplished using a mating
 %factor that is saved as a variable so that it can be altered later. 
-mateFactor = 50; 
+mateFactor = 20; 
 
 %TicketsPerOrg is a vector that simply saves the number of times a
 %particular organism will appear in the mating pool. Each element in the
