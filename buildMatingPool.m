@@ -19,8 +19,15 @@ normalizedFitness = (fitness - min(fitness))./(max(fitness) - min(fitness));
 %Now it must be decided how many times a particular organism will appear in
 %the mating pool based on its fitness; how many 'tickets' it will have in 
 %the 'lottery'. This is accomplished using a mating
-%factor that is saved as a variable so that it can be altered later. 
+%factor that is saved as a variable so that it can be altered for task 1.7 
+%work. 
 mateFactor = 10; 
+
+%Task 1.7 Note: anything between 10 and 15 works quite well using our 
+%"standard settings" and not 
+%applying and exponent to the fitness values. 10 does appear to be best
+%Lowering produces worse
+%results. With an expo factor of 10 works well too. 
 
 %TicketsPerOrg is a vector that simply saves the number of times a
 %particular organism will appear in the mating pool. Each element in the

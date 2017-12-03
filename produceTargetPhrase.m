@@ -6,13 +6,16 @@
 %Set the target phrase that the process should evolve. 
 targetPhrase = 'To be or not to be';
 
+%1.7 Notes: Shorter phrases have less possible wrong strings and therefor
+%generate faster. 
+
 %Use the buildPopulation function to create the initial population of 
 %strings and set the size of the population: 
 [population,populationSize] = buildPopulation(targetPhrase);
 
 %Specify the maximum number of generations that will be run through if the
 %target phrase has still not been produced: 
-maxGenerations = 200;
+maxGenerations = 250;
 
 %Preallocate vectors that will be used to store required information about
 %every generation: 
@@ -138,7 +141,7 @@ subplot(1,3,3);
 plot([1:generation-1],geneticDiversity(1:generation-1),'m');
 title('Generation vs. Genetic Diversity'); 
 xticks(0:20:200); 
-yticks(0:.01:.4);
+%yticks(0:.01:.4);
 xlabel('Generation'); 
 ylabel('Gen. Div.'); 
  

@@ -27,6 +27,15 @@ matchCheck = reshape(rightOrWrong,length(targetPhrase),populationSize);
 %the fitness vector corrisponds to an individual organism. 
 fitness = (sum(matchCheck))./length(targetPhrase); 
 fitness = fitness';
+
+%For task 1.7 experimentation: exponetially raising fitness values is an
+%option. This option was implemented more throughly in our image functions
+%due to the high overall effectiveness of the phrase evolution process. 
+expoFactor = 100; 
+
+fitness = fitness.^(expoFactor); 
+%Note: we left exponential factor at 1 finding that with out an exponential
+%factor  of 100 and a mating factor of 10 the system was usually quite effective. 
  
 %Note that fitness is normalized inside of the function that builds the
 %mating pool. 

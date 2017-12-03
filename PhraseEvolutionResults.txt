@@ -1,104 +1,84 @@
 Generation         Best Phrase          Max. Fitness    Avg. Fitness   Gen. Diversity
-    1          RrgcZ  GVvYfvtokSb          0.1667          0.0172          0.1494
-    2          eq ib TrNbQf cpqzu          0.2222          0.0425          0.1797
-    3          fM KGGWTanokuBr bg          0.2778          0.0806          0.1972
-    4          FagGG JWLnovxBp bs          0.2778          0.1064          0.1714
-    5          HTQGZ wTBnCf tp by          0.3333          0.1394          0.1939
-    6          Ro bISOmWnokatpIVu          0.3333          0.1822          0.1511
-    7          goQbZ YmEnok Xo Zh          0.4444          0.2111          0.2333
-    8          foQbD Ym nof co bo          0.5556          0.2386          0.3169
-    9          HoQbb Yr nov to ub          0.6111          0.2928          0.3183
-   10          HofbD Yr nov to bb          0.6667          0.3397          0.3269
-   11          Ho bH YrnnoK Co br          0.6111          0.3567          0.2544
-   12          mN be YW no  cp br          0.5556          0.3947          0.1608
-   13          Rogbe Ym no  Uo br          0.6111          0.4097          0.2014
-   14          fotbZ Ym nof to bA          0.6111          0.4236          0.1875
-   15          mojbe Tr nof tU bu          0.6667          0.4481          0.2186
-   16          mo be orpnoZ tU bA          0.7222          0.4872          0.2350
-   17          mo beRYr noQ to br          0.7222          0.5283          0.1939
-   18          mo be YrBnof to bj          0.7222          0.5583          0.1639
-   19          m  be or nov to bj          0.7778          0.5811          0.1967
-   20          m  be or nov to bj          0.7778          0.5836          0.1942
-   21          mo be or noZ to bj          0.8333          0.5981          0.2353
-   22          mo be or nof to bu          0.8333          0.6044          0.2289
-   23          mo be Yr nov to br          0.7778          0.6153          0.1625
-   24          eo be ur nof to bK          0.7778          0.6456          0.1322
-   25          Ho be orWnof to bA          0.7778          0.6622          0.1156
-   26          go be or nof to bj          0.8333          0.6747          0.1586
-   27          go be or nof to bK          0.8333          0.6797          0.1536
-   28          To be or nof to bA          0.8889          0.7000          0.1889
-   29          to be or nof to bi          0.8333          0.7064          0.1269
-   30          to be or nov to bj          0.8333          0.7144          0.1189
-   31          Ho be or nof to bj          0.8333          0.7242          0.1092
-   32          to be or nof to bM          0.8333          0.7283          0.1050
-   33          Ro be or nok to bj          0.8333          0.7461          0.0872
-   34          Ro be or nof to bC          0.8333          0.7356          0.0978
-   35          To be or noQ to bB          0.8889          0.7494          0.1394
-   36          Ro be or nof to bj          0.8333          0.7631          0.0703
-   37          mo be or nok to bM          0.8333          0.7644          0.0689
-   38          mo be or noC to bw          0.8333          0.7722          0.0611
-   39          Ro be or nof to bM          0.8333          0.7750          0.0583
-   40          io be or noC to bB          0.8333          0.7808          0.0525
-   41          to be or nof to bM          0.8333          0.7831          0.0503
-   42          lo be or nok to bM          0.8333          0.7778          0.0556
-   43          Ro be or nok to bj          0.8333          0.7703          0.0631
-   44          io be or nof to bA          0.8333          0.7753          0.0581
-   45          to be or nok to bS          0.8333          0.7778          0.0556
-   46          io be or noj to bt          0.8333          0.7864          0.0469
-   47          Ro be or nok to be          0.8889          0.7778          0.1111
-   48          Ro be or nok to be          0.8889          0.7647          0.1242
-   49          to be or noC to be          0.8889          0.7619          0.1269
-   50          to be or noC to be          0.8889          0.7719          0.1169
-   51          mo be or nok to bA          0.8333          0.7883          0.0450
-   52          So be or not to bM          0.8889          0.7917          0.0972
-   53          So be or not to bM          0.8889          0.7883          0.1006
-   54          So be or nof to bA          0.8333          0.7781          0.0553
-   55          to be or nok to bj          0.8333          0.7658          0.0675
-   56          mo be or nov to bj          0.8333          0.7642          0.0692
-   57          Po be or noj to bt          0.8333          0.7556          0.0778
-   58          no be or noj to bj          0.8333          0.7586          0.0747
-   59          Io be or noj to bA          0.8333          0.7631          0.0703
-   60          to be or noj to bw          0.8333          0.7669          0.0664
-   61          to be or noj to bj          0.8333          0.7586          0.0747
-   62          mo be or noE to bj          0.8333          0.7692          0.0642
-   63          So be or noj to bj          0.8333          0.7656          0.0678
-   64          To be or nof to bA          0.8889          0.7586          0.1303
-   65          to be or nof to bA          0.8333          0.7650          0.0683
-   66          Fo be or noj to bA          0.8333          0.7731          0.0603
-   67          Fo be or noj to bA          0.8333          0.7803          0.0531
-   68          oo be or noj to bA          0.8333          0.7733          0.0600
-   69          oo be or noj to bA          0.8333          0.7711          0.0622
-   70          So be or noj to bj          0.8333          0.7661          0.0672
-   71          So be or noj to bA          0.8333          0.7644          0.0689
-   72          to be or noC to bj          0.8333          0.7442          0.0892
-   73          So be or nof to bA          0.8333          0.7439          0.0894
-   74          So be or noC to bA          0.8333          0.7478          0.0856
-   75          Ko be or not to bz          0.8889          0.7508          0.1381
-   76          Do be or noC to bA          0.8333          0.7519          0.0814
-   77          to be or not to bv          0.8889          0.7486          0.1403
-   78          So be or not to bv          0.8889          0.7533          0.1356
-   79          to be or not to bv          0.8889          0.7581          0.1308
-   80          to be or not to bA          0.8889          0.7761          0.1128
-   81          To be or not to bz          0.9444          0.7917          0.1528
-   82          To be or noj to bz          0.8889          0.8014          0.0875
-   83          To be or not to bl          0.9444          0.8000          0.1444
-   84          To be or not to bk          0.9444          0.7961          0.1483
-   85          To be or not to bv          0.9444          0.7989          0.1456
-   86          To be or not to bI          0.9444          0.7864          0.1581
-   87          To be or not to bI          0.9444          0.7919          0.1525
-   88          To be or not to bP          0.9444          0.8197          0.1247
-   89          To be or not to bI          0.9444          0.8294          0.1150
-   90          To be or not to bv          0.9444          0.8542          0.0903
-   91          To be or not to bI          0.9444          0.8439          0.1006
-   92          To be or not to bk          0.9444          0.8536          0.0908
-   93          To be or not to bl          0.9444          0.8444          0.1000
-   94          To be or not to bA          0.9444          0.8528          0.0917
-   95          To be or not to bI          0.9444          0.8658          0.0786
-   96          To be or not to bA          0.9444          0.8739          0.0706
-   97          To be or not to bI          0.9444          0.8750          0.0694
-   98          To be or not to bI          0.9444          0.8681          0.0764
-   99          To be or not to bA          0.9444          0.8825          0.0619
-  100          To be or not to bA          0.9444          0.8864          0.0581
-  101          To be or not to bv          0.9444          0.8917          0.0528
-  102          To be or not to bv          0.9444          0.8778          0.0667
-  103          To be or not to be          1.0000          0.8708          0.1292
+    1          UoEzV nTAqjkPLMZbT          0.0000          0.0000          0.0000
+    2          UoBzV nkhqJkPLrZbT          0.0000          0.0000          0.0000
+    3          OoaQlHnkRBJMyMSbbY          0.0000          0.0000          0.0000
+    4          UoELV NbAIVP tRZTT          0.0000          0.0000          0.0000
+    5          ToQjudVrbWFz tRbTj          0.0000          0.0000          0.0000
+    6          ToENu VrbWFz tRbTj          0.0000          0.0000          0.0000
+    7          loZqw CrmzVICCMLbo          0.0000          0.0000          0.0000
+    8          UoZqV Cr zJy tMbbd          0.0000          0.0000          0.0000
+    9          UoZju Cr zJy tMLbd          0.0000          0.0000          0.0000
+   10          UofqV Cr YJy tMLbo          0.0000          0.0000          0.0000
+   11          UoKju nr zey thPbd          0.0000          0.0000          0.0000
+   12          UoKju nr zey tMPbd          0.0000          0.0000          0.0000
+   13          UoZjt nr z N thLbo          0.0000          0.0000          0.0000
+   14          ToZqV Cr JeN tMPbd          0.0000          0.0000          0.0000
+   15          ToZoV nr zey tMbbd          0.0000          0.0000          0.0000
+   16          ToKoA Cr zez tRbbo          0.0000          0.0000          0.0000
+   17          ToZoT nr zPN thLbq          0.0000          0.0000          0.0000
+   18          ToZjt Cr z y tMQbq          0.0000          0.0000          0.0000
+   19          ToZqt nr nJS thPbd          0.0000          0.0000          0.0000
+   20          ToZqt nr nJS tMPbd          0.0000          0.0000          0.0000
+   21          ToKbt nr nes thPbd          0.0000          0.0000          0.0000
+   22          ToZbw nr nes thPbd          0.0000          0.0000          0.0000
+   23          ToKbt nr neR tePbd          0.0000          0.0000          0.0000
+   24          To bt nr nes thPbd          0.0000          0.0000          0.0000
+   25          To bw nr neR thPbd          0.0000          0.0000          0.0000
+   26          To bw Kr neh thQbd          0.0000          0.0000          0.0000
+   27          To bw nr neh thPbq          0.0000          0.0000          0.0000
+   28          To bw nr neh tVPbw          0.0000          0.0000          0.0000
+   29          To bw nr neh tVPbw          0.0000          0.0000          0.0000
+   30          To bt nr nes thPbe          0.0000          0.0000          0.0000
+   31          To bt nr neh tVObe          0.0000          0.0000          0.0000
+   32          To bt Dr nes tQPbe          0.0000          0.0000          0.0000
+   33          To bt Dr nes tQPbe          0.0000          0.0000          0.0000
+   34          To bt Rr neh thPbe          0.0000          0.0000          0.0000
+   35          To bw Dr nes tVqbe          0.0000          0.0000          0.0000
+   36          To bw Dr nes thPbe          0.0000          0.0000          0.0000
+   37          To bw Cr neh tVQbe          0.0000          0.0000          0.0000
+   38          To bP Yr neh toPbe          0.0000          0.0000          0.0000
+   39          To bt Yr neO toPbe          0.0000          0.0000          0.0000
+   40          To bP nr nes toPbe          0.0000          0.0000          0.0000
+   41          To bt Dr nez toPbe          0.0000          0.0000          0.0000
+   42          To bw Cr nez toQbe          0.0000          0.0000          0.0000
+   43          To bt Cr nes toPbe          0.0000          0.0000          0.0000
+   44          To bw Yr nUh toPbe          0.0000          0.0000          0.0000
+   45          To bP Yr nes toPbe          0.0000          0.0000          0.0000
+   46          To bP Yr nes toPbe          0.0000          0.0000          0.0000
+   47          To bw Cr nes toPbe          0.0000          0.0000          0.0000
+   48          To bw Yr nes toPbe          0.0000          0.0000          0.0000
+   49          To bP Cr neh toPbe          0.0000          0.0000          0.0000
+   50          To bM Dr ndA to be          0.0000          0.0000          0.0000
+   51          To bM Dr ndA to be          0.0000          0.0000          0.0000
+   52          To be Yr nUA to be          0.0000          0.0000          0.0000
+   53          To be Yr nUA to be          0.0000          0.0000          0.0000
+   54          To be Dr neA to be          0.0000          0.0000          0.0000
+   55          To be Dr nes to be          0.0000          0.0000          0.0000
+   56          To be Dr ndh to be          0.0000          0.0000          0.0000
+   57          To be Lr nes to be          0.0000          0.0000          0.0000
+   58          To be Dr net to be          0.0000          0.0000          0.0000
+   59          To be Dr net to be          0.0000          0.0000          0.0000
+   60          To be Dr net to be          0.0000          0.0000          0.0000
+   61          To be Dr net to be          0.0000          0.0000          0.0000
+   62          To be Dr net to be          0.0000          0.0000          0.0000
+   63          To be Lr not to be          0.0033          0.0001          0.0032
+   64          To be Lr not to be          0.0033          0.0004          0.0029
+   65          To be Lr not to be          0.0033          0.0012          0.0021
+   66          To be Dr not to be          0.0033          0.0021          0.0012
+   67          To be Dr not to be          0.0033          0.0020          0.0013
+   68          To be Dr not to be          0.0033          0.0022          0.0011
+   69          To be Lr not to be          0.0033          0.0020          0.0013
+   70          To be Pr not to be          0.0033          0.0023          0.0010
+   71          To be Lr not to be          0.0033          0.0026          0.0007
+   72          To be Lr not to be          0.0033          0.0021          0.0012
+   73          To be Dr not to be          0.0033          0.0020          0.0013
+   74          To be Dr not to be          0.0033          0.0021          0.0012
+   75          To be Dr not to be          0.0033          0.0023          0.0010
+   76          To be br not to be          0.0033          0.0023          0.0010
+   77          To be Dr not to be          0.0033          0.0023          0.0010
+   78          To be Dr not to be          0.0033          0.0023          0.0010
+   79          To be Lr not to be          0.0033          0.0025          0.0008
+   80          To be Lr not to be          0.0033          0.0024          0.0009
+   81          To be Dr not to be          0.0033          0.0022          0.0011
+   82          To be Dr not to be          0.0033          0.0024          0.0009
+   83          To be or not to be          1.0000          0.0174          0.9826

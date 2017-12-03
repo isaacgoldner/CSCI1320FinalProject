@@ -17,8 +17,17 @@ targetPhraseLength = length(targetPhrase);
 CapASCII = [65:90];
 LowASCII = [97:122];
 SpaceASCII = [32];
+%Used in task 1.7 experimentation: add numbers to the mix: 
+NumASCII = [48:57]; 
 
+%Use with only the characters assigned: 
 PossCharASCII = char([CapASCII, LowASCII, SpaceASCII]);  
+
+%Use with more characters (numbers) for task 1.7: 
+%PossCharASCII = char([CapASCII, LowASCII, SpaceASCII,NumASCII]);  
+
+%1.7 General note: adding more characters increases the number of possible
+%strings that are incorrect, thereby making the evolution process slower. 
 
 %Population will be stored as a matrix that has as many rows as there are
 %organisms and as many columns as there are characters in a given organism.

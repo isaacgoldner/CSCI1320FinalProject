@@ -36,7 +36,18 @@ randNumVecStringLength(~x) = 0;
 CapASCII = [65:90];
 LowASCII = [97:122];
 SpaceASCII = [32];
-PossCharASCII = char([CapASCII, LowASCII, SpaceASCII]);  
+
+%Task 1.7: Add additional characters to the mix (numbers): 
+NumASCII = [48:57]; 
+
+%Run with only characters as originally requested: 
+PossCharASCII = char([CapASCII, LowASCII, SpaceASCII]);
+
+%Run with numbers for task 1.7: 
+%PossCharASCII = char([CapASCII, LowASCII, SpaceASCII,NumASCII]);  
+
+%1.7 General note: adding more characters increases the number of possible
+%strings that are incorrect, thereby making the evolution process slower. 
 
 %Find how many characters in total will be mutated in the child: 
 numMutationChars = sum(randNumVecStringLength);
