@@ -1,84 +1,251 @@
 Generation         Best Phrase          Max. Fitness    Avg. Fitness   Gen. Diversity
-    1          UoEzV nTAqjkPLMZbT          0.0000          0.0000          0.0000
-    2          UoBzV nkhqJkPLrZbT          0.0000          0.0000          0.0000
-    3          OoaQlHnkRBJMyMSbbY          0.0000          0.0000          0.0000
-    4          UoELV NbAIVP tRZTT          0.0000          0.0000          0.0000
-    5          ToQjudVrbWFz tRbTj          0.0000          0.0000          0.0000
-    6          ToENu VrbWFz tRbTj          0.0000          0.0000          0.0000
-    7          loZqw CrmzVICCMLbo          0.0000          0.0000          0.0000
-    8          UoZqV Cr zJy tMbbd          0.0000          0.0000          0.0000
-    9          UoZju Cr zJy tMLbd          0.0000          0.0000          0.0000
-   10          UofqV Cr YJy tMLbo          0.0000          0.0000          0.0000
-   11          UoKju nr zey thPbd          0.0000          0.0000          0.0000
-   12          UoKju nr zey tMPbd          0.0000          0.0000          0.0000
-   13          UoZjt nr z N thLbo          0.0000          0.0000          0.0000
-   14          ToZqV Cr JeN tMPbd          0.0000          0.0000          0.0000
-   15          ToZoV nr zey tMbbd          0.0000          0.0000          0.0000
-   16          ToKoA Cr zez tRbbo          0.0000          0.0000          0.0000
-   17          ToZoT nr zPN thLbq          0.0000          0.0000          0.0000
-   18          ToZjt Cr z y tMQbq          0.0000          0.0000          0.0000
-   19          ToZqt nr nJS thPbd          0.0000          0.0000          0.0000
-   20          ToZqt nr nJS tMPbd          0.0000          0.0000          0.0000
-   21          ToKbt nr nes thPbd          0.0000          0.0000          0.0000
-   22          ToZbw nr nes thPbd          0.0000          0.0000          0.0000
-   23          ToKbt nr neR tePbd          0.0000          0.0000          0.0000
-   24          To bt nr nes thPbd          0.0000          0.0000          0.0000
-   25          To bw nr neR thPbd          0.0000          0.0000          0.0000
-   26          To bw Kr neh thQbd          0.0000          0.0000          0.0000
-   27          To bw nr neh thPbq          0.0000          0.0000          0.0000
-   28          To bw nr neh tVPbw          0.0000          0.0000          0.0000
-   29          To bw nr neh tVPbw          0.0000          0.0000          0.0000
-   30          To bt nr nes thPbe          0.0000          0.0000          0.0000
-   31          To bt nr neh tVObe          0.0000          0.0000          0.0000
-   32          To bt Dr nes tQPbe          0.0000          0.0000          0.0000
-   33          To bt Dr nes tQPbe          0.0000          0.0000          0.0000
-   34          To bt Rr neh thPbe          0.0000          0.0000          0.0000
-   35          To bw Dr nes tVqbe          0.0000          0.0000          0.0000
-   36          To bw Dr nes thPbe          0.0000          0.0000          0.0000
-   37          To bw Cr neh tVQbe          0.0000          0.0000          0.0000
-   38          To bP Yr neh toPbe          0.0000          0.0000          0.0000
-   39          To bt Yr neO toPbe          0.0000          0.0000          0.0000
-   40          To bP nr nes toPbe          0.0000          0.0000          0.0000
-   41          To bt Dr nez toPbe          0.0000          0.0000          0.0000
-   42          To bw Cr nez toQbe          0.0000          0.0000          0.0000
-   43          To bt Cr nes toPbe          0.0000          0.0000          0.0000
-   44          To bw Yr nUh toPbe          0.0000          0.0000          0.0000
-   45          To bP Yr nes toPbe          0.0000          0.0000          0.0000
-   46          To bP Yr nes toPbe          0.0000          0.0000          0.0000
-   47          To bw Cr nes toPbe          0.0000          0.0000          0.0000
-   48          To bw Yr nes toPbe          0.0000          0.0000          0.0000
-   49          To bP Cr neh toPbe          0.0000          0.0000          0.0000
-   50          To bM Dr ndA to be          0.0000          0.0000          0.0000
-   51          To bM Dr ndA to be          0.0000          0.0000          0.0000
-   52          To be Yr nUA to be          0.0000          0.0000          0.0000
-   53          To be Yr nUA to be          0.0000          0.0000          0.0000
-   54          To be Dr neA to be          0.0000          0.0000          0.0000
-   55          To be Dr nes to be          0.0000          0.0000          0.0000
-   56          To be Dr ndh to be          0.0000          0.0000          0.0000
-   57          To be Lr nes to be          0.0000          0.0000          0.0000
-   58          To be Dr net to be          0.0000          0.0000          0.0000
-   59          To be Dr net to be          0.0000          0.0000          0.0000
-   60          To be Dr net to be          0.0000          0.0000          0.0000
-   61          To be Dr net to be          0.0000          0.0000          0.0000
-   62          To be Dr net to be          0.0000          0.0000          0.0000
-   63          To be Lr not to be          0.0033          0.0001          0.0032
-   64          To be Lr not to be          0.0033          0.0004          0.0029
-   65          To be Lr not to be          0.0033          0.0012          0.0021
-   66          To be Dr not to be          0.0033          0.0021          0.0012
-   67          To be Dr not to be          0.0033          0.0020          0.0013
-   68          To be Dr not to be          0.0033          0.0022          0.0011
-   69          To be Lr not to be          0.0033          0.0020          0.0013
-   70          To be Pr not to be          0.0033          0.0023          0.0010
-   71          To be Lr not to be          0.0033          0.0026          0.0007
-   72          To be Lr not to be          0.0033          0.0021          0.0012
-   73          To be Dr not to be          0.0033          0.0020          0.0013
-   74          To be Dr not to be          0.0033          0.0021          0.0012
-   75          To be Dr not to be          0.0033          0.0023          0.0010
-   76          To be br not to be          0.0033          0.0023          0.0010
-   77          To be Dr not to be          0.0033          0.0023          0.0010
-   78          To be Dr not to be          0.0033          0.0023          0.0010
-   79          To be Lr not to be          0.0033          0.0025          0.0008
-   80          To be Lr not to be          0.0033          0.0024          0.0009
-   81          To be Dr not to be          0.0033          0.0022          0.0011
-   82          To be Dr not to be          0.0033          0.0024          0.0009
-   83          To be or not to be          1.0000          0.0174          0.9826
+    1          Grfxm urkRMcGxx WX          0.0000          0.0000          0.0000
+    2          IYFbjnWeRdnsSlQuXe          0.0000          0.0000          0.0000
+    3          IJCbRnfEkRns lQkae          0.0000          0.0000          0.0000
+    4          vwXngolelBoTcKo ee          0.0000          0.0000          0.0000
+    5          IwIpYn eNjoTFdo Ue          0.0000          0.0000          0.0000
+    6          CbgpIoze vBENtM Hg          0.0000          0.0000          0.0000
+    7          nbaPmozm tCHEto KQ          0.0000          0.0000          0.0000
+    8          YbaTmozm tCHEto eQ          0.0000          0.0000          0.0000
+    9          TJesMJSm mxHFtoWxc          0.0000          0.0000          0.0000
+   10          WUbdpmzc ycvdtoxbF          0.0000          0.0000          0.0000
+   11          WGbdemzc zcvRtojKF          0.0000          0.0000          0.0000
+   12          Pdmvemzc zTyVtojKF          0.0000          0.0000          0.0000
+   13          o mveTzc zTyVtojKF          0.0000          0.0000          0.0000
+   14          K mleGzc bjvVtjjCF          0.0000          0.0000          0.0000
+   15          Hg bfIBqvjUWCtXlGE          0.0000          0.0000          0.0000
+   16          TgebevWQznqTSKtjMv          0.0000          0.0000          0.0000
+   17          TgebeuzQHnqoPafjVn          0.0000          0.0000          0.0000
+   18          TLebe rezn Hgzejqp          0.0000          0.0000          0.0000
+   19          dfAbe zwf ofigUU X          0.0000          0.0000          0.0000
+   20          abkee qrFQWO  QNoZ          0.0000          0.0000          0.0000
+   21          qoJbeD diKOSXKbjyP          0.0000          0.0000          0.0000
+   22          rdWVz tG QiO pRFbr          0.0000          0.0000          0.0000
+   23          FSTbe qrzzQyOtwySZ          0.0000          0.0000          0.0000
+   24           FRTbe LZzzvyOtwyS          0.0000          0.0000          0.0000
+   25          qlKLe LDQEEtmtocVi          0.0000          0.0000          0.0000
+   26          MlKLe dDQuEtmtodti          0.0000          0.0000          0.0000
+   27          EWLbe nm uYPysStYU          0.0000          0.0000          0.0000
+   28          EfWPe nR uxOyeUtYU          0.0000          0.0000          0.0000
+   29          VljweMJrWjJVBDaTLe          0.0000          0.0000          0.0000
+   30          PljreyarWnJVozHTLe          0.0000          0.0000          0.0000
+   31          PBjODyarFnocozHroe          0.0000          0.0000          0.0000
+   32          P  PeKrFZnJarQLORe          0.0000          0.0000          0.0000
+   33          IEaSeALzXVocGnVNRe          0.0000          0.0000          0.0000
+   34          Gy FeQodxQohGIDgDO          0.0000          0.0000          0.0000
+   35          Tb FANDXHQoR oTggx          0.0000          0.0000          0.0000
+   36          GS FANodHQoh oDgJx          0.0000          0.0000          0.0000
+   37          Ym HeVbsderA yJXHa          0.0000          0.0000          0.0000
+   38          Tm HeuGsdebA yHpHa          0.0000          0.0000          0.0000
+   39          IaLQeFobNNUfYtfiSD          0.0000          0.0000          0.0000
+   40          RibkBrobf bq tx cW          0.0000          0.0000          0.0000
+   41          QibuBboXfUbj tx eW          0.0000          0.0000          0.0000
+   42          AVNse oyLmFhmtmVJL          0.0000          0.0000          0.0000
+   43          cCMim otIKjv tigMM          0.0000          0.0000          0.0000
+   44          SCMNhqotgRxZ tiMoM          0.0000          0.0000          0.0000
+   45          HoHReRQduzzI tFnPk          0.0000          0.0000          0.0000
+   46          USHoeRfPuzzU tE zk          0.0000          0.0000          0.0000
+   47          USZAeRXWurKY tCDPk          0.0000          0.0000          0.0000
+   48          AJKAeUXwuJgf tenNk          0.0000          0.0000          0.0000
+   49          hosNeKoLahAU gLSBo          0.0000          0.0000          0.0000
+   50          goPieZolEhAt gLSBo          0.0000          0.0000          0.0000
+   51          YoSiSpolEpAt gdDBo          0.0000          0.0000          0.0000
+   52          RojNeLZLxPZO tDSpQ          0.0000          0.0000          0.0000
+   53          tHhqeLxDJOZj tEifH          0.0000          0.0000          0.0000
+   54          aojTbdqrEfbo HDcnE          0.0000          0.0000          0.0000
+   55          TimbXpet nXl kXMvD          0.0000          0.0000          0.0000
+   56          TembXVet nol keXQD          0.0000          0.0000          0.0000
+   57          TemEyVkrJnollWijQD          0.0000          0.0000          0.0000
+   58          U vqI NWblXtzCt YJ          0.0000          0.0000          0.0000
+   59          O vin ggblXtzCi AJ          0.0000          0.0000          0.0000
+   60          TxtiZJeA VXMgZTMiL          0.0000          0.0000          0.0000
+   61          TJufZ FN aQuYPVKUt          0.0000          0.0000          0.0000
+   62          nokZMYcz ZQm IoGUx          0.0000          0.0000          0.0000
+   63          woIOSrcn hNY Cv bt          0.0000          0.0000          0.0000
+   64          woIOSlcEIhSY Cv bt          0.0000          0.0000          0.0000
+   65          Tttay wGGnmE uuKUR          0.0000          0.0000          0.0000
+   66          TCyneBNpoQxaABoNXy          0.0000          0.0000          0.0000
+   67          mEvCjuNtunYxJforbe          0.0000          0.0000          0.0000
+   68          hqirx IrHKJZ GaVZA          0.0000          0.0000          0.0000
+   69          holNlNIpHORZ nopZJ          0.0000          0.0000          0.0000
+   70          TgJGJ IrBXCZrJacZB          0.0000          0.0000          0.0000
+   71          gQMTWSZXUnfOgXDjpe          0.0000          0.0000          0.0000
+   72          BC Yd oKPuhOuvA NU          0.0000          0.0000          0.0000
+   73          Gu Cd AKPuFtTvAVoU          0.0000          0.0000          0.0000
+   74          uA PsxoDNNMFtEG pe          0.0000          0.0000          0.0000
+   75          aD feHoKZsdjsvW KN          0.0000          0.0000          0.0000
+   76          ZA kjxFDNmMnREG ze          0.0000          0.0000          0.0000
+   77          ij bKzm NcqnusG zz          0.0000          0.0000          0.0000
+   78          Im feoNNvBwesfp fS          0.0000          0.0000          0.0000
+   79          VN LzHowacMFieq rJ          0.0000          0.0000          0.0000
+   80          pv ULEorm JWieWADe          0.0000          0.0000          0.0000
+   81          pvPULEorm JWieJoie          0.0000          0.0000          0.0000
+   82          yNGUKEoNm GW eGwHN          0.0000          0.0000          0.0000
+   83          cplJOKGS BpK QogWW          0.0000          0.0000          0.0000
+   84          QJRRisbS qpticoKWe          0.0000          0.0000          0.0000
+   85          TT byGfz lUtJBWMpX          0.0000          0.0000          0.0000
+   86          TT JkauGInUtJrHMjt          0.0000          0.0000          0.0000
+   87          ToEseGfu mJoJBWZKX          0.0000          0.0000          0.0000
+   88          ToTsewCuTmJAJvWflU          0.0000          0.0000          0.0000
+   89          TobomNmDDEilJtKQqE          0.0000          0.0000          0.0000
+   90          TzELdnAqTnxAqteswa          0.0000          0.0000          0.0000
+   91          cosseoyOBnLWetPkwD          0.0000          0.0000          0.0000
+   92          coELeAyO nLWetPdwD          0.0000          0.0000          0.0000
+   93          ceRpekggknofeykJwD          0.0000          0.0000          0.0000
+   94          TMUPe BTVXCtMiGYPN          0.0000          0.0000          0.0000
+   95          WAMgeqXJ nydGtVTBN          0.0000          0.0000          0.0000
+   96          TORZevtW Kor GzNcy          0.0000          0.0000          0.0000
+   97          nlEgeKmh nqwJtOqqy          0.0000          0.0000          0.0000
+   98          To kwNebOftpmlDoNh          0.0000          0.0000          0.0000
+   99          TlvTetoH RrEMvrlMD          0.0000          0.0000          0.0000
+  100          TFvTetkHdkotMvlyfq          0.0000          0.0000          0.0000
+  101          TqcqoPojIqoFwGCpsh          0.0000          0.0000          0.0000
+  102          zVKNuWkMUnQU tLncg          0.0000          0.0000          0.0000
+  103          Tb Tea ehJVfAcoYgu          0.0000          0.0000          0.0000
+  104          ogLACCoAJnzegscXqD          0.0000          0.0000          0.0000
+  105           pfwIFhr UMtLstzuc          0.0000          0.0000          0.0000
+  106          TgeqAxbroHcAgRoYbu          0.0000          0.0000          0.0000
+  107          NgeEecvrISoGVtfUGa          0.0000          0.0000          0.0000
+  108          yR re VvqyfYPkVxID          0.0000          0.0000          0.0000
+  109          ykcBo XrFvcF EQaez          0.0000          0.0000          0.0000
+  110          ZZ RHZVkB ot tDycC          0.0000          0.0000          0.0000
+  111          ZZ sHYVJD ot tDyWC          0.0000          0.0000          0.0000
+  112          xx OHhVkenot tggce          0.0000          0.0000          0.0000
+  113          xM OHhVkenomwHggce          0.0000          0.0000          0.0000
+  114          Hd nKjsTiMo  tZjfQ          0.0000          0.0000          0.0000
+  115          Hl nNQsTyTo  bR fe          0.0000          0.0000          0.0000
+  116          u  yv HShnrcHNa ke          0.0000          0.0000          0.0000
+  117           VEvVUWJBxot tVCcI          0.0000          0.0000          0.0000
+  118          BPERxSWahnFtJcV ve          0.0000          0.0000          0.0000
+  119          iyubeUqchtot QvzPj          0.0000          0.0000          0.0000
+  120          EyubekXUh ot ebFPI          0.0000          0.0000          0.0000
+  121          GQloesoZz oY pNxnc          0.0000          0.0000          0.0000
+  122          wQloeAokt oY pNFnW          0.0000          0.0000          0.0000
+  123          GGlvdRqo woA DpBxe          0.0000          0.0000          0.0000
+  124          AUlvdKro poV kvBxe          0.0000          0.0000          0.0000
+  125          GUlId ro eoY QvCxe          0.0000          0.0000          0.0000
+  126          GUlId ro eoQ QvCxe          0.0000          0.0000          0.0000
+  127          TUTgkxiCPnGtwGcvde          0.0000          0.0000          0.0000
+  128          OddIe MowqSr JH Ke          0.0000          0.0000          0.0000
+  129          OdIIe bouqSr OZ eR          0.0000          0.0000          0.0000
+  130          ByZmH oCCtRt KgyLX          0.0000          0.0000          0.0000
+  131          TKZZOPAbkAFJ loeaI          0.0000          0.0000          0.0000
+  132          TdPROPAotwpW loeaI          0.0000          0.0000          0.0000
+  133          UQlivcbMZnotKIoAXJ          0.0000          0.0000          0.0000
+  134          UQlivcVFZnJtKPo aJ          0.0000          0.0000          0.0000
+  135          UolNRcFsgrMbCPo am          0.0000          0.0000          0.0000
+  136          TohJaYYO pMbCmoVac          0.0000          0.0000          0.0000
+  137          ToUDxsKT LMoyNoCaC          0.0000          0.0000          0.0000
+  138          TpmBxqEz nelCvouVe          0.0000          0.0000          0.0000
+  139          TpmBxqqz nesCvoUVQ          0.0000          0.0000          0.0000
+  140          TzMYDiDq GUtNvucVe          0.0000          0.0000          0.0000
+  141          TrMYlioT GitBvbFVe          0.0000          0.0000          0.0000
+  142          nG YZRFt vptJviKii          0.0000          0.0000          0.0000
+  143          FOaledotdjpIutzdFH          0.0000          0.0000          0.0000
+  144          TbKKddorvxixbtzlLT          0.0000          0.0000          0.0000
+  145          TbKkhNouOYqiNLKTSe          0.0000          0.0000          0.0000
+  146          eWFLecsyWnQqmUdILl          0.0000          0.0000          0.0000
+  147          TJZfejOAYrLC tH Sf          0.0000          0.0000          0.0000
+  148          zhhPijor JvO PJSLi          0.0000          0.0000          0.0000
+  149          zFhmnuFr kTtPPkVFr          0.0000          0.0000          0.0000
+  150          TbkAegGHwnxtZEPAbm          0.0000          0.0000          0.0000
+  151          gcuIU BNYaotlMoNbo          0.0000          0.0000          0.0000
+  152          gcAAUDBNYnitEMo bm          0.0000          0.0000          0.0000
+  153          aRAAeaBcmnitEMo Vm          0.0000          0.0000          0.0000
+  154          aRjCe uLmnEeEMo UK          0.0000          0.0000          0.0000
+  155          oq bcZLgjGFXstghQY          0.0000          0.0000          0.0000
+  156          MX bFmuUCDZXmtgIpY          0.0000          0.0000          0.0000
+  157          Xh fFJGj VRt pofMH          0.0000          0.0000          0.0000
+  158          Xh fFJGj YEt pof f          0.0000          0.0000          0.0000
+  159          Nc UFJfW  xt KuXbc          0.0000          0.0000          0.0000
+  160          Dc mLgfv cxNgKdXbx          0.0000          0.0000          0.0000
+  161          GhKPCepjwnYtMvoebf          0.0000          0.0000          0.0000
+  162          GhWPCepjwnYtavoebX          0.0000          0.0000          0.0000
+  163          GJgPblpjwnYtNvoebX          0.0000          0.0000          0.0000
+  164          jVrCzirzunbvlwokbS          0.0000          0.0000          0.0000
+  165          tE zV LNlyNttGXwFe          0.0000          0.0000          0.0000
+  166          DE Oc bN AFNtGcHFe          0.0000          0.0000          0.0000
+  167          ajApaxRi ygbDaHsbu          0.0000          0.0000          0.0000
+  168          dEqwtOUJRnapDAdXbe          0.0000          0.0000          0.0000
+  169          kPgslRoJjngWfWklbD          0.0000          0.0000          0.0000
+  170          WosKasUylni Lulkbe          0.0000          0.0000          0.0000
+  171          ro ULGbAynOulSSSbe          0.0000          0.0000          0.0000
+  172          zo ULObgXnOuyVSSbe          0.0000          0.0000          0.0000
+  173          ro ULGeqlJOm ASxbe          0.0000          0.0000          0.0000
+  174          To GLGHvxnq lqdDbe          0.0000          0.0000          0.0000
+  175          UozMUsoQdnOvVdydbe          0.0000          0.0000          0.0000
+  176          Po busgQJDqu Xylbe          0.0000          0.0000          0.0000
+  177          Po busgHJDqW jEMUe          0.0000          0.0000          0.0000
+  178          xw bWSzvkDqIrymSbe          0.0000          0.0000          0.0000
+  179          xoVbUSRQkDMI gmMbh          0.0000          0.0000          0.0000
+  180          Bz bLYBhBzqVhet  h          0.0000          0.0000          0.0000
+  181          kG bnNcbWCMD zeBbR          0.0000          0.0000          0.0000
+  182          KoCRjMzrJlrK enlAe          0.0000          0.0000          0.0000
+  183          KoCRjhzrJXot enlAe          0.0000          0.0000          0.0000
+  184          AoCbjhfhJXot enlIe          0.0000          0.0000          0.0000
+  185          ktqWedarqYatUFfgre          0.0000          0.0000          0.0000
+  186          kqqdeyarsWitjImgre          0.0000          0.0000          0.0000
+  187          ktqVSdzrrPgtUaPUre          0.0000          0.0000          0.0000
+  188          dcqCeGzpLsgtqwJkbT          0.0000          0.0000          0.0000
+  189          dcpCeGSrLSatqwbkbT          0.0000          0.0000          0.0000
+  190          UH jSUoSOqQtp oHMo          0.0000          0.0000          0.0000
+  191          UH jSUocTAQtanotnq          0.0000          0.0000          0.0000
+  192          AH vSVoYLnDtgnotnB          0.0000          0.0000          0.0000
+  193          kLYje oVAAqdaroTyb          0.0000          0.0000          0.0000
+  194          Pm RhzojLJkwCbobwy          0.0000          0.0000          0.0000
+  195          AScMZIPZhnglTjotbH          0.0000          0.0000          0.0000
+  196          AuCWmkucLoolKVoSbP          0.0000          0.0000          0.0000
+  197          gERlSyoMEfoxBBoybg          0.0000          0.0000          0.0000
+  198          GWnOeNoyNfqwBOopbg          0.0000          0.0000          0.0000
+  199          kh Fp ZWumQxiQZZbe          0.0000          0.0000          0.0000
+  200          kz Fp ZGuoQxMkPZbe          0.0000          0.0000          0.0000
+  201          Fm YU DZCtoxiQZoEe          0.0000          0.0000          0.0000
+  202          Ha Yl QoUtohJQfoEe          0.0000          0.0000          0.0000
+  203          Tz DF YZRrvVEgvkbe          0.0000          0.0000          0.0000
+  204          Tz fm YZIrDVEWvkbl          0.0000          0.0000          0.0000
+  205          toVTg SFPnJhnxt eN          0.0000          0.0000          0.0000
+  206          qoFWg QFyTAM xg eN          0.0000          0.0000          0.0000
+  207          YogJD AryfAQ  ohbP          0.0000          0.0000          0.0000
+  208          DogJD AryleQ  ohbP          0.0000          0.0000          0.0000
+  209          DogJd Krphep  p DP          0.0000          0.0000          0.0000
+  210          Do VdmKrpTet Zp rP          0.0000          0.0000          0.0000
+  211          DX bifSQPTktzzo pS          0.0000          0.0000          0.0000
+  212          So AioLuPTktzwo QS          0.0000          0.0000          0.0000
+  213          pJ AHSSuuJktIIoCei          0.0000          0.0000          0.0000
+  214          pX iJ SuuJkthIo ei          0.0000          0.0000          0.0000
+  215          SyYSH hLjrUO YKSkw          0.0000          0.0000          0.0000
+  216          eSGKf ieJnkChZo vT          0.0000          0.0000          0.0000
+  217          he xo xHesovSiAgbB          0.0000          0.0000          0.0000
+  218          he jo xReRovSiAgbB          0.0000          0.0000          0.0000
+  219          he jo gRegCvSihgbB          0.0000          0.0000          0.0000
+  220          EJ bYJPIkvGJ totBf          0.0000          0.0000          0.0000
+  221          lJHbYvFWtnRJ totXs          0.0000          0.0000          0.0000
+  222          TGWdoTkjdndkitodwQ          0.0000          0.0000          0.0000
+  223          TsvdATkfGndP eoH p          0.0000          0.0000          0.0000
+  224          nYWtETkjUnMT KXynY          0.0000          0.0000          0.0000
+  225          UiWiifgjUGGt wofce          0.0000          0.0000          0.0000
+  226          viWiTSgyUGot toGBe          0.0000          0.0000          0.0000
+  227          WiWiTSgGHGot aoGBE          0.0000          0.0000          0.0000
+  228          WiriIfgBf Mt toZBO          0.0000          0.0000          0.0000
+  229          WdqiRffBVDDt toZBD          0.0000          0.0000          0.0000
+  230          WdqMMffgVDStbtoeBD          0.0000          0.0000          0.0000
+  231          ZlPZfqyuqLDM tokZI          0.0000          0.0000          0.0000
+  232          GNnZiMEr ZKxvtokHt          0.0000          0.0000          0.0000
+  233          xFOZz orZLKtvtCkRu          0.0000          0.0000          0.0000
+  234          FQ DdKSDweoVctQKYu          0.0000          0.0000          0.0000
+  235          HN cmZwVQnztFMoVaP          0.0000          0.0000          0.0000
+  236          FoyCtnVrjWktVtoICD          0.0000          0.0000          0.0000
+  237          Foy vx rcWkteDoICp          0.0000          0.0000          0.0000
+  238          Tox ceUnaWktKAowYi          0.0000          0.0000          0.0000
+  239          Tt  xTUnaWktxhocip          0.0000          0.0000          0.0000
+  240          Yt TevluQvktFtNVCp          0.0000          0.0000          0.0000
+  241          Yt heNCuQMztOtN pL          0.0000          0.0000          0.0000
+  242          ytMTeNQMPMDtOtN BZ          0.0000          0.0000          0.0000
+  243          FDrFILSgCLPpitobRe          0.0000          0.0000          0.0000
+  244          RQrYwKagCLPp toVhl          0.0000          0.0000          0.0000
+  245          RuWIwKfqrLAk toVMl          0.0000          0.0000          0.0000
+  246          huWIgRfqrLck toVkl          0.0000          0.0000          0.0000
+  247          huWVfRfqJlck toVfl          0.0000          0.0000          0.0000
+  248          nebbFtKUtnuI GPqYe          0.0000          0.0000          0.0000
+  249          IobbxDKEtnuIvGYqYe          0.0000          0.0000          0.0000
+  250          ZkbbxBKEtngbEfslSe          0.0000          0.0000          0.0000

@@ -10,6 +10,9 @@ mutatedChild = child;
 %will occur
 mutationRate = 1;
 
+%1.7 Notes: 1 is an optimal mutation rate for working with our optimized
+%exponential fitness factor and mating factor. 
+
 %generate random number(s) based on the mutation rate: 
 numVec = randi([1,100],mutationRate);
 
