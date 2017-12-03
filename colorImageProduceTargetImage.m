@@ -11,7 +11,7 @@ targetImage = targetImage ./ 255;
 population = colorImageBuildPopulation(targetImage);
 
 %specify the maximum number of generations that will be run through
-maxGenerations = 1000;
+maxGenerations = 50;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
@@ -144,6 +144,14 @@ title(round((generation / 9) * 7));
 subplot(3,3,9);
 imshow(bestImage{generation - 1,1});
 title(generation - 1);
+
+%graph the maximum and average fitness over generations
+figure
+plot([1:generation-1],maxFitness,[1:generation-1],avgFitness);
+legend('Max Fitness','Average Fitness','Location','southeast');
+title('Max Fitness and Average Fitness Over Generations');
+xlabel('Generation');
+ylabel('Fitness');
 
 %Save the image with the heighest fitness created in the entire evolution
 %process to an image file. 
