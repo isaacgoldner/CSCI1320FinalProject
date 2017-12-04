@@ -6,7 +6,7 @@
 %Set the target phrase that the process should evolve. 
 targetPhrase = 'To be or not to be';
 
-%1.7 Notes: Shorter phrases have less possible wrong strings and therefor
+%1.7 Notes: Shorter phrases have less possible wrong strings and therefore
 %generate faster. 
 
 %Use the buildPopulation function to create the initial population of 

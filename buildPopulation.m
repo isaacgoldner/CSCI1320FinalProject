@@ -6,7 +6,18 @@ function [population, populationSize] = buildPopulation(targetPhrase)
 %Store the size of the initial population. As instructed we set our 
 %population total at 200, where each of the 200 organisms is a different string the
 %same length as the target phrase. 
-populationSize = 200; 
+populationSize = 600; 
+
+%1.7 Note: We normally used a population of 200 organisms. 
+%decreasing population size generally made the evolution process require
+%more generations. 
+
+%Increasing the population size made the process require significantly
+%fewer generations but run slower. We found that a population size near 500
+%would optimize a balance of running fewer generations at a reasonable
+%speed. However, this change technically qualifies as overfitting. 
+
+
 
 %find how many characters comprise targetPhrase: 
 targetPhraseLength = length(targetPhrase);

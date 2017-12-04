@@ -21,13 +21,15 @@ normalizedFitness = (fitness - min(fitness))./(max(fitness) - min(fitness));
 %the 'lottery'. This is accomplished using a mating
 %factor that is saved as a variable so that it can be altered for task 1.7 
 %work. 
-mateFactor = 10; 
+mateFactor = 1000; 
 
 %Task 1.7 Note: anything between 10 and 15 works quite well using our 
 %"standard settings" and not 
-%applying and exponent to the fitness values. 10 does appear to be best
-%Lowering produces worse
-%results. With an expo factor of 10 works well too. 
+%applying and exponent to the fitness values.
+%With an exponential factor of 100 on the fitness values a mating factor of
+%1000 produces the target phrase in significantly fewer generations.
+%Increasing the mating factor over this value generally lead to a slower
+%evolution process. 
 
 %TicketsPerOrg is a vector that simply saves the number of times a
 %particular organism will appear in the mating pool. Each element in the
