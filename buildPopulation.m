@@ -6,7 +6,7 @@ function [population, populationSize] = buildPopulation(targetPhrase)
 %Store the size of the initial population. As instructed we set our 
 %population total at 200, where each of the 200 organisms is a different string the
 %same length as the target phrase. 
-populationSize = 600; 
+populationSize = 250; 
 
 %1.7 Note: We normally used a population of 200 organisms. 
 %decreasing population size generally made the evolution process require
