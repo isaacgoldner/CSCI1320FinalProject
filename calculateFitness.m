@@ -31,7 +31,7 @@ fitness = fitness';
 %For task 1.7 experimentation: exponetially raising fitness values is an
 %option. This option was implemented more throughly in our image functions
 %due to the high overall effectiveness of the phrase evolution process. 
-expoFactor = 100; 
+expoFactor = 1; 
 
 fitness = fitness.^(expoFactor); 
 %Note: we left exponential factor at 1 finding that with out an exponential

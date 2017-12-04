@@ -11,7 +11,7 @@ targetImage = targetImage ./ 255;
 population = colorImageBuildPopulation(targetImage);
 
 %specify the maximum number of generations that will be run through
-maxGenerations = 50;
+maxGenerations = 1000;
 
 %Initialize the vectors that will be used to store data from each
 %generation, along with the cell array that will store the best image from
